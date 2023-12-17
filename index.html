@@ -23,28 +23,28 @@
     <section class="row">
       <div class="col"><img class="w-100" src="img/SVG/logo.svg" alt="logo Aéro club de Frotey-les-Lure"></div>
       <div class="col text-center mt-2">
-        <p>BAPTÈME DE L'AIR</p>
+        <a class="lien_nav text-decoration-none text-white" href="">BAPTÈME DE L'AIR</a>
       </div>
       <div class="col text-center mt-2">
-        <p>FORMATIONS</p>
+        <a class="lien_nav text-decoration-none text-white" href="">FORMATIONS</a>
       </div>
       <div class="col text-center mt-2">
-        <p>FORFAITS</p>
+        <a class="lien_nav text-decoration-none text-white" href="">FORFAITS</a>
       </div>
       <div class="col text-center mt-2">
-        <p>À PROPOS</p>
+        <a class="lien_nav text-decoration-none text-white" href="">À PROPOS</a>
       </div>
       <div class="col text-center mt-2">
-        <p>ÉVÉNEMENTS</p>
+        <a class="lien_nav text-decoration-none text-white" href="">ÉVÉNEMENTS</a>
       </div>
       <div class="col text-center mt-2">
-        <p>GALERIE</p>
+        <a class="lien_nav text-decoration-none text-white" href="">GALERIE</a>
       </div>
       <div class="col text-center mt-2">
-        <p>CONTACT</p>
+        <a class="lien_nav text-decoration-none text-white" href="">CONTACT</a>
       </div>
       <div class="col text-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+        <svg id="account" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
           <g fill="none" fill-rule="evenodd">
             <path
               d="M24 0v24H0V0h24ZM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018Zm.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01l-.184-.092Z" />
@@ -66,14 +66,16 @@
     <img id="avion_helice" src="img/avion.gif" alt="gif de l'animation de l'avion">
   </div>
 
-  <div class="z-3">
-    <section class="">
+  <div class="z-3 position-relative">
+    <section class="z-3">
       <img class="w-100" src="img/SVG/nuage2fin.svg" alt="">
     </section>
     <section class="bg-white hauteur text-dark z-3">
-      <h3 class="text-center font">Météo à Frotey-les-Lure</h3>
+      <h3 class="text-center font color_meteo size-3">Météo à Frotey-les-Lure</h3>
       <article class="bg-body w-75 h-75 m-auto rounded-4 font meteo">TEST</article>
-      <p class="text-center font mt-3">Pour plus d’informations rendez vous sur le site vigilance.meteofrance.fr </p>
+      <p class="color_meteo text-center font mt-3 size-2">Pour plus d’informations rendez vous sur le site <a
+          class="text-decoration-none fw-bold" target="_blank"
+          href="https://vigilance.meteofrance.fr/fr/haute-saone">vigilance.meteofrance.fr</a></p>
     </section>
     <section class="">
       <img class="nuage rotation w-100" src="img/SVG/nuage2fin.svg" alt="">
@@ -83,52 +85,355 @@
   <h5 class="text-white text-center font mt-5">6 classes d'ULM</h5>
   <section class="container-fluid h-25 width_avion_section mt-3">
     <article class="row mt-4">
-      <div class="col d-flex justify-content-center align-content-center"><img class="w-100 drop_shodow_img"
-          src="img/icon_avion/noun-parachute-4423885.png" alt=""></div>
-      <div class="col d-flex justify-content-center align-content-center">
-        <div class="bg-white barre h-100"></div>
+      <div class="col d-flex flex-column justify-content-between align-content-center"><img
+          class="w-100 drop_shodow_img" src="img/icon_avion/noun-parachute-4423885.png" alt="">
+        <p class="text-shadow size-2-5 mt-2 text-white text-center">Paramoteur</p>
       </div>
-      <div class="col d-flex justify-content-center align-content-center"><img class="w-100 drop_shodow_img"
-          src="img/icon_avion/icones aircraft.png" alt=""></div>
       <div class="col d-flex justify-content-center align-content-center">
-        <div class="bg-white barre h-100"></div>
+        <div class="bg-white barre h-75"></div>
       </div>
-      <div class="col d-flex justify-content-center align-content-center"><img class="w-100 drop_shodow_img"
-          src="img/icon_avion/avion-leger.png" alt=""></div>
+      <div class="col d-flex flex-column justify-content-between align-content-center"><img
+          class="w-100 drop_shodow_img" src="img/icon_avion/icones aircraft.png" alt="">
+        <p class="text-shadow size-2-5 mt-2 text-white text-center">Pendulaire</p>
+      </div>
       <div class="col d-flex justify-content-center align-content-center">
-        <div class="bg-white barre h-100"></div>
+        <div class="bg-white barre h-75"></div>
       </div>
-      <div class="col d-flex justify-content-center align-content-center"><img class="w-100 drop_shodow_img"
-          src="img/icon_avion/autogire (1).png" alt=""></div>
+      <div class="col d-flex flex-column justify-content-between align-content-center"><img
+          class="w-100 drop_shodow_img" src="img/icon_avion/avion-leger.png" alt="">
+        <p class="text-shadow size-2-5 mt-2 text-white text-center">Multiaxe</p>
+      </div>
       <div class="col d-flex justify-content-center align-content-center">
-        <div class="bg-white barre h-100"></div>
+        <div class="bg-white barre h-75"></div>
       </div>
-      <div class="col d-flex justify-content-center align-content-center"><img class="w-100 drop_shodow_img"
-          src="img/icon_avion/airship.png" alt=""></div>
+      <div class="col d-flex flex-column justify-content-between align-content-center"><img
+          class="w-100 drop_shodow_img" src="img/icon_avion/autogire (1).png" alt="">
+        <p class="text-shadow size-2-5 mt-2 text-white text-center">L'autogire ultraléger</p>
+      </div>
       <div class="col d-flex justify-content-center align-content-center">
-        <div class="bg-white barre h-100"></div>
+        <div class="bg-white barre h-75"></div>
       </div>
-      <div class="col d-flex justify-content-center align-content-center"><img class="w-100 drop_shodow_img"
-          src="img/icon_avion/helicopter.png" alt=""></div>
+      <div class="col d-flex flex-column justify-content-between align-content-center"><img
+          class="w-100 drop_shodow_img" src="img/icon_avion/airship.png" alt="">
+        <p class="text-shadow size-2-5 mt-2 text-white text-center">L'aérostat ultraléger</p>
+      </div>
+      <div class="col d-flex justify-content-center align-content-center">
+        <div class="bg-white barre h-75"></div>
+      </div>
+      <div class="col d-flex flex-column justify-content-between align-content-center"><img
+          class="w-100 drop_shodow_img" src="img/icon_avion/helicopter.png" alt="">
+        <p class="text-shadow size-2-5 mt-2 text-white text-center">L'élicoptère ultraléger</p>
+      </div>
     </article>
   </section>
 
   <section id="margin_top_bapteme">
-    <h3 class="font text-white text-center">Nos offres pour un baptème de l'air</h3>
+    <h3 class="font text-white text-center size-3">Nos offres pour un baptème de l'air</h3>
     <h6 class="font text-white text-center mt-3">Notre association possède que <strong>3 types d’appareil </strong></h6>
-    <article class="container-fluid">
+    <article class="container-fluid font mt-5">
       <div class="d-flex justify-content-around">
-        <div class="w-25 carte_avion">
-          test
+        <div class="carte_avion w-25 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
+          <img class="img_card_bapteme mx-auto rounded-3 object-fit-cover" src="img/pendulaire.jpg"
+            alt="ULM pendulaire">
+          <h5 class="font-wheight-bapteme">ULM Pendulaire</h5>
+          <ul class="d-flex flex-column">
+            <li class="size-2">Baptème de l'air</li>
+            <div class="custom-select mt-1">
+              <select class="w-75">
+                <option value="" disabled selected>Formule</option>
+                <option value="">Solo</option>
+                <option value="">Duo</option>
+              </select>
+            </div>
+            <div class="custom-select mt-1">
+              <select class="w-100">
+                <option value="" disabled selected>Temps de prestation</option>
+                <option value>20 minutes</option>
+                <option value>30 minutes</option>
+              </select>
+            </div>
+            <div class="custom-select mt-1">
+              <select class="w-75">
+                <option value="" disabled selected>Date</option>
+              </select>
+            </div>
+          </ul>
+          <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme">
+            <div>
+              <p class="m-0"><span class="non-strong-text">à partir de</span><strong
+                  class="strong-text fst-italic">95,00
+                  €</strong></p>
+            </div>
+            <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
+          </div>
         </div>
-        <div class="w-25 carte_avion">
-          aaaa
+        <div class=" carte_avion  w-25 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
+          <img class="img_card_bapteme mx-auto rounded-3 object-fit-cover" src="img/cours-5.jpg" alt="ULM multiexiale">
+          <h5 class="font-wheight-bapteme">ULM Multiexiale</h5>
+          <ul class="d-flex flex-column">
+            <li class="size-2">Baptème de l'air</li>
+            <li class="size-2">Formule Solo</li>
+            <li class="size-2">20 minutes de prestation</li>
+            <div class="custom-select mt-1">
+              <select class="w-75">
+                <option value="" disabled selected>Date</option>
+              </select>
+            </div>
+          </ul>
+          <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme w-75">
+            <p class="m-0"><strong class="fst-italic">95,00 €</strong></p>
+            <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
+          </div>
         </div>
-        <div class="w-25 carte_avion">
-          bbb
+        <div class=" carte_avion  w-25 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
+          <img class="img_card_bapteme mx-auto rounded-3 object-fit-cover" src="img/slide-3.jpg" alt="ULM autogire">
+          <h5 class="font-wheight-bapteme">ULM Autogire</h5>
+          <ul class="d-flex flex-column">
+            <li class="size-2">Baptème de l'air</li>
+            <li class="size-2">Formule Solo</li>
+            <div class="custom-select mt-1">
+              <select class="w-100">
+                <option value="" disabled selected>Temps de prestation</option>
+                <option value>20 minutes</option>
+                <option value>45 minutes</option>
+              </select>
+            </div>
+            <div class="custom-select mt-1">
+              <select class="w-75">
+                <option value="" disabled selected>Date</option>
+              </select>
+            </div>
+          </ul>
+          <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme">
+            <div>
+              <p class="m-0"><span class="non-strong-text">à partir de</span><strong
+                  class="strong-text fst-italic">95,00
+                  €</strong></p>
+            </div>
+            <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
+          </div>
         </div>
       </div>
     </article>
+  </section>
+  <h3 class="font text-white text-center mt-5 size-3">N’hésitez pas à regarder dans les nuages</h3>
+  <section class="font">
+    <h3 class="text-white text-center mt-5 size-3">Avis Clients</h3>
+    <article class="w-50 mx-auto avis_clients mt-4">
+      <div class="d-flex flex-row">
+        <div class="w-25">
+          <p class="fw-bold fs-4">Bessie Cooper</p>
+          <p class="fs-5">ULM Multiaxiale</p>
+        </div>
+        <div class="w-75">
+          <img src="" alt="stars">
+          <img src="" alt="stars">
+          <img src="" alt="stars">
+          <img src="" alt="stars">
+          <img src="" alt="stars">
+        </div>
+      </div>
+      <div class="size-2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto recusandae sint sunt sapiente porro provident
+        quas doloribus ex odit pariatur ab deleniti, reiciendis ipsam iste facere distinctio nihil facilis assumenda
+        ipsa repellendus mollitia laboriosam rem! In tempore repellendus, autem, iusto quos sunt molestiae fugit
+        delectus enim libero beatae, pariatur inventore facilis sapiente. Amet, repudiandae nisi a eveniet, rerum
+        reprehenderit voluptatem dolor, qui cum suscipit soluta. Aliquid dolorum reprehenderit laboriosam commodi
+        quisquam, quibusdam et vero earum quasi non inventore quia fugiat illo aperiam consequatur quidem vel deleniti
+        dignissimos nam quas excepturi eius nesciunt provident dolorem? Quae similique iure culpa soluta fugiat!
+      </div>
+    </article>
+  </section>
+
+  <section id="formation" class="w-100">
+    <h2 class="text-white text-center">FORMATIONS</h2>
+    <div class="w-100 h-100 d-flex flex-row justify-content-around align-items-center mt-5">
+      <article
+        class="carte_avion2 w-25 h-100 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
+        <h3 class="mt-2 size-3">Brevet de pilote</h3>
+        <div class="w-75 rounded-5 barre-horizontale"></div>
+        <ul class="mt-2 size-2">
+          <li>Validité 1 an</li>
+          <li>Cours illimités</li>
+          <li>Formation à pieds ou en chariot</li>
+          <li>Prêt du matériel</li>
+          <li>10 vols minimum</li>
+          <li>Cours théorique</li>
+          <li>1 cours de perfectionnement</li>
+          <li>Brevet d'Initiation Aéronotique (BIA)</li>
+        </ul>
+        <div class="d-flex flex-row justify-content-around align-items-center w-100">
+          <p class="color-red-bapteme fst-italic m-0 size-3">1200 €</p>
+          <input type="button" value="S'inscrire" class="button_reserver_bapteme px-2 text-white">
+        </div>
+      </article>
+
+      <article
+        class="carte_avion2 w-25 h-100 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
+        <h3 class="mt-2 size-3">Emport de passager</h3>
+        <div class="w-75 rounded-5 barre-horizontale"></div>
+        <ul class="mt-2 size-2">
+          <li>Durée de 6h à 8h</li>
+          <li>Évaluation préalable du pilote</li>
+          <li>Formation biplace à pied ou en chariot</li>
+          <li>Avec lle matériel du stagiaire</li>
+          <li>4 vols minimum</li>
+          <li>Sensibilisation aux facteurs humains</li>
+        </ul>
+        <div class="d-flex flex-row justify-content-around align-items-center w-100">
+          <p class="color-red-bapteme fst-italic m-0 size-3">450 €</p>
+          <input type="button" value="S'inscrire" class="button_reserver_bapteme px-2 text-white">
+        </div>
+      </article>
+
+      <article
+        class="carte_avion2 w-25 h100 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
+        <h3 class="mt-2 size-3">Stage d'initiation</h3>
+        <div class="w-75 rounded-5 barre-horizontale"></div>
+        <ul class="mt-2 size-2">
+          <li>Durée 3h</li>
+          <li>Présentation de l'aéronef et notion de mécanique de vol</li>
+          <li>Gonflage et pilotage d'un parapente au sol</li>
+          <li>Vol de 20 min en biplace</li>
+          <li>Initiation au pilotage</li>
+        </ul>
+        <div class="d-flex flex-row justify-content-around align-items-center w-100">
+          <p class="font fst-italic color-red-bapteme size-3 m-0">180 €</p>
+          <input type="button" value="S'inscrire" class="button_reserver_bapteme px-2 text-white">
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="font">
+    <h3 class="text-white text-center mt-5 size-3">Avis Clients</h3>
+    <article class="w-50 mx-auto avis_clients mt-4">
+      <div class="d-flex flex-row">
+        <div class="w-25">
+          <p class="fw-bold fs-4">Bessie Cooper</p>
+          <p class="fs-5">ULM Multiaxiale</p>
+        </div>
+        <div class="w-75">
+          <img src="" alt="stars">
+          <img src="" alt="stars">
+          <img src="" alt="stars">
+          <img src="" alt="stars">
+          <img src="" alt="stars">
+        </div>
+      </div>
+      <div class="size-2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto recusandae sint sunt sapiente porro provident
+        quas doloribus ex odit pariatur ab deleniti, reiciendis ipsam iste facere distinctio nihil facilis assumenda
+        ipsa repellendus mollitia laboriosam rem! In tempore repellendus, autem, iusto quos sunt molestiae fugit
+        delectus enim libero beatae, pariatur inventore facilis sapiente. Amet, repudiandae nisi a eveniet, rerum
+        reprehenderit voluptatem dolor, qui cum suscipit soluta. Aliquid dolorum reprehenderit laboriosam commodi
+        quisquam, quibusdam et vero earum quasi non inventore quia fugiat illo aperiam consequatur quidem vel deleniti
+        dignissimos nam quas excepturi eius nesciunt provident dolorem? Quae similique iure culpa soluta fugiat!
+      </div>
+    </article>
+  </section>
+
+  <section id="formation2">
+    <h2 class="text-white text-center">Forfaits</h2>
+    <div class="d-flex flex-row justify-content-around align-items-center mt-5 color_meteo hauteur_container">
+
+      <article class="carte_avion2 w-25 hauteur_card">
+        <h2 class="font text-center mt-3 size-5">500 €</h2>
+        <div class="w-75 rounded-5 barre-horizontale mx-auto"></div>
+        <h4 class="text-center mt-3">Forfait initiation</h4>
+        <ul class=" mt-3">
+          <li>Idéal pour s'initier au pilotage</li>
+          <li class="mt-2">5 vols avec un instructeur du club</li>
+          <li class="mt-2">5h de vol</li>
+          <li class="mt-2">Idéal pour se faire une idée</li>
+          <li class="mt-2">Essence comprise</li>
+        </ul>
+        <div class="d-flex justify-content-center my-auto">
+          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white w-50 fs-4">
+        </div>
+      </article>
+
+      <article class="carte_avion2 w-25 hauteur_card">
+        <h2 class="font text-center mt-3 size-5">90 €/h</h2>
+        <div class="w-75 rounded-5 barre-horizontale mx-auto"></div>
+        <h4 class="text-center mt-3">Forfait membre</h4>
+        <ul class=" mt-3">
+          <li>Prix pour les 10 premières heures</li>
+          <li class="mt-2">Cotisation club 105 €</li>
+          <li class="mt-2">Cotisation moins de 25 ans 60 €</li>
+          <li class="mt-2">Assurance comprise</li>
+          <li class="mt-2">Avoir licence FFFPLUM ou FFW</li>
+        </ul>
+        <div class="d-flex justify-content-center my-auto">
+          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white w-50 fs-4">
+        </div>
+      </article>
+
+      <article class="carte_avion2 w-25 hauteur_card">
+        <h2 class="font text-center mt-3 size-5">64 €/h</h2>
+        <div class="w-75 rounded-5 barre-horizontale mx-auto"></div>
+        <h4 class="text-center mt-3">Forfait membre +40h</h4>
+        <ul class=" mt-3">
+          <li>+10 = 75 € par heure</li>
+          <li class="mt-2">+20 = 71 € par heure</li>
+          <li class="mt-2">+30 = 67 € par heure</li>
+          <li class="mt-2">Moins de 25 ans = -20%</li>
+          <li class="mt-2">Avoir licence FFFPLUM ou FFW</li>
+        </ul>
+        <div class="d-flex justify-content-center my-auto">
+          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white w-50 fs-4">
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <section class="font">
+    <h3 class="text-white text-center mt-5 size-3">Avis Clients</h3>
+    <article class="w-50 mx-auto avis_clients mt-4">
+      <div class="d-flex flex-row">
+        <div class="w-25">
+          <p class="fw-bold fs-4">Bessie Cooper</p>
+          <p class="fs-5">ULM Multiaxiale</p>
+        </div>
+        <div class="w-75">
+          <img src="" alt="stars">
+          <img src="" alt="stars">
+          <img src="" alt="stars">
+          <img src="" alt="stars">
+          <img src="" alt="stars">
+        </div>
+      </div>
+      <div class="size-2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto recusandae sint sunt sapiente porro provident
+        quas doloribus ex odit pariatur ab deleniti, reiciendis ipsam iste facere distinctio nihil facilis assumenda
+        ipsa repellendus mollitia laboriosam rem! In tempore repellendus, autem, iusto quos sunt molestiae fugit
+        delectus enim libero beatae, pariatur inventore facilis sapiente. Amet, repudiandae nisi a eveniet, rerum
+        reprehenderit voluptatem dolor, qui cum suscipit soluta. Aliquid dolorum reprehenderit laboriosam commodi
+        quisquam, quibusdam et vero earum quasi non inventore quia fugiat illo aperiam consequatur quidem vel deleniti
+        dignissimos nam quas excepturi eius nesciunt provident dolorem? Quae similique iure culpa soluta fugiat!
+      </div>
+    </article>
+  </section>
+
+  <br><br><br><br><br>
+  <section>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eligendi dolorum laborum distinctio similique
+    culpa ut aut excepturi est, iste soluta facere nostrum voluptas facilis porro adipisci ipsam eum. Id earum
+    veritatis, natus fuga tempora a ipsam ullam, quis perspiciatis doloremque placeat nemo esse ea maxime odit magnam
+    corrupti nostrum alias necessitatibus error sint illum possimus autem? Id praesentium nobis impedit quasi
+    obcaecati
+    odit maxime magnam saepe molestias quibusdam aperiam vero recusandae illum voluptates aspernatur, iusto qui, eius
+    eum tempore facere officia voluptatem? Ipsum quisquam modi eum perferendis est et provident, illum recusandae sint
+    doloremque quos aspernatur officiis, quae laboriosam delectus, facere quasi quo quod aliquid blanditiis vitae.
+    Obcaecati, delectus omnis qui iusto nesciunt esse amet assumenda. Iusto voluptas provident voluptate, nobis
+    similique natus officiis assumenda molestias quae, voluptatum illum eum exercitationem blanditiis commodi,
+    corporis
+    alias cupiditate iste ducimus unde? Assumenda minima, quas quibusdam quisquam optio dolore perferendis laborum eos
+    voluptatem, consectetur aliquam id? Temporibus laborum nostrum tempora consequuntur, quo, voluptate id sequi, enim
+    quisquam libero autem? Quisquam aspernatur sequi rerum molestiae sapiente iure fugiat magni voluptas praesentium
+    quibusdam, quis quo voluptatum cumque exercitationem illo tenetur adipisci sint corrupti nostrum natus saepe,
+    placeat sed neque! Error veniam magni assumenda blanditiis.
   </section>
 
   <script src="js/index.js"></script>
