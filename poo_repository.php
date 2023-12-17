@@ -68,3 +68,4 @@ class Repository extends Model {
 	public function delete(int $id){
 		return $this->requete("DELETE FROM {$this->table} WHERE id = ?", [$id]);
 }
+}
