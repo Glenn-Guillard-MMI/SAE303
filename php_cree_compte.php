@@ -35,6 +35,7 @@ try {
     <input type="text" name="nom" required id="nom" onkeyup="verification_nom()">
     <input type="text" name="prenom" required id='prenom' onkeyup="verification_prenom()">
     <input type="mail" name="email" required id="email" onkeyup="verification_mail()">
+    <input type="text" name="num" required id="num" onkeyup="verification_num()">
     <!-- <input type="password" name="mdp"> !-->
     <input type="submit" disabled id="push">
 </form>
