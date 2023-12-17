@@ -22,8 +22,18 @@ function verification_prenom() {
   button_disable_abled();
 }
 
+function verification_mail() {
+  const mail = document.getElementById("email").value;
+
+  if (mail !== "" && mail.indexOf("@") !== -1 && mail.indexOf(".") !== -1) {
+    verif_mail = true;
+  } else {
+    verif_mail = false;
+  }
+  button_disable_abled();
+}
 function button_disable_abled() {
-  if (verif_nom && verif_prenom) {
+  if (verif_mail && verif_prenom && verif_nom) {
     document.getElementById("push").disabled = false;
   } else {
     document.getElementById("push").disabled = true;

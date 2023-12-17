@@ -34,7 +34,7 @@ try {
 <form action="_set_up_compt.php" method="post">
     <input type="text" name="nom" required id="nom" onkeyup="verification_nom()">
     <input type="text" name="prenom" required id='prenom' onkeyup="verification_prenom()">
-    <input type="mail" name="email" required id="email">
+    <input type="mail" name="email" required id="email" onkeyup="verification_mail()">
     <!-- <input type="password" name="mdp"> !-->
     <input type="submit" disabled id="push">
 </form>
