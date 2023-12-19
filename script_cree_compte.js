@@ -2,6 +2,7 @@ let verif_nom = false;
 let verif_prenom = false;
 let verif_mail = false;
 let verif_num = false;
+let verif_password = false;
 
 function verification_nom() {
   const nom = document.getElementById("nom").value;
@@ -9,6 +10,16 @@ function verification_nom() {
     verif_nom = true;
   } else {
     verif_nom = false;
+  }
+  button_disable_abled();
+}
+
+function verification_password() {
+  const password = document.getElementById("password").value;
+  if (password !== "") {
+    verif_password = true;
+  } else {
+    verif_password = false;
   }
   button_disable_abled();
 }
@@ -76,18 +87,15 @@ function verification_num() {
     verification_num();
   }
   if (num.length != 10) {
-    console.log(num.length);
     verif_num = false;
   } else {
-    console.log(num.length);
-    console.log("yeah");
-
     verif_num = true;
   }
   button_disable_abled();
 }
+
 function button_disable_abled() {
-  if (verif_mail && verif_prenom && verif_nom && verif_num) {
+  if (verif_mail && verif_prenom && verif_nom && verif_num && verif_password) {
     document.getElementById("push").disabled = false;
   } else {
     document.getElementById("push").disabled = true;
