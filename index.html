@@ -1,4 +1,3 @@
-
 <!--
 
   Copyright by Thomas Henry, Valentin Lamour, Jérôme Fabre et Glenn Guillard.
@@ -16,6 +15,8 @@
   <link rel="stylesheet" href="css/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
     rel="stylesheet">
@@ -63,6 +64,18 @@
       </div>
     </section>
   </nav>
+
+  <section id="cookie" class="d-flex flex-column position-fixed top-50 w-25">
+    <article>
+      Ce site utilise des cookies, le fait de ne pas consentir ou de retirer son consentement peut avoir un effet
+      négatif sur certaines caractéristiques et fonctions.
+    </article>
+    <article class="d-flex flex-row">
+      <input type="button" value="TOUT REFUSER">
+      <input type="button" value="TOUT ACCEPTER">
+    </article>
+  </section>
+
   <section id="backToTop">
     <a href="#"><img id="fleche_haut" src="img/SVG/back_to_top.svg" alt="bouton remonte en haut de la page"></a>
   </section>
@@ -165,10 +178,10 @@
                 </select>
               </div>
               <div class="mt-1 mx-auto w-100">
-                <input class="w-100" type="date">
+                <input class="test-date w-100" type="text" placeholder="Choisir une date .." readonly="readonly">
               </div>
               <div class="mt-1 mb-5">
-                <input class="w-100" type="time">
+                <input class="test-time w-100" type="text" placeholder="Choisir une heure .." readonly="readonly">
               </div>
             </div>
             <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme">
@@ -182,52 +195,34 @@
           </div>
         </div>
 
-        <div class=" carte_avion  w-25 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
+        <div class="carte_avion w-25 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
           <div class="w-75">
-            <img class="img_card_bapteme mx-auto rounded-3 object-fit-cover" src="img/cours-5.jpg"
-              alt="ULM multiexiale">
-            <h5 class="font-wheight-bapteme text-center mt-2">ULM Multiexiale</h5>
-            <div class="d-flex flex-column">
-              <ul>
-                <li class="size-2">Baptème de l'air</li>
-                <li class="size-2">Formule Solo</li>
-                <li class="size-2">20 minutes de prestation</li>
-              </ul>
-              <div class="mt-1 mx-auto w-100">
-                <input class="w-100" type="date">
-              </div>
-              <div class="mt-1 mx-auto w-100 mb-5">
-                <input class="w-100" type="time">
-              </div>
-            </div>
-            <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme w-75">
-              <p class="m-0"><strong class="fst-italic">95,00 €</strong></p>
-              <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
-            </div>
-          </div>
-        </div>
-
-        <div class=" carte_avion  w-25 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
-          <div class="w-75">
-            <img class="img_card_bapteme mx-auto rounded-3 object-fit-cover" src="img/slide-3.jpg" alt="ULM autogire">
-            <h5 class="font-wheight-bapteme text-center mt-2">ULM Autogire</h5>
+            <img class="img_card_bapteme mx-auto mt-2 rounded-3 object-fit-cover" src="img/pendulaire.jpg"
+              alt="ULM pendulaire">
+            <h5 class="font-wheight-bapteme text-center mt-2">ULM Pendulaire</h5>
             <div class="d-flex flex-column mb-3">
               <ul>
                 <li class="size-2">Baptème de l'air</li>
-                <li class="size-2">Formule Solo</li>
               </ul>
-              <div class="custom-select mt-1">
+              <div class="custom-select mt-1 mx-auto w-100">
+                <select class="w-100">
+                  <option value="" disabled selected>Formule</option>
+                  <option value="">Solo</option>
+                  <option value="">Duo</option>
+                </select>
+              </div>
+              <div class="custom-select mt-1 mx-auto w-100">
                 <select class="w-100">
                   <option value="" disabled selected>Temps de prestation</option>
                   <option value>20 minutes</option>
-                  <option value>45 minutes</option>
+                  <option value>30 minutes</option>
                 </select>
               </div>
-              <div class="mt-1">
-                <input class="w-100" type="date">
+              <div class="mt-1 mx-auto w-100">
+                <input class="test-date w-100" type="text" placeholder="Choisir une date .." readonly="readonly">
               </div>
               <div class="mt-1 mb-5">
-                <input class="w-100" type="time">
+                <input class="test-time w-100" type="text" placeholder="Choisir une heure .." readonly="readonly">
               </div>
             </div>
             <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme">
@@ -240,6 +235,48 @@
             </div>
           </div>
         </div>
+
+        <div class="carte_avion w-25 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
+          <div class="w-75">
+            <img class="img_card_bapteme mx-auto mt-2 rounded-3 object-fit-cover" src="img/pendulaire.jpg"
+              alt="ULM pendulaire">
+            <h5 class="font-wheight-bapteme text-center mt-2">ULM Pendulaire</h5>
+            <div class="d-flex flex-column mb-3">
+              <ul>
+                <li class="size-2">Baptème de l'air</li>
+              </ul>
+              <div class="custom-select mt-1 mx-auto w-100">
+                <select class="w-100">
+                  <option value="" disabled selected>Formule</option>
+                  <option value="">Solo</option>
+                  <option value="">Duo</option>
+                </select>
+              </div>
+              <div class="custom-select mt-1 mx-auto w-100">
+                <select class="w-100">
+                  <option value="" disabled selected>Temps de prestation</option>
+                  <option value>20 minutes</option>
+                  <option value>30 minutes</option>
+                </select>
+              </div>
+              <div class="mt-1 mx-auto w-100">
+                <input class="test-date w-100" type="text" placeholder="Choisir une date .." readonly="readonly">
+              </div>
+              <div class="mt-1 mb-5">
+                <input class="test-time w-100" type="text" placeholder="Choisir une heure .." readonly="readonly">
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme">
+              <div>
+                <p class="m-0"><span class="non-strong-text">à partir de</span><strong
+                    class="strong-text fst-italic">95,00
+                    €</strong></p>
+              </div>
+              <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
+            </div>
+          </div>
+        </div>
+
       </div>
     </article>
   </section>
@@ -435,7 +472,7 @@
       <div class="size-2">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto recusandae sint sunt sapiente porro provident
         quas doloribus ex odit pariatur ab deleniti, reiciendis ipsam iste facere distinctio nihil facilis assumenda
-        ipsa repellendus mollitia labofbsqjkfriosam rem! In tempore repellendus, autem, iusto quos sunt molestiae fugit
+        ipsa repellendus mollitia laboriosam rem! In tempore repellendus, autem, iusto quos sunt molestiae fugit
         delectus enim libero beatae, pariatur inventore facilis sapiente. Amet, repudiandae nisi a eveniet, rerum
         reprehenderit voluptatem dolor, qui cum suscipit soluta. Aliquid dolorum reprehenderit laboriosam commodi
         quisquam, quibusdam et vero earum quasi non inventore quia fugiat illo aperiam consequatur quidem vel deleniti
@@ -443,7 +480,6 @@
       </div>
     </article>
   </section>
-
   <br><br><br><br><br>
   <section>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eligendi dolorum laborum distinctio similique
@@ -465,7 +501,20 @@
   </section>
 
   <script src="js/index.js"></script>
-  <script src="js/bootstrap.min.js">
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    flatpickr(".test-time", {
+      enableTime: true,
+      noCalendar: true,
+      time_24hr: true,
+      dateFormat: "H:i",
+      minuteIncrement: 60,
+      minTime: "8:00",
+      maxTime: "18:00"
+    });
+    flatpickr(".test-date", {
+      minDate: new Date().fp_incr(7)
+    });
   </script>
 </body>
 

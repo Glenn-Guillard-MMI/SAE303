@@ -324,7 +324,7 @@ h2 {
     margin-right: 0.5vw;
 }
 
-input[type="date"],input[type="time"] {
+input[type="text"] {
     border: 1px solid #002962;
     border-radius: 8px;
     padding: 0.2em;
