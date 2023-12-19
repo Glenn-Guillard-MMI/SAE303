@@ -16,10 +16,12 @@ function commence() {
   });
 }
 
-/*
-var largeurEcran = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-var hauteurEcran = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var backToTop = document.getElementById('backToTop'),
+  fleche = document.getElementById('fleche_haut');
 
-// Affichez la taille de l'écran dans la console
-console.log('Largeur de l\'écran : ' + largeurEcran + ' pixels');
-console.log('Hauteur de l\'écran : ' + hauteurEcran + ' pixels');*/
+backToTop.addEventListener('mouseover', function () {
+  fleche.style.width = '3.5em';
+});
+backToTop.addEventListener('mouseout', function () {
+  fleche.style.width = '4em';
+});

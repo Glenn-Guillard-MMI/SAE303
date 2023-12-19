@@ -1,3 +1,11 @@
+
+<!--
+
+  Copyright by Thomas Henry, Valentin Lamour, Jérôme Fabre et Glenn Guillard.
+  Tous droits réservés sur le site par ces membres.
+
+-->
+
 <!DOCTYPE html>
 <html lang=fr">
 
@@ -56,11 +64,11 @@
     </section>
   </nav>
   <section id="backToTop">
-    <a href="#"><img src="img/SVG/back_to_top.svg" alt="bouton remonte en haut de la page"></a>
+    <a href="#"><img id="fleche_haut" src="img/SVG/back_to_top.svg" alt="bouton remonte en haut de la page"></a>
   </section>
   <section class="d-flex flex-column justify-content-center align-items-center m-4">
     <h1 class="text-white" onclick="commence()">Bienvenue</h1>
-    <article id="font-local-header" class="text-white h6 font">à l'aéroclub de Frotey-les-Lure</article>
+    <article id="font-local-header" class="text-white h6 font">à l'Aéro Club de Frotey-les-Lure</article>
   </section>
   <div id="container_avion">
     <img id="avion_helice" src="img/avion.gif" alt="gif de l'animation de l'avion">
@@ -71,10 +79,10 @@
       <img class="w-100" src="img/SVG/nuage2fin.svg" alt="">
     </section>
     <section class="bg-white hauteur text-dark z-3">
-      <h3 class="text-center font color_meteo size-3">Météo à Frotey-les-Lure</h3>
+      <h3 class="text-center font color_meteo size-3 mb-4">Météo à Frotey-les-Lure</h3>
       <article class="bg-body w-75 h-75 m-auto rounded-4 font meteo">TEST</article>
-      <p class="color_meteo text-center font mt-3 size-2">Pour plus d’informations rendez vous sur le site <a
-          class="text-decoration-none fw-bold" target="_blank"
+      <p id="width_meteo_lien" class="color_meteo text-center font mt-3 size-2 overflow-hidden mx-auto">Pour plus
+        d’informations rendez vous sur le site <a class="text-decoration-none fw-bold meteo_france" target="_blank"
           href="https://vigilance.meteofrance.fr/fr/haute-saone">vigilance.meteofrance.fr</a></p>
     </section>
     <section class="">
@@ -132,90 +140,110 @@
     <h6 class="font text-white text-center mt-3">Notre association possède que <strong>3 types d’appareil </strong></h6>
     <article class="container-fluid font mt-5">
       <div class="d-flex justify-content-around">
+
         <div class="carte_avion w-25 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
-          <img class="img_card_bapteme mx-auto rounded-3 object-fit-cover" src="img/pendulaire.jpg"
-            alt="ULM pendulaire">
-          <h5 class="font-wheight-bapteme">ULM Pendulaire</h5>
-          <ul class="d-flex flex-column">
-            <li class="size-2">Baptème de l'air</li>
-            <div class="custom-select mt-1">
-              <select class="w-75">
-                <option value="" disabled selected>Formule</option>
-                <option value="">Solo</option>
-                <option value="">Duo</option>
-              </select>
+          <div class="w-75">
+            <img class="img_card_bapteme mx-auto mt-2 rounded-3 object-fit-cover" src="img/pendulaire.jpg"
+              alt="ULM pendulaire">
+            <h5 class="font-wheight-bapteme text-center mt-2">ULM Pendulaire</h5>
+            <div class="d-flex flex-column mb-3">
+              <ul>
+                <li class="size-2">Baptème de l'air</li>
+              </ul>
+              <div class="custom-select mt-1 mx-auto w-100">
+                <select class="w-100">
+                  <option value="" disabled selected>Formule</option>
+                  <option value="">Solo</option>
+                  <option value="">Duo</option>
+                </select>
+              </div>
+              <div class="custom-select mt-1 mx-auto w-100">
+                <select class="w-100">
+                  <option value="" disabled selected>Temps de prestation</option>
+                  <option value>20 minutes</option>
+                  <option value>30 minutes</option>
+                </select>
+              </div>
+              <div class="mt-1 mx-auto w-100">
+                <input class="w-100" type="date">
+              </div>
+              <div class="mt-1 mb-5">
+                <input class="w-100" type="time">
+              </div>
             </div>
-            <div class="custom-select mt-1">
-              <select class="w-100">
-                <option value="" disabled selected>Temps de prestation</option>
-                <option value>20 minutes</option>
-                <option value>30 minutes</option>
-              </select>
+            <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme">
+              <div>
+                <p class="m-0"><span class="non-strong-text">à partir de</span><strong
+                    class="strong-text fst-italic">95,00
+                    €</strong></p>
+              </div>
+              <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
             </div>
-            <div class="custom-select mt-1">
-              <select class="w-75">
-                <option value="" disabled selected>Date</option>
-              </select>
-            </div>
-          </ul>
-          <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme">
-            <div>
-              <p class="m-0"><span class="non-strong-text">à partir de</span><strong
-                  class="strong-text fst-italic">95,00
-                  €</strong></p>
-            </div>
-            <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
           </div>
         </div>
+
         <div class=" carte_avion  w-25 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
-          <img class="img_card_bapteme mx-auto rounded-3 object-fit-cover" src="img/cours-5.jpg" alt="ULM multiexiale">
-          <h5 class="font-wheight-bapteme">ULM Multiexiale</h5>
-          <ul class="d-flex flex-column">
-            <li class="size-2">Baptème de l'air</li>
-            <li class="size-2">Formule Solo</li>
-            <li class="size-2">20 minutes de prestation</li>
-            <div class="custom-select mt-1">
-              <select class="w-75">
-                <option value="" disabled selected>Date</option>
-              </select>
+          <div class="w-75">
+            <img class="img_card_bapteme mx-auto rounded-3 object-fit-cover" src="img/cours-5.jpg"
+              alt="ULM multiexiale">
+            <h5 class="font-wheight-bapteme text-center mt-2">ULM Multiexiale</h5>
+            <div class="d-flex flex-column">
+              <ul>
+                <li class="size-2">Baptème de l'air</li>
+                <li class="size-2">Formule Solo</li>
+                <li class="size-2">20 minutes de prestation</li>
+              </ul>
+              <div class="mt-1 mx-auto w-100">
+                <input class="w-100" type="date">
+              </div>
+              <div class="mt-1 mx-auto w-100 mb-5">
+                <input class="w-100" type="time">
+              </div>
             </div>
-          </ul>
-          <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme w-75">
-            <p class="m-0"><strong class="fst-italic">95,00 €</strong></p>
-            <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
+            <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme w-75">
+              <p class="m-0"><strong class="fst-italic">95,00 €</strong></p>
+              <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
+            </div>
           </div>
         </div>
+
         <div class=" carte_avion  w-25 d-flex justify-content-around align-items-center flex-column color-blue-bapteme">
-          <img class="img_card_bapteme mx-auto rounded-3 object-fit-cover" src="img/slide-3.jpg" alt="ULM autogire">
-          <h5 class="font-wheight-bapteme">ULM Autogire</h5>
-          <ul class="d-flex flex-column">
-            <li class="size-2">Baptème de l'air</li>
-            <li class="size-2">Formule Solo</li>
-            <div class="custom-select mt-1">
-              <select class="w-100">
-                <option value="" disabled selected>Temps de prestation</option>
-                <option value>20 minutes</option>
-                <option value>45 minutes</option>
-              </select>
+          <div class="w-75">
+            <img class="img_card_bapteme mx-auto rounded-3 object-fit-cover" src="img/slide-3.jpg" alt="ULM autogire">
+            <h5 class="font-wheight-bapteme text-center mt-2">ULM Autogire</h5>
+            <div class="d-flex flex-column mb-3">
+              <ul>
+                <li class="size-2">Baptème de l'air</li>
+                <li class="size-2">Formule Solo</li>
+              </ul>
+              <div class="custom-select mt-1">
+                <select class="w-100">
+                  <option value="" disabled selected>Temps de prestation</option>
+                  <option value>20 minutes</option>
+                  <option value>45 minutes</option>
+                </select>
+              </div>
+              <div class="mt-1">
+                <input class="w-100" type="date">
+              </div>
+              <div class="mt-1 mb-5">
+                <input class="w-100" type="time">
+              </div>
             </div>
-            <div class="custom-select mt-1">
-              <select class="w-75">
-                <option value="" disabled selected>Date</option>
-              </select>
+            <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme">
+              <div>
+                <p class="m-0"><span class="non-strong-text">à partir de</span><strong
+                    class="strong-text fst-italic">95,00
+                    €</strong></p>
+              </div>
+              <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
             </div>
-          </ul>
-          <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme">
-            <div>
-              <p class="m-0"><span class="non-strong-text">à partir de</span><strong
-                  class="strong-text fst-italic">95,00
-                  €</strong></p>
-            </div>
-            <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
           </div>
         </div>
       </div>
     </article>
   </section>
+
   <h3 class="font text-white text-center mt-5 size-3">N’hésitez pas à regarder dans les nuages</h3>
   <section class="font">
     <h3 class="text-white text-center mt-5 size-3">Avis Clients</h3>
@@ -264,7 +292,7 @@
         </ul>
         <div class="d-flex flex-row justify-content-around align-items-center w-100">
           <p class="color-red-bapteme fst-italic m-0 size-3">1200 €</p>
-          <input type="button" value="S'inscrire" class="button_reserver_bapteme px-2 text-white">
+          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white">
         </div>
       </article>
 
@@ -282,7 +310,7 @@
         </ul>
         <div class="d-flex flex-row justify-content-around align-items-center w-100">
           <p class="color-red-bapteme fst-italic m-0 size-3">450 €</p>
-          <input type="button" value="S'inscrire" class="button_reserver_bapteme px-2 text-white">
+          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white">
         </div>
       </article>
 
@@ -299,7 +327,7 @@
         </ul>
         <div class="d-flex flex-row justify-content-around align-items-center w-100">
           <p class="font fst-italic color-red-bapteme size-3 m-0">180 €</p>
-          <input type="button" value="S'inscrire" class="button_reserver_bapteme px-2 text-white">
+          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white">
         </div>
       </article>
     </div>
@@ -341,15 +369,15 @@
         <h2 class="font text-center mt-3 size-5">500 €</h2>
         <div class="w-75 rounded-5 barre-horizontale mx-auto"></div>
         <h4 class="text-center mt-3">Forfait initiation</h4>
-        <ul class=" mt-3">
+        <ul class="px-5 mt-3">
           <li>Idéal pour s'initier au pilotage</li>
-          <li class="mt-2">5 vols avec un instructeur du club</li>
-          <li class="mt-2">5h de vol</li>
-          <li class="mt-2">Idéal pour se faire une idée</li>
-          <li class="mt-2">Essence comprise</li>
+          <li class="mt-3">5 vols avec un instructeur du club</li>
+          <li class="mt-3">5h de vol</li>
+          <li class="mt-3">Idéal pour se faire une idée</li>
+          <li class="mt-3">Essence comprise</li>
         </ul>
-        <div class="d-flex justify-content-center my-auto">
-          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white w-50 fs-4">
+        <div class="d-flex justify-content-center my-auto mt-4">
+          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white w-50 fs-4 mt-4">
         </div>
       </article>
 
@@ -357,15 +385,15 @@
         <h2 class="font text-center mt-3 size-5">90 €/h</h2>
         <div class="w-75 rounded-5 barre-horizontale mx-auto"></div>
         <h4 class="text-center mt-3">Forfait membre</h4>
-        <ul class=" mt-3">
+        <ul class="mt-3 px-5">
           <li>Prix pour les 10 premières heures</li>
-          <li class="mt-2">Cotisation club 105 €</li>
-          <li class="mt-2">Cotisation moins de 25 ans 60 €</li>
-          <li class="mt-2">Assurance comprise</li>
-          <li class="mt-2">Avoir licence FFFPLUM ou FFW</li>
+          <li class="mt-3">Cotisation club 105 €</li>
+          <li class="mt-3">Cotisation moins de 25 ans 60 €</li>
+          <li class="mt-3">Assurance comprise</li>
+          <li class="mt-3">Avoir licence FFFPLUM ou FFW</li>
         </ul>
-        <div class="d-flex justify-content-center my-auto">
-          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white w-50 fs-4">
+        <div class="d-flex justify-content-center my-auto mt-4">
+          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white w-50 fs-4 mt-4">
         </div>
       </article>
 
@@ -373,15 +401,15 @@
         <h2 class="font text-center mt-3 size-5">64 €/h</h2>
         <div class="w-75 rounded-5 barre-horizontale mx-auto"></div>
         <h4 class="text-center mt-3">Forfait membre +40h</h4>
-        <ul class=" mt-3">
+        <ul class="mt-3 px-5">
           <li>+10 = 75 € par heure</li>
-          <li class="mt-2">+20 = 71 € par heure</li>
-          <li class="mt-2">+30 = 67 € par heure</li>
-          <li class="mt-2">Moins de 25 ans = -20%</li>
-          <li class="mt-2">Avoir licence FFFPLUM ou FFW</li>
+          <li class="mt-3">+20 = 71 € par heure</li>
+          <li class="mt-3">+30 = 67 € par heure</li>
+          <li class="mt-3">Moins de 25 ans = -20%</li>
+          <li class="mt-3">Avoir licence FFFPLUM ou FFW</li>
         </ul>
-        <div class="d-flex justify-content-center my-auto">
-          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white w-50 fs-4">
+        <div class="d-flex justify-content-center my-auto mt-4">
+          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white w-50 fs-4 mt-4">
         </div>
       </article>
     </div>
@@ -407,7 +435,7 @@
       <div class="size-2">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto recusandae sint sunt sapiente porro provident
         quas doloribus ex odit pariatur ab deleniti, reiciendis ipsam iste facere distinctio nihil facilis assumenda
-        ipsa repellendus mollitia laboriosam rem! In tempore repellendus, autem, iusto quos sunt molestiae fugit
+        ipsa repellendus mollitia labofbsqjkfriosam rem! In tempore repellendus, autem, iusto quos sunt molestiae fugit
         delectus enim libero beatae, pariatur inventore facilis sapiente. Amet, repudiandae nisi a eveniet, rerum
         reprehenderit voluptatem dolor, qui cum suscipit soluta. Aliquid dolorum reprehenderit laboriosam commodi
         quisquam, quibusdam et vero earum quasi non inventore quia fugiat illo aperiam consequatur quidem vel deleniti
