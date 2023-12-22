@@ -1,36 +1,3 @@
-<?php
-require_once "poo_repository.php";
-require_once "poo_models.php";
-
-try {
-	$modele = new Model("adherant");
-
-	$exemple1 = new Repository($modele->getTable());
-
-	$sql = "Select * from ".$modele->getTable().";";
-
-	$resultat = $exemple1->requete($sql);
-
-	foreach ($resultat as $ligne) {
-		echo '<table border=\'1\' width=\'35%\'>';
-		echo '<tr>';
-		echo '<td>';
-		echo $ligne['nom'];
-		echo '</td>';
-		echo '<td>';
-		echo $ligne['prenom'];
-		echo '</td>';
-		echo '<td>';		
-		echo $ligne['mail'];
-		echo '</td>';	
-		echo '</tr>';
-		echo '</table>';
-	}
-	} catch(PDOException $e){
-           die($e->getMessage());
-   }
-
-   ?>
 <form action="_set_up_compt.php" method="post">
     <input type="radio" id="Homme" name="genre" value="Homme" checked /><label for="Homme">Homme</label>
     <input type="radio" id="Femme" name="genre" value="Femme" /><label for="Femme">Femme</label>
@@ -39,8 +6,11 @@ try {
     <input type="text" name="prenom" required id='prenom' onkeyup="verification_prenom()">
     <input type="mail" name="email" required id="email" onkeyup="verification_mail()">
     <input type="text" name="num" required id="num" onkeyup="verification_num()">
+    <input type="date" name="birthday" required id="birthday" onchange="Vbirthday()">
     <input type="password" name="password" required id="password" onkeyup="verification_password()">
+    <input type="number" name="code_addresse" require id="code_addresse" onkeyup="verif_code()">
+    <input type="text" name="physique_addresse" require id="physique_addresse" onkeyup="verif_physique()">
     <input type="submit" disabled id="push">
 </form>
 
-<script src="script_cree_compte.js"></script>
+<script src="js/script_cree_compte.js?time=<?php require 'UID.php'; echo UID(200)?>"></script>
