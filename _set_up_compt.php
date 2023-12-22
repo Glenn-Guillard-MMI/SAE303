@@ -18,7 +18,7 @@ $password = "'".password_hash(($_POST["password"]), PASSWORD_DEFAULT)."'";
 $genre ="'".($_POST["genre"])."'";
 $birthday ="'".($_POST["birthday"])."'";
 $addresse = "'".($_POST["physique_addresse"]).",".($_POST["code_addresse"])."'";
-
+$now  = "'".date("Y-m-d H:i:s")."'";
 
 
 //Lancement de la requete
@@ -26,7 +26,7 @@ try{
 
     $modele = new Model("adherant");
 	$Repository = new Repository($modele->getTable());
-    $sql ="INSERT INTO ". $modele->getTable() ." (autorisation, nom, prenom, mail,civilite, mdp, date_naissance, adresse,num_tel) VALUES (0, $nom, $prenom, $mail,$genre,$password,$birthday,$addresse,$num)";
+    $sql ="INSERT INTO ". $modele->getTable() ." (autorisation, nom, prenom, mail,civilite, mdp, date_naissance, adresse,num_tel,date_crea) VALUES (0, $nom, $prenom, $mail,$genre,$password,$birthday,$addresse,$num,$now)";
     $Repository->requete($sql);
     header("Location: php_cree_compte.php");
 

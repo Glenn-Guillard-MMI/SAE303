@@ -16,7 +16,9 @@ if(isset($_SESSION['erreur'])){
 
 <?php 
 unset($_SESSION['erreur']);
-}?>
+
+}
+?>
 
 
 <script src="js/_crerBapteme.js?time=<?php require 'UID.php'; echo UID(200)?>"></script>
