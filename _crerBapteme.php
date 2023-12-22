@@ -66,7 +66,7 @@ if((!empty($_POST["solo"]) || !empty($_POST["duo"])) && (!empty($_POST["20"]) ||
     require_once "UID.php";
     $folder = "ImageBapteme";
     $img = $_FILES["images"]["tmp_name"];
-    $uniqueFileName = UID(250);
+    $uniqueFileName = UID(50);
     $destinationPath = "$folder/$uniqueFileName.png";
     move_uploaded_file($img, $destinationPath);
     $uniqueFileName="'".$uniqueFileName."'";
