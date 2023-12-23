@@ -67,9 +67,6 @@ h2 {
 
 /*HEADER*/
 nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
     font-family: aeronaves;
     background: linear-gradient(180deg, rgba(0, 41, 98, 0.90) 11.85%, rgba(0, 54, 129, 0.45) 56.64%, rgba(0, 78, 137, 0.20) 76.95%, rgba(0, 78, 137, 0.00) 100%, rgba(0, 78, 137, 0.00) 100%);
 }
@@ -127,4 +124,34 @@ nav {
 .connexion_button:hover {
     border-color: #D4D4D4;
     background-color: #002962;
+}
+
+@media only screen and (max-width: 850px) {
+    #background{
+        width: 40% !important;
+    }
+    label, input[type="password"], input[type="mail"]{
+        font-size: 2vw !important;
+    }
+    span{
+        font-size: 1.2vw !important;
+    }
+    input[type="submit"]{
+        font-size: 1.5vw !important;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    #background{
+        width: 50% !important;
+    }
+    form{
+        width: 75% !important;
+    }
+    span{
+        font-size: 1.6vw !important;
+    }
+    h2{
+        font-size: 2.5vw !important;
+    }
 }
