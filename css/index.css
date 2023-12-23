@@ -555,7 +555,7 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
 
 .slider::before,
 .slider::after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 1)0%, rgba(255, 255, 255, 0) 100%);
+background: linear-gradient(to right, #407BA7 0%, rgba(255, 255, 255, 0) 100%);
     content: ' ';
     height: 100%;
     position: absolute;
@@ -791,7 +791,7 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
     height: 180vh;
 }
 
-#arrive_avion {
+.arrive_avion {
     height: 40vh;
 }
 
@@ -892,11 +892,11 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
 
 .slider3::before,
 .slider3::after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 1)0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, #407BA7 0%, rgba(255, 255, 255, 0) 100%);
     content: ' ';
     height: 100%;
     position: absolute;
-    width: 2.5%;
+    width: 5%;
     z-index: 2;
     margin-top: auto;
 }
