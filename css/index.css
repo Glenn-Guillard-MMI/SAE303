@@ -409,7 +409,6 @@ input[type="text"] {
     border-radius: 15px;
     background: linear-gradient(180deg, #FFF 0%, #CBD5E1 100%);
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
-    height: 20em !important;
 }
 
 .barre-horizontale {
@@ -635,20 +634,20 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
 
 /*event*/
 
-.ml-custom-event{
+.ml-custom-event {
     margin-left: 1.5vw;
 }
 
-.box-shadow-custom-event{
+.box-shadow-custom-event {
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
 }
 
-.barre-custom-event{
+.barre-custom-event {
     height: 0.75vh;
     width: calc();
 }
 
-.button_event{
+.button_event {
     background-color: #fff;
     color: #002962;
     width: fit-content;
@@ -657,7 +656,7 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
 }
 
-.button_event:hover{
+.button_event:hover {
     background-color: #407BA7;
     border-color: #fff;
     color: #fff;
@@ -667,7 +666,7 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
 
 /*avis*/
 
-.avis{
+.avis {
     height: 70vh;
 }
 
@@ -678,17 +677,17 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
     gap: 0.3rem;
     --stroke: #002962;
     --fill: #ffc73a;
-  }
-  
-  .rating input {
+}
+
+.rating input {
     appearance: unset;
-  }
-  
-  .rating label {
+}
+
+.rating label {
     cursor: pointer;
-  }
-  
-  .rating svg {
+}
+
+.rating svg {
     width: 2rem;
     height: 2rem;
     overflow: visible;
@@ -698,19 +697,19 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
     stroke-dasharray: 12;
     animation: idle 4s linear infinite;
     transition: stroke 0.2s, fill 0.5s;
-  }
-  
-  @keyframes idle {
+}
+
+@keyframes idle {
     from {
-      stroke-dashoffset: 24;
+        stroke-dashoffset: 24;
     }
-  }
-  
-  .rating label:hover svg {
+}
+
+.rating label:hover svg {
     stroke: var(--fill);
-  }
-  
-  .rating input:checked ~ label svg {
+}
+
+.rating input:checked~label svg {
     transition: 0s;
     animation: idle 4s linear infinite, yippee 0.75s backwards;
     fill: var(--fill);
@@ -719,55 +718,55 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
     stroke-dasharray: 0;
     stroke-linejoin: miter;
     stroke-width: 8px;
-  }
-  
-  @keyframes yippee {
+}
+
+@keyframes yippee {
     0% {
-      transform: scale(1);
-      fill: var(--fill);
-      fill-opacity: 0;
-      stroke-opacity: 1;
-      stroke: var(--stroke);
-      stroke-dasharray: 10;
-      stroke-width: 1px;
-      stroke-linejoin: bevel;
+        transform: scale(1);
+        fill: var(--fill);
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke: var(--stroke);
+        stroke-dasharray: 10;
+        stroke-width: 1px;
+        stroke-linejoin: bevel;
     }
-  
+
     30% {
-      transform: scale(0);
-      fill: var(--fill);
-      fill-opacity: 0;
-      stroke-opacity: 1;
-      stroke: var(--stroke);
-      stroke-dasharray: 10;
-      stroke-width: 1px;
-      stroke-linejoin: bevel;
+        transform: scale(0);
+        fill: var(--fill);
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke: var(--stroke);
+        stroke-dasharray: 10;
+        stroke-width: 1px;
+        stroke-linejoin: bevel;
     }
-  
+
     30.1% {
-      stroke: var(--fill);
-      stroke-dasharray: 0;
-      stroke-linejoin: miter;
-      stroke-width: 8px;
+        stroke: var(--fill);
+        stroke-dasharray: 0;
+        stroke-linejoin: miter;
+        stroke-width: 8px;
     }
-  
+
     60% {
-      transform: scale(1.2);
-      fill: var(--fill);
+        transform: scale(1.2);
+        fill: var(--fill);
     }
-  }
-  
-.textarea_avis{
+}
+
+.textarea_avis {
     resize: none !important;
     height: 15vh;
     border: 2px solid #002962;
 }
 
-#input_avis{
+#input_avis {
     cursor: text;
 }
 
-.button_avis{
+.button_avis {
     width: fit-content;
     border: 2px solid transparent;
     background-color: rgba(0, 41, 98, 0.80);
@@ -776,43 +775,115 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
     transition: all 0.25s linear;
 }
 
-.button_cookie_refus:hover {
+.button_avis:hover {
     border-color: #D4D4D4;
     background-color: #002962;
     color: #FFF;
     box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.25);
 }
+
 /*avis*/
 
 /*contact*/
 
-#degrade-custom{
+#degrade-custom {
     background: linear-gradient(180deg, #407BA7 0%, #6CA4AD 100%);
     height: 180vh;
 }
 
-#arrive_avion{
+#arrive_avion {
     height: 40vh;
 }
 
-.icon-custom{
+.icon-custom {
     color: white !important;
+    margin-right: 1vw;
 }
 
-.container_contact{
-    width: 45vw !important;
+.container_contact {
+    width: 40vw !important;
 }
 
+.reverse_phone {
+    transform: scaleX(-1);
+}
+
+.margin-custom-contact {
+    margin-left: 10vw;
+}
+
+.margin-r-custom-contact {
+    margin-right: 10vw;
+}
+
+
+.width-custom-contact-input{
+    width: 45%;
+    height: 5vh;
+    cursor: text !important;
+}
+.input-custom-contact {
+    border-radius: 10px !important;
+    border: 0px solid #002962 !important;
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.50) 100%);
+    backdrop-filter: blur(5px);
+    height: 5vh;
+    cursor: text !important;
+}
+
+.input-custom-contact-textarea {
+    border-radius: 10px !important;
+    border: 0px solid #002962 !important;
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.50) 100%);
+    backdrop-filter: blur(5px);
+    height: 10vh;
+    resize: none;
+}
+
+.button-contact-custom{
+    box-shadow: 0px 4px 30.3px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid transparent;
+    background-color: #6AB04E;
+    transition: all 0.5s ease;
+}
+
+.button-contact-custom:hover{
+    border-color: #fff;
+}
 /*contact*/
 
 /*footer*/
 
-footer{
+footer {
     background-image: url('../img/footer.png');
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: cover;
+    background-size: cover;
+    background-position: top;
     height: 70vh;
-}   
+}
 
+.bg-custom-footer{
+    background-color: #636363;
+}
+
+.lien-footer{
+    color: #FFF;
+    transition: all 0.5s ease;
+}
+
+.lien-footer:hover{
+    color: #2c3a5c;
+}
+
+.lien_compte{
+    left: 33%;
+    top: 45%;
+    font-family: aeronaves;
+}
+
+.lien_mention{
+    left: 29.5%;
+    top: 61%;
+    font-family: aeronaves;
+}
 /*footer*/
