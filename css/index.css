@@ -819,12 +819,25 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
 
 .width-custom-contact-input{
     width: 45%;
+    height: 5vh;
+    cursor: text !important;
 }
 .input-custom-contact {
     border-radius: 10px !important;
     border: 0px solid #002962 !important;
     background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.50) 100%);
     backdrop-filter: blur(5px);
+    height: 5vh;
+    cursor: text !important;
+}
+
+.input-custom-contact-textarea {
+    border-radius: 10px !important;
+    border: 0px solid #002962 !important;
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.50) 100%);
+    backdrop-filter: blur(5px);
+    height: 10vh;
+    resize: none;
 }
 
 .button-contact-custom{
