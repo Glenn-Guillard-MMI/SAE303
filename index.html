@@ -24,16 +24,15 @@
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
     rel="stylesheet">
   <link rel="icon" href="img/SVG/logo.svg">
-  <style>
-
-  </style>
   <title>SAE 301-303</title>
 </head>
 
 <body class="bg-body overflow-x-hidden">
   <nav class="container-fluid p-3 w-100 text-white">
     <section class="row">
-      <div class="col"><img class="w-100" src="img/SVG/logo.svg" alt="logo Aéro club de Frotey-les-Lure"></div>
+      <div class="col">
+        <a href="#"><img class="w-100" src="img/SVG/logo.svg" alt="logo Aéro club de Frotey-les-Lure"></a>
+      </div>
       <div class="col text-center mt-2">
         <a class="lien_nav text-decoration-none text-white" href="#bapteme">BAPTÈME DE L'AIR</a>
       </div>
@@ -791,8 +790,10 @@
     </article>
   </section>
 
+
   <section id="formation">
     <h2 class="text-white text-center">GALERIE</h2>
+    <!--
     <article class="d-flex flex-row mt-5">
       <div class="w-100 mx-2"><img src="img/troisAutogires.jpg" alt="trois autogire" class="h-100 w-100"></div>
       <div class="w-100 mx-2"><img src="img/pendulaire1.jpg" alt="pendulaire" class="h-100 w-100"></div>
@@ -800,6 +801,26 @@
     </article>
     <article class="w-50 mt-3 mx-auto">
       <div class="w-100 mx-2"><img src="img/course-3.jpg" alt="avion devant le soleil" class="h-100 w-100"></div>
+      <div class="w-100 mx-2"><img src="img/pendulaire.jpg" alt="avion devant le soleil" class="h-100 w-100"></div>
+      <div class="w-100 mx-2"><img src="img/slide-3.jpg" alt="avion devant le soleil" class="h-100 w-100"></div>
+    </article>
+    -->
+
+    <article class="slider3 position-relative w-100 d-grid overflow-hidden mb-5">
+      <div class="slide-track3 h-75 d-flex overflow-hidden">
+        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/course-3.jpg" alt=""></div>
+        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/troisAutogires.jpg" alt=""></div>
+        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/pendulaire1.jpg" alt=""></div>
+        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/pendulaire.jpg" alt=""></div>
+        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/slide-3.jpg" alt=""></div>
+        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/cours-5.jpg" alt=""></div>
+
+        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/course-3.jpg" alt=""></div>
+        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/troisAutogires.jpg" alt=""></div>
+        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/pendulaire1.jpg" alt=""></div>
+        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/pendulaire.jpg" alt=""></div>
+        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/slide-3.jpg" alt=""></div>
+        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/cours-5.jpg" alt=""></div>
     </article>
   </section>
 
@@ -938,7 +959,8 @@
               <input type="email" placeholder="E-mail" class="input-custom-contact width-custom-contact-input">
             </div>
             <input type="text" placeholder="Sujet" class="input-custom-contact mt-3">
-            <textarea placeholder="Comment pouvons-nous vous aider ?" class="input-custom-contact-textarea mt-3"></textarea>
+            <textarea placeholder="Comment pouvons-nous vous aider ?"
+              class="input-custom-contact-textarea mt-3"></textarea>
             <input type="button" value="SEND"
               class="w-25 mt-4 button-contact-custom size-2-5 rounded-3 text-white mx-auto p-2">
           </form>
@@ -948,7 +970,7 @@
   </section>
   <footer class="position-relative">
     <a href="" class="position-absolute text-white lien_compte size-2-5">Compte</a>
-    <a href="" class="position-absolute text-white lien_mention size-2-5">Mentions Légales</a>
+    <a href="mention-legales.html" class="position-absolute text-white lien_mention size-2-5">Mentions Légales</a>
   </footer>
   <section class="d-flex justify-content-center align-items-center p-2 bg-custom-footer">
     <p class="text-white size-2-5 my-auto">Un projet de <a href="" target="_blank"
