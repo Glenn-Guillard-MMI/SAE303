@@ -409,7 +409,6 @@ input[type="text"] {
     border-radius: 15px;
     background: linear-gradient(180deg, #FFF 0%, #CBD5E1 100%);
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
-    height: 20em !important;
 }
 
 .barre-horizontale {
@@ -845,9 +844,33 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
 footer {
     background-image: url('../img/footer.png');
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: cover;
+    background-size: cover;
+    background-position: top;
     height: 70vh;
 }
 
+.bg-custom-footer{
+    background-color: #636363;
+}
+
+.lien-footer{
+    color: #FFF;
+    transition: all 0.5s ease;
+}
+
+.lien-footer:hover{
+    color: #2c3a5c;
+}
+
+.lien_compte{
+    left: 33%;
+    top: 45%;
+    font-family: aeronaves;
+}
+
+.lien_mention{
+    left: 29.5%;
+    top: 61%;
+    font-family: aeronaves;
+}
 /*footer*/
