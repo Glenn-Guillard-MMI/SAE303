@@ -67,12 +67,12 @@
     </section>
   </nav>
 
-  <section id="cookie" class="d-flex flex-column justify-content-around position-fixed w-25">
-    <article class="p-2">
+  <section id="cookie" class="position-fixed w-25 rounded-4">
+    <article class="size-2 p-3">
       Ce site utilise des cookies, le fait de ne pas consentir ou de retirer son consentement peut avoir un effet
       négatif sur certaines caractéristiques et fonctions.
     </article>
-    <article class="d-flex flex-row justify-content-around mt-1">
+    <article class="d-flex justify-content-around pb-2">
       <input class="button_cookie_refus px-2 rounded-5 d-inline-flex justify-content-center align-items-center"
         type="button" value="Tout refuser">
       <input class="button_reserver_bapteme px-2 text-white rounded-5" type="button" value="Tout accepter">
@@ -97,43 +97,43 @@
     <h3 class="text-center font color_meteo size-3 mb-4">Météo à Frotey-les-Lure</h3>
     <article
       class="bg-body w-75 h-75 m-auto rounded-4 font meteo d-flex flex-row justify-content-around align-items-center text-white">
-      <div class="h-75 d-flex align-content-center justify-content-around flex-column">
+      <div class="h-100 pt-4 d-flex align-content-center justify-content-around flex-column">
         <p id="date0" class="text-center fw-bold"></p>
         <img id="meteo0" class="meteo_img" src="img/meteo/Rain.png" alt="">
         <p id="temp0" class="text-center mt-5 fw-medium"></p>
         <p id="temperature0" class="text-center fs-1"></p>
       </div>
-      <div class="h-75 d-flex align-content-center justify-content-around flex-column">
+      <div class="h-100 pt-4 d-flex align-content-center justify-content-around flex-column">
         <p id="date1" class="text-center fw-bold"></p>
         <img id="meteo1" class="meteo_img" src="img/meteo/Rain.png" alt="">
         <p id="temp1" class="text-center mt-5 fw-medium"></p>
         <p id="temperature1" class="text-center fs-1"></p>
       </div>
-      <div class="h-75 d-flex align-content-center justify-content-around flex-column">
+      <div class="h-100 pt-4 d-flex align-content-center justify-content-around flex-column">
         <p id="date2" class="text-center fw-bold"></p>
         <img id="meteo2" class="meteo_img" src="img/meteo/Rain.png" alt="">
         <p id="temp2" class="text-center mt-5 fw-medium"></p>
         <p id="temperature2" class="text-center fs-1"></p>
       </div>
-      <div class="h-75 d-flex align-content-center justify-content-around flex-column">
+      <div class="h-100 pt-4 d-flex align-content-center justify-content-around flex-column">
         <p id="date3" class="text-center fw-bold"></p>
         <img id="meteo3" class="meteo_img" src="img/meteo/Rain.png" alt="">
         <p id="temp3" class="text-center mt-5 fw-medium"></p>
         <p id="temperature3" class="text-center fs-1"></p>
       </div>
-      <div class="h-75 d-flex align-content-center justify-content-around flex-column">
+      <div class="h-100 pt-4 d-flex align-content-center justify-content-around flex-column">
         <p id="date4" class="text-center fw-bold"></p>
         <img id="meteo4" class="meteo_img" src="img/meteo/Rain.png" alt="">
         <p id="temp4" class="text-center mt-5 fw-medium"></p>
         <p id="temperature4" class="text-center fs-1"></p>
       </div>
-      <div class="h-75 d-flex align-content-center justify-content-around flex-column">
+      <div class="h-100 pt-4 d-flex align-content-center justify-content-around flex-column">
         <p id="date5" class="text-center fw-bold"></p>
         <img id="meteo5" class="meteo_img" src="img/meteo/Rain.png" alt="">
         <p id="temp5" class="text-center mt-5 fw-medium"></p>
         <p id="temperature5" class="text-center fs-1"></p>
       </div>
-      <div class="h-75 d-flex align-content-center justify-content-around flex-column">
+      <div class="h-100 pt-4 d-flex align-content-center justify-content-around flex-column">
         <p id="date6" class="text-center fw-bold"></p>
         <img id="meteo6" class="meteo_img" src="img/meteo/Rain.png" alt="">
         <p id="temp6" class="text-center mt-5 fw-medium"></p>
@@ -201,13 +201,10 @@
 
         <div class="carte_avion w-25 color-blue-bapteme d-flex justify-content-around align-items-center flex-column">
           <div class="w-75 d-flex justify-content-around align-items-center flex-column">
-            <img class="img_card_bapteme mx-auto mt-2 rounded-3 object-fit-cover" src="img/pendulaire.jpg"
+            <img class="img_card_bapteme mx-auto mt-5 rounded-3 object-fit-cover" src="img/pendulaire.jpg"
               alt="ULM pendulaire">
-            <h5 class="font-wheight-bapteme text-center mt-2">ULM Pendulaire</h5>
+            <h5 class="font-wheight-bapteme text-center mt-2 fs-3">ULM Pendulaire</h5>
             <div class="d-flex flex-column mb-3 w-100">
-              <ul>
-                <li class="size-2">Baptème de l'air</li>
-              </ul>
               <div class="custom-select mt-1 mx-auto w-100">
                 <select class="w-100">
                   <option value="" disabled selected>Formule</option>
@@ -229,26 +226,23 @@
                 <input class="test-time w-100" type="text" placeholder="Choisir une heure .." readonly="readonly">
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme mb-3">
+            <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme mb-5">
               <div>
                 <p class="m-0"><span class="non-strong-text">à partir de</span><strong
                     class="strong-text fst-italic">95,00
                     €</strong></p>
               </div>
-              <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
+              <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white fs-5">
             </div>
           </div>
         </div>
 
         <div class="carte_avion w-25 color-blue-bapteme d-flex justify-content-around align-items-center flex-column">
           <div class="w-75 d-flex justify-content-around align-items-center flex-column">
-            <img class="img_card_bapteme mx-auto mt-2 rounded-3 object-fit-cover" src="img/pendulaire.jpg"
+            <img class="img_card_bapteme mx-auto mt-5 rounded-3 object-fit-cover" src="img/pendulaire.jpg"
               alt="ULM pendulaire">
-            <h5 class="font-wheight-bapteme text-center mt-2">ULM Pendulaire</h5>
+            <h5 class="font-wheight-bapteme text-center mt-2 fs-3">ULM Pendulaire</h5>
             <div class="d-flex flex-column mb-3 w-100">
-              <ul>
-                <li class="size-2">Baptème de l'air</li>
-              </ul>
               <div class="custom-select mt-1 mx-auto w-100">
                 <select class="w-100">
                   <option value="" disabled selected>Formule</option>
@@ -270,26 +264,23 @@
                 <input class="test-time w-100" type="text" placeholder="Choisir une heure .." readonly="readonly">
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme mb-3">
+            <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme mb-5">
               <div>
                 <p class="m-0"><span class="non-strong-text">à partir de</span><strong
                     class="strong-text fst-italic">95,00
                     €</strong></p>
               </div>
-              <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
+              <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white fs-5">
             </div>
           </div>
         </div>
 
         <div class="carte_avion w-25 color-blue-bapteme d-flex justify-content-around align-items-center flex-column">
           <div class="w-75 d-flex justify-content-around align-items-center flex-column">
-            <img class="img_card_bapteme mx-auto mt-2 rounded-3 object-fit-cover" src="img/pendulaire.jpg"
+            <img class="img_card_bapteme mx-auto mt-5 rounded-3 object-fit-cover" src="img/pendulaire.jpg"
               alt="ULM pendulaire">
-            <h5 class="font-wheight-bapteme text-center mt-2">ULM Pendulaire</h5>
+            <h5 class="font-wheight-bapteme text-center mt-2 fs-3">ULM Pendulaire</h5>
             <div class="d-flex flex-column mb-3 w-100">
-              <ul>
-                <li class="size-2">Baptème de l'air</li>
-              </ul>
               <div class="custom-select mt-1 mx-auto w-100">
                 <select class="w-100">
                   <option value="" disabled selected>Formule</option>
@@ -311,13 +302,13 @@
                 <input class="test-time w-100" type="text" placeholder="Choisir une heure .." readonly="readonly">
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme mb-3">
+            <div class="d-flex flex-row align-items-center justify-content-around color-red-bapteme mb-5">
               <div>
                 <p class="m-0"><span class="non-strong-text">à partir de</span><strong
                     class="strong-text fst-italic">95,00
                     €</strong></p>
               </div>
-              <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white">
+              <input type="button" value="RÉSERVER" class="button_reserver_bapteme px-2 text-white fs-5">
             </div>
           </div>
         </div>
@@ -359,59 +350,59 @@
     <h2 id="container_formation" class="text-white text-center size-4">FORMATIONS</h2>
     <div class="w-100 d-flex justify-content-around align-items-stretch mt-5">
 
-      <article class="carte_avion2 w-25 d-flex justify-content-around align-items-center flex-column color-blue-bapteme"
+      <article class="carte_avion2 w-25 d-flex justify-content-between align-items-center flex-column color-blue-bapteme"
         style="flex: 0 0 25%;">
-        <h3 class="mt-2 size-3">Brevet de pilote</h3>
+        <h3 class="mt-4 size-3">Brevet de pilote</h3>
         <div class="w-75 rounded-5 barre-horizontale"></div>
-        <ul class="mt-3 size-2">
+        <ul class="mt-5 size-2">
           <li>Validité 1 an</li>
-          <li>Cours illimités</li>
-          <li>Formation à pieds ou en chariot</li>
-          <li>Prêt du matériel</li>
-          <li>10 vols minimum</li>
-          <li>Cours théorique</li>
-          <li>1 cours de perfectionnement</li>
-          <li>Brevet d'Initiation Aéronotique (BIA)</li>
+          <li class="mt-2">Cours illimités</li>
+          <li class="mt-2">Formation à pieds ou en chariot</li>
+          <li class="mt-2">Prêt du matériel</li>
+          <li class="mt-2">10 vols minimum</li>
+          <li class="mt-2">Cours théorique</li>
+          <li class="mt-2">1 cours de perfectionnement</li>
+          <li class="mt-2">Brevet d'Initiation Aéronotique (BIA)</li>
         </ul>
-        <div class="d-flex flex-row justify-content-around align-items-center w-100 mt-auto">
-          <p class="color-red-bapteme fst-italic size-3">1200 €</p>
-          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white">
+        <div class="d-flex flex-row justify-content-around align-items-center w-100 mt-5 mb-3">
+          <p class="color-red-bapteme fst-italic size-3 my-auto">1200 €</p>
+          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white fs-5">
         </div>
       </article>
 
       <article class="carte_avion2 w-25 d-flex justify-content-around align-items-center flex-column color-blue-bapteme"
         style="flex: 0 0 25%;">
-        <h3 class="mt-2 size-3">Emport de passager</h3>
+        <h3 class="mt-4 size-3">Emport de passager</h3>
         <div class="w-75 rounded-5 barre-horizontale"></div>
-        <ul class="mt-3 size-2">
+        <ul class="mt-5 size-2">
           <li>Durée de 6h à 8h</li>
-          <li>Évaluation préalable du pilote</li>
-          <li>Formation biplace à pied ou en chariot</li>
-          <li>Avec lle matériel du stagiaire</li>
-          <li>4 vols minimum</li>
-          <li>Sensibilisation aux facteurs humains</li>
+          <li class="mt-2">Évaluation préalable du pilote</li>
+          <li class="mt-2">Formation biplace à pied ou en chariot</li>
+          <li class="mt-2">Avec lle matériel du stagiaire</li>
+          <li class="mt-2">4 vols minimum</li>
+          <li class="mt-2">Sensibilisation aux facteurs humains</li>
         </ul>
-        <div class="d-flex flex-row justify-content-around align-items-center w-100 mt-auto">
-          <p class="color-red-bapteme fst-italic size-3">450 €</p>
-          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white">
+        <div class="d-flex flex-row justify-content-around align-items-center w-100 mt-auto mb-3">
+          <p class="color-red-bapteme fst-italic size-3 my-auto">450 €</p>
+          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white fs-5">
         </div>
       </article>
 
       <article
         class="carte_avion2 w-25 d-flex justify-content-around align-items-sm-center flex-column color-blue-bapteme"
         style="flex: 0 0 25%;">
-        <h3 class="mt-2 size-3">Stage d'initiation</h3>
+        <h3 class="mt-4 size-3">Stage d'initiation</h3>
         <div class="w-75 rounded-5 barre-horizontale"></div>
-        <ul class="mt-3 size-2 w-75">
+        <ul class="mt-5 size-2 w-75">
           <li>Durée 3h</li>
-          <li>Présentation de l'aéronef et notion de mécanique de vol</li>
-          <li>Gonflage et pilotage d'un parapente au sol</li>
-          <li>Vol de 20 min en biplace</li>
-          <li>Initiation au pilotage</li>
+          <li class="mt-2">Présentation de l'aéronef et notion de mécanique de vol</li>
+          <li class="mt-2">Gonflage et pilotage d'un parapente au sol</li>
+          <li class="mt-2">Vol de 20 min en biplace</li>
+          <li class="mt-2">Initiation au pilotage</li>
         </ul>
-        <div class="d-flex flex-row justify-content-around align-items-center w-100 mt-auto">
-          <p class="font fst-italic color-red-bapteme size-3">180 €</p>
-          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white">
+        <div class="d-flex flex-row justify-content-around align-items-center w-100 mt-auto mb-3">
+          <p class="font fst-italic color-red-bapteme size-3 my-auto">180 €</p>
+          <input type="button" value="S'INSCRIRE" class="button_reserver_bapteme px-2 text-white fs-5">
         </div>
       </article>
 
@@ -455,7 +446,7 @@
         <h2 class="font text-center mt-3 size-5">500 €</h2>
         <div class="w-75 rounded-5 barre-horizontale mx-auto"></div>
         <h4 class="text-center mt-3">Forfait initiation</h4>
-        <ul class="px-5 mt-3">
+        <ul class="px-4 mt-3">
           <li>Idéal pour s'initier au pilotage</li>
           <li class="mt-3">5 vols avec un instructeur du club</li>
           <li class="mt-3">5h de vol</li>
@@ -471,7 +462,7 @@
         <h2 class="font text-center mt-3 size-5">90 €/h</h2>
         <div class="w-75 rounded-5 barre-horizontale mx-auto"></div>
         <h4 class="text-center mt-3">Forfait membre</h4>
-        <ul class="mt-3 px-5">
+        <ul class="mt-3 px-4">
           <li>Prix pour les 10 premières heures</li>
           <li class="mt-3">Cotisation club 105 €</li>
           <li class="mt-3">Cotisation moins de 25 ans 60 €</li>
@@ -487,7 +478,7 @@
         <h2 class="font text-center mt-3 size-5">64 €/h</h2>
         <div class="w-75 rounded-5 barre-horizontale mx-auto"></div>
         <h4 class="text-center mt-3">Forfait membre +40h</h4>
-        <ul class="mt-3 px-5">
+        <ul class="mt-3 px-4">
           <li>+10 = 75 € par heure</li>
           <li class="mt-3">+20 = 71 € par heure</li>
           <li class="mt-3">+30 = 67 € par heure</li>
@@ -816,7 +807,7 @@
   <section class="z-3 position-relative">
     <img class="w-100" src="img/SVG/nuage2fin.svg" alt="">
   </section>
-  <section class="bg-white avis">
+  <section class="bg-white pb-5 pt-2">
     <h2 class="text-center color-blue-bapteme">LAISSER UN AVIS</h2>
     <form class="w-50 d-flex align-content-center justify-content-around flex-column mx-auto">
       <label class="mt-4 size-2-5">Nom et prénom</label>
