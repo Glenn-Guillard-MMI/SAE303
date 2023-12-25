@@ -43,3 +43,69 @@
     font-size: 3.5vw;
     font-weight: 600;
 }
+
+h1,h2{
+    font-family: aeronaves;
+}
+
+/*HEADER*/
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: aeronaves;
+    background: linear-gradient(180deg, rgba(0, 41, 98, 0.90) 11.85%, rgba(0, 54, 129, 0.45) 56.64%, rgba(0, 78, 137, 0.20) 76.95%, rgba(0, 78, 137, 0.00) 100%, rgba(0, 78, 137, 0.00) 100%);
+}
+
+.lien_nav {
+    font-size: 1vw;
+    padding: 0.5vw 0.7vw 0.5vw 0.65vw;
+    transition: all 0.25s ease;
+    border-radius: 34px;
+    border: 1px solid transparent;
+    text-shadow: 6px 6px 7px rgba(0, 0, 0, 0.25);
+}
+
+.lien_nav:hover {
+    background-color: #002962;
+    border-radius: 34px;
+}
+
+.lien_nav:active {
+    border-color: #FFF;
+}
+
+#account {
+    cursor: pointer;
+}
+
+#account path:last-child {
+    transition: fill 0.25s ease;
+}
+
+#account:hover path:last-child {
+    fill: #002962;
+}
+
+/*HEADER*/
+
+.bg-body {
+    background-color: #407BA7 !important;
+}
+
+/*footer*/
+
+.bg-custom-footer{
+    background-color: #636363;
+}
+
+.lien-footer{
+    color: #FFF;
+    transition: all 0.5s ease;
+}
+
+.lien-footer:hover{
+    color: #2c3a5c;
+}
+
+/*footer*/
