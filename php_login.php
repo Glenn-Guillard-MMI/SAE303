@@ -16,7 +16,7 @@ if (isset($_SESSION['mail'])){
         $resultat = $exemple1->requete($sql);
     
         foreach ($resultat as $ligne) {
-            if ($ligne["autorisation"] == 3){
+           {
                 echo " Nom =". $ligne["nom"];
                 echo " prenom =". $ligne["prenom"];
                 echo " Status =". $ligne["autorisation"];
@@ -28,6 +28,7 @@ if (isset($_SESSION['mail'])){
 
 
         }
+        
         } catch(PDOException $e){
                die($e->getMessage());
        }

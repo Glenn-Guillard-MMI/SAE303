@@ -6,6 +6,7 @@ let verif_password = false;
 let verifi_birthday = false;
 let code_verif = false;
 let phys_addresse = false;
+let verif_ville = false;
 
 function verification_nom() {
   const nom = document.getElementById("nom").value;
@@ -174,10 +175,21 @@ function button_disable_abled() {
     verif_password &&
     verifi_birthday &&
     code_verif &&
-    phys_addresse
+    phys_addresse &&
+    verif_ville
   ) {
     document.getElementById("push").disabled = false;
   } else {
     document.getElementById("push").disabled = true;
   }
+}
+
+function verification_ville() {
+  const ville = document.getElementById("ville").value;
+  if (ville !== "") {
+    verif_ville = true;
+  } else {
+    verif_ville = false;
+  }
+  button_disable_abled();
 }

@@ -31,3 +31,6 @@ try {
    }
 
    ?>
+
+
+   , prenom = $prenom, civilite = $genre, mail = $mail, code_postale = $code, ville = $ville, adresse = $addresse, num_tel = $num, date_naissance = $birthday, date_update = $now 
