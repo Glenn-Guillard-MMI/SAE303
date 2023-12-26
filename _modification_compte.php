@@ -1,10 +1,12 @@
 <?php
 
 //initialisation de données
-if(!empty($_POST["nom"]) and !empty($_POST["prenom"]) and !empty($_POST["email"])and !empty($_POST["genre"] and !empty($_POST["birthday"])and !empty($_POST["code_addresse"])and !empty($_POST["physique_addresse"])and !empty($_POST["num"])and !empty($_POST["ville"])and !empty($_POST["password"]))){
+if(!empty($_POST["nom"]) and !empty($_POST["prenom"]) and !empty($_POST["email"])and !empty($_POST["genre"] and !empty($_POST["birthday"])and !empty($_POST["code_addresse"])and !empty($_POST["physique_addresse"])and !empty($_POST["num"])and !empty($_POST["ville"]))){
 
 
 //Recupération POO
+session_start();
+$mail_secu = "'".$_SESSION["mail"]."'";
 require_once "poo_repository.php";
 require_once "poo_models.php";
 
@@ -14,7 +16,6 @@ $nom = "'".($_POST["nom"])."'";
 $prenom ="'".($_POST["prenom"])."'";
 $mail ="'".($_POST["email"])."'";
 $num ="'".($_POST["num"])."'";
-$password = "'".password_hash(($_POST["password"]), PASSWORD_DEFAULT)."'";
 $genre ="'".($_POST["genre"])."'";
 $birthday ="'".($_POST["birthday"])."'";
 $addresse = "'".($_POST["physique_addresse"])."'";
@@ -25,17 +26,22 @@ $now  = "'".date("Y-m-d H:i:s")."'";
 
 //Lancement de la requete
 try{
-
     $modele = new Model("adherant");
 	$Repository = new Repository($modele->getTable());
-    $sql ="INSERT INTO ". $modele->getTable() ." (autorisation, nom, prenom, mail,civilite, mdp, date_naissance, adresse,num_tel,date_crea,code_postale,ville) VALUES (0, $nom, $prenom, $mail,$genre,$password,$birthday,$addresse,$num,$now,$code,$ville)";
+    $sql ="UPDATE ". $modele->getTable() . " SET nom = $nom, prenom = $prenom, civilite = $genre, mail = $mail, code_postale = $code, ville = $ville, adresse = $addresse, num_tel = $num, date_naissance = $birthday, date_update = $now WHERE mail = $mail_secu";
     $Repository->requete($sql);
-    header("Location: php_cree_compte.php");
+    session_destroy();
+    header("Location: php_modifier_compte.php");
+    exit();
 
 }
 catch(PDOException $e){
-    header("Location: php_cree_compte.php");
+
     die($e->getMessage());
+    header("Location: php_modifier_compte.php");
+    exit();
+
+
 }}
     else{
     header("Location: php_cree_compte.php");
