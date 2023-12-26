@@ -65,36 +65,10 @@ function verification_mail() {
 function verification_num() {
   let num = document.getElementById("num").value;
 
-  const liste_cara = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-  ];
+  const liste_cara = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   for (let i = 0; i < num.length; i++) {
-    if (liste_cara.includes(num[i].toUpperCase())) {
+    if (!liste_cara.includes(parseInt(num[i]))) {
       document.getElementById("num").value =
         num.substring(0, i) + num.substring(i + 1);
     }
@@ -122,36 +96,10 @@ function Vbirthday() {
 }
 function verif_code() {
   const code = document.getElementById("code_addresse").value;
-  const liste_cara = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-  ];
+  const liste_cara = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   for (let i = 0; i < code.length; i++) {
-    if (liste_cara.includes(code[i].toUpperCase())) {
+    if (!liste_cara.includes(parseInt(code[i]))) {
       document.getElementById("code_addresse").value =
         code.substring(0, i) + code.substring(i + 1);
     }
@@ -199,20 +147,14 @@ function button_disable_abled() {
 }
 
 function card2() {
-  if (
-    verif_prenom &&
-    verif_nom &&
-    verifi_birthday
-  ) {
+  if (verif_prenom && verif_nom && verifi_birthday) {
     document.getElementById("card2").style.display = "block";
     document.getElementById("card1").style.display = "none";
   }
 }
 
 function card3() {
-  if (
-    verif_mail 
-  ) {
+  if (verif_mail) {
     document.getElementById("card2").style.display = "none";
     document.getElementById("card3").style.display = "block";
   }
