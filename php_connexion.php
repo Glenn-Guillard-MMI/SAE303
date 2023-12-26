@@ -63,7 +63,7 @@
         <h1 class="text-white text-center mt-5">SE CONNECTER</h1>
         <article id="background"
             class=" w-25 d-flex flex-column justify-content-center align-items-center rounded-4 mx-auto text-blue">
-            <img src="img/SVG/logo.svg" alt="logo ACF2L" class="w-50 mt-4">
+            <img src="img/SVG/logo.svg" alt="logo ACF2L" class="w-50 mt-4 shadow-img">
             <h2 class="text-blue size-3 mt-2">Utiliser votre compte</h2>
             <form action="_connexion_compt.php" method="post" class="d-flex flex-column mt-5">
                 <label class="size-2-5">Adresse mail</label>
