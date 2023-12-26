@@ -77,7 +77,7 @@
                 <img src="img/SVG/logo.svg" alt="logo aero club" class="w-75 shadow-img mx-auto">
                 <h3 class="text-center mt-3">Informations Personnelles</h3>
                 <label for="genre" class="mt-3 fs-5">Civilité</label>
-                <div class="d-flex justify-content-around">
+                <div class="d-flex justify-content-between w-75">
                     <div>
                         <input type="radio" id="Homme" name="genre" value="Homme" checked />
                         <label for="Homme">Homme</label>
