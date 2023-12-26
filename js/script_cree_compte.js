@@ -6,6 +6,8 @@ let verif_password = false;
 let verifi_birthday = false;
 let code_verif = false;
 let phys_addresse = false;
+let verif_ville = false;
+let code_verif_double = false;
 
 function verification_nom() {
   const nom = document.getElementById("nom").value;
@@ -23,6 +25,18 @@ function verification_password() {
     verif_password = true;
   } else {
     verif_password = false;
+  }
+  button_disable_abled();
+}
+
+function verification_double_password() {
+  const password = document.getElementById("password").value,
+    password_double = document.getElementById("password_double").value;
+
+  if (password_double === password) {
+    code_verif_double = true;
+  } else {
+    code_verif_double = false;
   }
   button_disable_abled();
 }
@@ -174,10 +188,52 @@ function button_disable_abled() {
     verif_password &&
     verifi_birthday &&
     code_verif &&
-    phys_addresse
+    phys_addresse &&
+    verif_ville &&
+    code_verif_double
   ) {
     document.getElementById("push").disabled = false;
   } else {
     document.getElementById("push").disabled = true;
   }
+}
+
+function card2() {
+  if (
+    verif_prenom &&
+    verif_nom &&
+    verifi_birthday
+  ) {
+    document.getElementById("card2").style.display = "block";
+    document.getElementById("card1").style.display = "none";
+  }
+}
+
+function card3() {
+  if (
+    verif_mail 
+  ) {
+    document.getElementById("card2").style.display = "none";
+    document.getElementById("card3").style.display = "block";
+  }
+}
+
+function return_card1() {
+  document.getElementById("card2").style.display = "none";
+  document.getElementById("card1").style.display = "block";
+}
+
+function return_card2() {
+  document.getElementById("card2").style.display = "block";
+  document.getElementById("card3").style.display = "none";
+}
+
+function verification_ville() {
+  const ville = document.getElementById("ville").value;
+  if (ville !== "") {
+    verif_ville = true;
+  } else {
+    verif_ville = false;
+  }
+  button_disable_abled();
 }

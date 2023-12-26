@@ -9,25 +9,8 @@
     src: url(../font/AeronavesPersonalUseOnly-0WWnz.ttf);
 }
 
-body {
+.font {
     font-family: Nunito;
-}
-
-.text-blue {
-    color: #002962;
-}
-
-h1 {
-    font-family: aeronaves;
-    font-size: 2.5vw;
-}
-
-h2 {
-    font-family: Nunito;
-}
-
-.bg-body {
-    background-color: #407BA7 !important;
 }
 
 .size-1 {
@@ -61,12 +44,16 @@ h2 {
     font-weight: 600;
 }
 
-.text-shadow {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+h1,
+h2 {
+    font-family: aeronaves;
 }
 
 /*HEADER*/
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     font-family: aeronaves;
     background: linear-gradient(180deg, rgba(0, 41, 98, 0.90) 11.85%, rgba(0, 54, 129, 0.45) 56.64%, rgba(0, 78, 137, 0.20) 76.95%, rgba(0, 78, 137, 0.00) 100%, rgba(0, 78, 137, 0.00) 100%);
 }
@@ -103,59 +90,76 @@ nav {
 
 /*HEADER*/
 
-/*form*/
+.bg-body {
+    background-color: #407BA7 !important;
+}
 
-#background {
+.text-blue {
+    color: #002962;
+}
+
+form {
+    width: 33% !important;
+}
+
+.background {
     background: linear-gradient(180deg, #FFF 0%, #CBD5E1 100%);
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
 }
 
-.shadow-img{
-    filter : drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+.shadow-img {
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
 }
 
-.input_connexion {
+.input-custom {
     border: 2px solid #002962;
 }
 
-.connexion_button {
-    border: 2px solid transparent;
+.button_suivant {
+    cursor: pointer;
+    background-color: #002962;
+    width: fit-content;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease;
+}
+
+.button_suivant:hover {
+    border-color: #fff;
+}
+
+.button_return:hover {
+    border-color: #fff;
+    background-color: #002962 !important;
+    color: #FFF !important;
+}
+
+.button_return {
+    cursor: pointer;
+    width: fit-content;
+    border: 1px solid #002962;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease;
+}
+
+.button_inscri {
     background: rgba(0, 41, 98, 0.80);
+    cursor: pointer;
+    width: fit-content;
+    border: 1px solid transparent;
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
     transition: all 0.5s ease;
 }
 
-.connexion_button:hover {
-    border-color: #D4D4D4;
-    background-color: #002962;
+.button_inscri:hover{
+    border-color: #fff;
+    background-color: #002962 !important;
 }
 
-@media only screen and (max-width: 850px) {
-    #background{
-        width: 40% !important;
-    }
-    label, input[type="password"], input[type="mail"]{
-        font-size: 2vw !important;
-    }
-    span{
-        font-size: 1.2vw !important;
-    }
-    input[type="submit"]{
-        font-size: 1.5vw !important;
-    }
+#card2 {
+    display: none;
 }
 
-@media only screen and (max-width: 500px){
-    #background{
-        width: 50% !important;
-    }
-    form{
-        width: 75% !important;
-    }
-    span{
-        font-size: 1.6vw !important;
-    }
-    h2{
-        font-size: 2.5vw !important;
-    }
+#card3 {
+    display: none;
 }
