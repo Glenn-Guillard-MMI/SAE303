@@ -65,9 +65,7 @@ if (isset($_SESSION['mail'])){
         onkeyup="verification_ville()">
     <br>
 
-    <!-- <label for="password">password</label>
-    <input type="password" name="password" required id="password" onkeyup="verification_password()">
-    <br> -->
+
     <b>Après avoir modifier vos informations, vous serez déconnecter automatiquement</b>
     <input type="submit" id="pushe">
 </form>
