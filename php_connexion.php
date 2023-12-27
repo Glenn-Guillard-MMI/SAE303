@@ -23,7 +23,7 @@
     <nav class="container-fluid p-3 w-100 text-white">
         <section class="row">
             <div class="col">
-                <a href="#"><img class="w-100" src="img/SVG/logo.svg" alt="logo Aéro club de Frotey-les-Lure"></a>
+                <a href="index.html"><img class="w-100" src="img/SVG/logo.svg" alt="logo Aéro club de Frotey-les-Lure"></a>
             </div>
             <div class="col text-center mt-2">
                 <a class="lien_nav text-decoration-none text-white size-2-5" href="index.html#bapteme">BAPTÈME DE L'AIR</a>
