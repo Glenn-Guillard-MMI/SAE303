@@ -219,12 +219,13 @@ if (isset($_SESSION['mail'])){
 <h1>Nombre de vol</h1>
 <p>
     <?php 
-  try{
+ try{
+    $modele6 = new Model("reservation");
+    $exemple6 = new Repository($modele6->getTable());
+    $sql8 = "Select COUNT(*) from ".$modele6->getTable()." WHERE pilote = $mail";
+    $resultat8= $exemple6->requete($sql8);
 
-  $sql2 = "Select COUNT(*) from ".$modele->getTable();
-  $resultat6 = $exemple1->requete($sql2);
-
-  foreach ($resultat6 as $ligne) {
+  foreach ($resultat8 as $ligne) {
       { echo  $ligne["COUNT(*)"];}
   }}
 
