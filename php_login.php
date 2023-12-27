@@ -126,7 +126,7 @@ if (isset($_SESSION['mail'])){
     <?php 
   try{
 
-  $sql2 = "Select COUNT(*) from ".$modele->getTable();
+  $sql2 = "Select COUNT(*) from ".$modele->getTable()." WHERE compte_actif = 1";;
   $resultat6 = $exemple1->requete($sql2);
 
   foreach ($resultat6 as $ligne) {

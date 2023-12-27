@@ -20,10 +20,10 @@ if(isset($_SESSION['mail'])){
         {
             if ($ligne["autorisation"] == 3){
                 try {
-                $sql2 = "Select * from ".$modele->getTable(). " where compte_actif = 1";
-                $sql3 = "Select * from ".$modele->getTable()." where mail = $mail  ";
-                $sql4 ="$sql2 EXCEPT $sql3";
-                $resultat2 = $exemple1->requete($sql4);
+                    $sql2 = "SELECT * FROM " . $modele->getTable() . " WHERE compte_actif = 1 ";
+                    $sql3 = "SELECT mail FROM " . $modele->getTable() . " WHERE mail = $mail";
+                    $sql4 = "$sql2 AND mail NOT IN ($sql3)";
+                    $resultat2 = $exemple1->requete($sql4);
                 ?>
 
 <input type="texte" id="search" onkeyup="search()">
