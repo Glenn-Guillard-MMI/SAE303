@@ -30,11 +30,11 @@ try{
 	$Repository = new Repository($modele->getTable());
     $sql ="INSERT INTO ". $modele->getTable() ." (nom, prenom, mail,civilite, mdp, date_naissance, adresse,num_tel,date_crea,code_postale,ville,licence) VALUES ($nom, $prenom, $mail,$genre,$password,$birthday,$addresse,$num,$now,$code,$ville,0)";
     $Repository->requete($sql);
-    header("Location: php_cree_compte.php");
+    header("Location: index.html");
 
 }
 catch(PDOException $e){
-    header("Location: php_cree_compte.php");
+    //header("Location: hello.php");
     die($e->getMessage());
 }}
     else{

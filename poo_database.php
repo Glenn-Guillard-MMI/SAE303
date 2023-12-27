@@ -7,8 +7,8 @@ class Database extends PDO {
     // Informations de connexion
     private const DBHOST = 'localhost';
     private const DBUSER = 'root';
-    private const DBPASS = '';
-    private const DBNAME = 'bdd_aero_club';
+    private const DBPASS = 'root'; // retirer root si pas MAC !!!!! 
+    private const DBNAME = 'test';
 
     public function __construct()
     {
