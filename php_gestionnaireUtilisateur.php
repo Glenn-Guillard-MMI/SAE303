@@ -20,11 +20,21 @@ if(isset($_SESSION['mail'])){
         {
             if ($ligne["autorisation"] == 3){
                 try {
-                $sql2 = "Select * from ".$modele->getTable();
+                $sql2 = "Select * from ".$modele->getTable(). " where compte_actif = 1";
                 $sql3 = "Select * from ".$modele->getTable()." where mail = $mail  ";
                 $sql4 ="$sql2 EXCEPT $sql3";
                 $resultat2 = $exemple1->requete($sql4);
                 ?>
+
+<input type="texte" id="search" onkeyup="search()">
+
+<input type="radio" id="all" name="Search_Status" checked onclick="all_status()"><label for="all">Tout</label>
+
+<input type="radio" id="staff" name="Search_Status" onclick="status_staff()"><label for="staff">staff</label>
+
+<input type="radio" id="pilote" name="Search_Status" onclick="status_pilote()"><label for="pilote">pilote</label>
+
+<input type="radio" id="adherant" name="Search_Status" onclick="status_adheran()"><label for="adherant">adherant</label>
 <table border="1px">
     <thead>
         <tr>
@@ -38,12 +48,20 @@ if(isset($_SESSION['mail'])){
         </tr>
     </thead>
     <tbody>
+        <script>
+        let name_classe_search = [];
+        </script>
         <?php
                 foreach ($resultat2 as $ligne2)
                 {
+?>
+        <script>
+        name_classe_search.push(<?php echo "'"."Aff_".$ligne2["nom"]."'" ?>)
+        </script>
 
+        <?php
                     $mailJqierry = "'".$ligne2["mail"]."'";
-                    echo "<tr id='Utilisateur_".str_replace(".","",str_replace('@','',$ligne2["mail"]))."'>";
+                    echo "<tr id='Utilisateur_".str_replace(".","",str_replace('@','',$ligne2["mail"]))."' class='affiche Aff_".$ligne2["nom"]." statusAll status_".$ligne2["autorisation"]."'>";
                     echo "<td>";
                     echo $ligne2["nom"] ." ".$ligne2["prenom"];
                     echo "</td>";
@@ -117,7 +135,8 @@ if(isset($_SESSION['mail'])){
 
 
             else{
-                //Return
+                header("Location: index.php");
+
             }
 
         }
@@ -129,7 +148,7 @@ if(isset($_SESSION['mail'])){
 
 }
 else{
-    //return
+    header("Location: index.php");
 }
 
 

@@ -10,7 +10,7 @@ if(isset($_POST['mailSuprresion'])){
 try{
     $modele = new Model("adherant");
 	$Repository = new Repository($modele->getTable());
-    $sql ="DELETE FROM ". $modele->getTable() . " WHERE mail = $mailSupression";
+    $sql ="UPDATE ". $modele->getTable() . " SET compte_actif = 0 WHERE mail = $mailSupression";
     $Repository->requete($sql);
     exit();
 

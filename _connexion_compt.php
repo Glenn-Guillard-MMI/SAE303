@@ -9,7 +9,7 @@ if(!empty($_POST["email"]) and !empty($_POST["password"])){
 
     $modele = new Model("adherant");
 	$exemple1 = new Repository($modele->getTable());
-	$sql = "Select * from ".$modele->getTable()." where mail = $email;";
+	$sql = "Select * from ".$modele->getTable()." where mail = $email AND compte_actif = 1;";
 	$resultat = $exemple1->requete($sql);
     $mail_co=false;
 
