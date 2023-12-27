@@ -15,7 +15,7 @@ require_once "poo_models.php";
 $nom = "'".($_POST["nom"])."'";
 $prenom ="'".($_POST["prenom"])."'";
 $mail ="'".($_POST["email"])."'";
-$num ="'".($_POST["num"])."'";
+$num ="'".substr($_POST["num"], 0, 2) . ' '.substr($_POST["num"], 2, 2) . ' '.substr($_POST["num"], 4, 2) . ' '.substr($_POST["num"], 6, 2) . ' '.substr($_POST["num"], 8, 2)."'";
 $genre ="'".($_POST["genre"])."'";
 $birthday ="'".($_POST["birthday"])."'";
 $addresse = "'".($_POST["physique_addresse"])."'";

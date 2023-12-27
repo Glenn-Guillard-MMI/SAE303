@@ -31,3 +31,37 @@ function ModificationStatus(mail) {
     },
   });
 }
+
+function search() {
+  if ($("#search").val().length > 0) {
+    $(".affiche").hide();
+    for (let i = 0; i < $("#search").val().length; i++) {
+      for (let j = 0; j < name_classe_search.length; j++) {
+        let input = "Aff_" + $("#search").val();
+        let classe = name_classe_search[j].substr(0, 5 + i);
+        if (input.toUpperCase() == classe.toUpperCase()) {
+          $("." + name_classe_search[j]).show();
+        }
+      }
+    }
+  } else {
+    $(".affiche").show();
+  }
+}
+
+function all_status() {
+  $(".statusAll").show();
+}
+
+function status_pilote() {
+  $(".statusAll").hide();
+  $(".status_1").show();
+}
+function status_staff() {
+  $(".statusAll").hide();
+  $(".status_2").show();
+}
+function status_adheran() {
+  $(".statusAll").hide();
+  $(".status_0").show();
+}
