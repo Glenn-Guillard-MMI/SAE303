@@ -145,3 +145,8 @@ thead {
 .input-custom{
     border: 2px solid #002962;
 }
+
+select{
+    color: #002962;
+    border-color: #407BA7;
+}

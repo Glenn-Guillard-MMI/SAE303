@@ -119,7 +119,7 @@
 
 
                                             ?>
-                                            <select onchange="ModificationStatus(<?php echo $mailJqierry ?>)" id=<?php echo "Changement_" . str_replace(".", "", str_replace('@', '', $ligne2["mail"])) ?>>
+                                            <select class="rounded-3" onchange="ModificationStatus(<?php echo $mailJqierry ?>)" id=<?php echo "Changement_" . str_replace(".", "", str_replace('@', '', $ligne2["mail"])) ?>>
                                                 <?php
 
 
