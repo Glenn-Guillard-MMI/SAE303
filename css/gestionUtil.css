@@ -1,0 +1,152 @@
+.bg-custom {
+    background-color: #002962;
+}
+
+@font-face {
+    font-family: aeronaves;
+    src: url(../font/AeronavesPersonalUseOnly-0WWnz.ttf);
+}
+
+.font-avion {
+    font-family: aeronaves;
+}
+
+.font-normal {
+    font-family: nunito;
+}
+
+nav {
+    box-shadow: 7px 0px 15px 0px rgba(0, 0, 0, 0.25);
+    height: 100vh !important;
+}
+
+nav a:not(.exclu) {
+    transition: all 0.25s ease;
+}
+
+nav a:not(.exclu):hover {
+    background-color: #FFF !important;
+    color: #002962 !important;
+}
+
+.ml-custom {
+    margin-left: 2vw;
+}
+
+.text-blue {
+    color: #002962 !important;
+}
+
+table {
+    width: 95% !important;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    border-collapse: separate !important;
+    border-spacing: 0px;
+    border-radius: 10px;
+    border: 2px solid #407BA7;
+}
+
+td,
+th {
+    padding: 0.5vw;
+}
+
+table thead th:first-child {
+    border-top-left-radius: 5px;
+}
+
+table thead th:last-child {
+    border-top-right-radius: 5px;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+thead {
+    background-color: #407BA7;
+}
+
+.button-custom {
+    border: 2px solid #002962;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.25s ease;
+}
+
+.button-custom:hover {
+    background-color: #002962 !important;
+    color: #fff !important;
+}
+
+.icon_supp {
+    cursor: pointer;
+}
+
+#confirm {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: 25%;
+    z-index: 500;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid #002962;
+}
+
+#confirm div div p{
+    cursor: pointer;
+    color: #002962;
+    transition: all 0.25s ease;
+}
+
+#button_suppr{
+    background: rgba(0, 41, 98, 0.80) !important;
+    border: 1px rgba(0, 41, 98, 0.80) !important;
+}
+
+#button_annul{
+    border: 1px solid #002962;
+}
+
+#button_suppr:hover{
+    border-color: #FFF !important;
+    background: #002962;
+}
+
+#button_annul:hover{
+    background: #002962 !important;
+    color: #fff !important;
+}
+
+.flou{
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    backdrop-filter: blur(3px);
+}
+
+.input-custom{
+    border: 2px solid #002962;
+}
+
+select{
+    color: #002962;
+    border-color: #407BA7;
+}
