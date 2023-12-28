@@ -1,5 +1,27 @@
+function test(mail2) {
+  const mail3 = mail2;
+  console.log(mail3);
+  var confirm = document.getElementById("confirm"),
+  button_suppr = document.getElementById("button_suppr");
+  var overlay = document.querySelector('.overlay');
+  overlay.style.display = 'block';
+  confirm.style.display = "block";
+  button_suppr.value = mail3;
+
+}
+
+function annul(){
+  var confirm = document.getElementById("confirm"),
+  button_suppr = document.getElementById("button_suppr");
+  var overlay = document.querySelector('.overlay');
+  overlay.style.display = 'none';
+  button_suppr.value = " ";
+  confirm.style.display = "none";
+}
+
 function suppresion(mail) {
   const recupMail = mail;
+  //console.log(recupMail);
   var escapedMail = recupMail.replace("@", "");
   escapedMail = escapedMail.replace(".", "");
   jQuery.ajax({
@@ -15,6 +37,12 @@ function suppresion(mail) {
       console.log(textStatus.reponseText);
     },
   });
+  var confirm = document.getElementById("confirm")
+  button_suppr = document.getElementById("button_suppr");
+  var overlay = document.querySelector('.overlay');
+  overlay.style.display = 'none';
+  button_suppr.value = " ";
+  confirm.style.display = "none";
 }
 function ModificationStatus(mail) {
   const recupMail = mail;
