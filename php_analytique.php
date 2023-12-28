@@ -113,6 +113,196 @@ if(isset($_SESSION['mail'])){
 
 </p>
 
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<?php 
+$date = date('Y');
+
+$mountExist =["01","02","03","04","05","06","07","08","09","10","11","12"];
+$result = [];
+for ($i=0;$i<count($mountExist);$i++) 
+{
+$creationReservation = "'".$date."-".$mountExist[$i]."%'";
+  try{
+    
+    $modele10 = new Model("reservation");
+    $exemple10 = new Repository($modele10->getTable());
+    $sql10 = "Select COUNT(*) from ".$modele10->getTable(). " where date_crea like $creationReservation";
+    $resultat10 = $exemple10->requete($sql10);
+    foreach ($resultat10 as $ligne) {
+        { array_push($result,$ligne["COUNT(*)"]);}
+    }}
+  
+    catch(PDOException $e){
+        die($e->getMessage());
+    }  
+}
+    ?>
+
+
+
+<script>
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+    type: 'bar',
+
+    data: {
+        labels: <?php echo json_encode($mountExist)?>,
+        datasets: [{
+            label: '# of Votes',
+            data: <?php echo json_encode($result) ?>,
+            backgroundColor: '#4B0A19',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+
+
+<div>
+    <canvas id="nbrvue"></canvas>
+</div>
+
+
+
+
+<?php 
+$date = date('Y');
+
+$mountExistVu =["01","02","03","04","05","06","07","08","09","10","11","12"];
+$resultVu = [];
+for ($i=0;$i<count($mountExistVu);$i++) 
+{
+$creationVu = "'".$date."-".$mountExistVu[$i]."'";
+  try{
+    
+    $modele11 = new Model("vu");
+    $exemple11 = new Repository($modele11->getTable());
+    $sql11 = "Select compteur from ".$modele11->getTable(). " where date = $creationVu";
+    $resultat11 = $exemple11->requete($sql11);
+    foreach ($resultat11 as $ligne) {
+       
+        
+        { 
+         
+                 array_push($resultVu,$ligne["compteur"]);
+            }
+           
+    }}
+  
+    catch(PDOException $e){
+        die($e->getMessage());
+    }  
+}
+    ?>
+
+
+
+<script>
+const nbrvue = document.getElementById('nbrvue');
+
+new Chart(nbrvue, {
+    type: 'bar',
+
+    data: {
+        labels: <?php echo json_encode($mountExistVu)?>,
+        datasets: [{
+            label: '# of Votes',
+            data: <?php echo json_encode($resultVu) ?>,
+            backgroundColor: '#4B0A19',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+
+<div>
+    <canvas id="MoyennAvis"></canvas>
+</div>
+
+
+
+
+<?php 
+$date = date('Y');
+
+$mountExistAvis =["01","02","03","04","05","06","07","08","09","10","11","12"];
+$resultAvis = [];
+for ($i=0;$i<count($mountExistAvis);$i++) 
+{
+$creationAvis = "'".$date."-".$mountExistAvis[$i]."%'";
+  try{
+    
+    $modele11 = new Model("avis");
+    $exemple11 = new Repository($modele11->getTable());
+    $sql11 = "Select AVG(note) from ".$modele11->getTable(). " where date like $creationAvis";
+    $resultat11 = $exemple11->requete($sql11);
+    foreach ($resultat11 as $ligne) {
+       
+        
+        { 
+           
+                 array_push($resultAvis,$ligne["AVG(note)"]);
+            
+           }
+    }}
+  
+    catch(PDOException $e){
+        die($e->getMessage());
+    }  
+}
+    ?>
+
+
+
+<script>
+const MoyennAvis = document.getElementById('MoyennAvis');
+
+new Chart(MoyennAvis, {
+    type: 'line',
+
+    data: {
+        labels: <?php echo json_encode($mountExistAvis)?>,
+        datasets: [{
+            label: '# of Votes',
+            data: <?php echo json_encode($resultAvis) ?>,
+            backgroundColor: '#4B0A19',
+            borderColor: '#4B0A19',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
 <?php
  }
             else{
