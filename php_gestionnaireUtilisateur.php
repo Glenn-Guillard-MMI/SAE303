@@ -181,7 +181,7 @@
                                 </table>
                                 <div id="confirm" class="rounded-4 bg-white">
                                     <div class="d-flex justify-content-around align-items-center flex-column h-100">
-                                        <p class="text-black text-center px-2">Voulez-vous supprimer cette information ? Cette action ne peut pas être annulée.</p>
+                                        <p class="text-blue text-center px-2">Voulez-vous supprimer cette information ? Cette action ne peut pas être annulée.</p>
                                         <div class="d-flex flex-row justify-content-around align-items-center w-100">
                                             <p id="button_annul" onclick="annul()" class="px-2 py-1 rounded-3 bg-white">Annuler</p>
                                             <p id="button_suppr" onclick="suppresion(this.value)" value="" class="px-2 py-1 rounded-3 text-white">Supprimer</p>

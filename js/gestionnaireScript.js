@@ -7,7 +7,7 @@ function test(mail2) {
   overlay.style.display = 'block';
   confirm.style.display = "block";
   button_suppr.value = mail3;
-
+  document.body.style.overflow = 'hidden';
 }
 
 function annul(){
@@ -17,6 +17,7 @@ function annul(){
   overlay.style.display = 'none';
   button_suppr.value = " ";
   confirm.style.display = "none";
+  document.body.style.overflow = 'auto';
 }
 
 function suppresion(mail) {
@@ -43,6 +44,7 @@ function suppresion(mail) {
   overlay.style.display = 'none';
   button_suppr.value = " ";
   confirm.style.display = "none";
+  document.body.style.overflow = 'auto';
 }
 function ModificationStatus(mail) {
   const recupMail = mail;
