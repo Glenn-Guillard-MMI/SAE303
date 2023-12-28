@@ -27,11 +27,10 @@
 </head>
 
 <body class="font-normal">
-
     <div class="d-flex flex-row w-100 h-100">
-        <section class="w-25 h-100">
+        <section class="w-25 h-100 position-fixed start-0">
             <nav class="bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                <img class="w-50" src="img/SVG/logo.svg" alt="logo aero club">
+                <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Accueil</a>
                 <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="">Gestion des utilisateurs</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>

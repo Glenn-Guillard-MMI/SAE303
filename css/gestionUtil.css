@@ -30,7 +30,7 @@ nav a:not(.exclu):hover {
 }
 
 .ml-custom {
-    margin-left: 2vw;
+    margin-left: 27%;
 }
 
 .text-blue {
@@ -149,4 +149,8 @@ thead {
 select{
     color: #002962;
     border-color: #407BA7;
+}
+
+.logo-shadow{
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
 }
