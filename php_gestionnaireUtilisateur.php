@@ -165,7 +165,7 @@
 
                                                 echo "<td>";
                                                 ?>
-                                                <i onclick="test(<?php echo $mailJqierry ?>)" class="fas fa-trash trash-icon icon_supp"></i>
+                                                <i onclick="test(<?php echo $mailJqierry ?>)" class="fas fa-trash trash-icon icon_supp text-danger"></i>
                                         <?php
                                             echo "</td>";
                                             echo "</tr>";
