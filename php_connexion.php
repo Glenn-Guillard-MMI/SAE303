@@ -23,28 +23,28 @@
     <nav class="container-fluid p-3 w-100 text-white">
         <section class="row">
             <div class="col">
-                <a href="index.html"><img class="w-100" src="img/SVG/logo.svg" alt="logo Aéro club de Frotey-les-Lure"></a>
+                <a href="#"><img class="w-100" src="img/SVG/logo.svg" alt="logo Aéro club de Frotey-les-Lure"></a>
             </div>
             <div class="col text-center mt-2">
-                <a class="lien_nav text-decoration-none text-white size-2-5" href="index.html#bapteme">BAPTÈME DE L'AIR</a>
+                <a class="lien_nav text-decoration-none text-white size-2-5" href="index.php#bapteme">BAPTÈME DE L'AIR</a>
             </div>
             <div class="col text-center mt-2">
-                <a class="lien_nav text-decoration-none text-white" href="index.html#container_formation">FORMATIONS</a>
+                <a class="lien_nav text-decoration-none text-white" href="index.php#container_formation">FORMATIONS</a>
             </div>
             <div class="col text-center mt-2">
-                <a class="lien_nav text-decoration-none text-white" href="index.html#forfait">FORFAITS</a>
+                <a class="lien_nav text-decoration-none text-white" href="index.php#forfait">FORFAITS</a>
             </div>
             <div class="col text-center mt-2">
-                <a class="lien_nav text-decoration-none text-white" href="index.html#propos">À PROPOS</a>
+                <a class="lien_nav text-decoration-none text-white" href="index.php#propos">À PROPOS</a>
             </div>
             <div class="col text-center mt-2">
-                <a class="lien_nav text-decoration-none text-white" href="index.html#event">ÉVÉNEMENTS</a>
+                <a class="lien_nav text-decoration-none text-white" href="index.php#event">ÉVÉNEMENTS</a>
             </div>
             <div class="col text-center mt-2">
-                <a class="lien_nav text-decoration-none text-white" href="index.html#galerie">GALERIE</a>
+                <a class="lien_nav text-decoration-none text-white" href="index.php#galerie">GALERIE</a>
             </div>
             <div class="col text-center mt-2">
-                <a class="lien_nav text-decoration-none text-white" href="index.html#contact">CONTACT</a>
+                <a class="lien_nav text-decoration-none text-white" href="index.php#contact">CONTACT</a>
             </div>
             <div class="col text-center">
                 <svg id="account" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">

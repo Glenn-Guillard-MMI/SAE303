@@ -25,7 +25,7 @@ if(!empty($_POST["email"]) and !empty($_POST["password"])){
     {
         session_start();
         $_SESSION['mail'] = $_POST["email"];
-        header("Location: index.html");
+        header("Location: index.php");
 
     }
         else{header("Location: php_connexion.php");}

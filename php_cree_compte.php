@@ -6,7 +6,7 @@
 -->
 
 <!DOCTYPE html>
-<html lang=fr">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -160,7 +160,7 @@
                 <div class="d-flex justify-content-around flex-row mt-2">
                     <button onclick="return_card2()"
                         class="button_return bg-white mt-3 text-blue px-2 py-1 rounded-2">Retour</button>
-                    <input type="submit" disabled id="push" value="S'inscrire" class="button_inscri mt-3 text-white px-2 rounded-2">
+                    <input type="submit" disabled id="push" value="S'inscrire" class="button_inscri mt-3 text-white px-2 py-1 rounded-2">
                 </div>
             </section>
         </div>
