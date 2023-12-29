@@ -25,3 +25,8 @@ backToTop.addEventListener('mouseover', function () {
 backToTop.addEventListener('mouseout', function () {
   fleche.style.width = '4em';
 });
+
+function retirer(){
+  document.getElementById("cookie").style.display = 'none';
+  document.getElementById("cookie").style.userSelect = 'none';
+}
