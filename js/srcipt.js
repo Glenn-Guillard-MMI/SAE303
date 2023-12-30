@@ -3,7 +3,39 @@ function meteoAPI(data) {
   for (var i = 0; i < 7; i++) {
     temperature = data.list[i].main.temp;
     $("#temperature" + [i]).text(temperature + "°");
-    $("#temp" + [i]).text(data.list[i].weather[0].main);
+    switch (data.list[i].weather[0].main) {
+      case "Clear":
+        $("#temp" + [i]).text('Dégagé');
+        break;
+      case "Clouds":
+        $("#temp" + [i]).text('Nuageux');
+        break;
+      case "Rain":
+        $("#temp" + [i]).text('Pluvieux');
+        break;
+      case "Snow":
+        $("#temp" + [i]).text('Neige');
+        break;
+      case "Thunderstorm":
+        $("#temp" + [i]).text('Orageux');
+        break;
+      case "Fog":
+        $("#temp" + [i]).text('Brouillard');
+        break;
+      case "Windy":
+        $("#temp" + [i]).text('Vent');
+        break;
+      case "Haze":
+        $("#temp" + [i]).text('Brouillard');
+        break;
+      case "Dust":
+        $("#temp" + [i]).text('Brouillard');
+        break;
+      case "Smoke":
+        $("#temp" + [i]).text('Brouillard');
+        break;
+    }
+    //$("#temp" + [i]).text(data.list[i].weather[0].main);
     document.getElementById('meteo' + [i]).alt = data.list[i].weather[0].main;
     if (data.list[i].weather[0].main == 'Smoke' || data.list[i].weather[0].main == 'Dust' || data.list[i].weather[0].main == 'Haze' || data.list[i].weather[0].main == 'Fog') {
       document.getElementById('meteo' + [i]).src = 'img/meteo/Fog.png';
@@ -20,7 +52,7 @@ function meteoAPI(data) {
     let numeroJour = dateCourante.getDate();
     let mois = dateCourante.toLocaleString('fr', { month: 'long' });
     let dateFormatee = `${jourSemaine} ${numeroJour} ${mois}`;
-    $("#date"+[i]).text(dateFormatee);
+    $("#date" + [i]).text(dateFormatee);
   }
 
 }

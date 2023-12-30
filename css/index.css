@@ -151,10 +151,23 @@ h2 {
     font-family: aeronaves;
 }
 
+.popup_bapteme {
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    user-select: none;
+    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
+}
+
 /*en dssous header*/
 
 .bg-body {
     background-color: #407BA7 !important;
+}
+
+.mt-custom{
+    margin-top: 15%;
 }
 
 /*avion haut*/
@@ -175,10 +188,40 @@ h2 {
     animation-timing-function: cubic-bezier(.21, .91, .46, .99);
 }
 
+.container_avion_bas{
+    width: 35%;
+    margin: 0 auto;
+    perspective: 100px;
+}
+
+#avion_helice_bas {
+    position: relative;
+    top: 2em;
+    display: block;
+    opacity: 0;
+    width: 100%;
+    z-index: 1 !important;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(.21, .91, .46, .99);
+}
+
+@keyframes arriver2 {
+    from {
+        transform: translateZ(-1000px);
+        top: -200em;
+        opacity: 0;
+    }
+    to {
+        transform: translateZ(0px);
+        top: 2em;
+        opacity: 1;
+    }
+}
+
 @keyframes arriver {
     from {
         transform: translateZ(-250px);
-        top: -100em;
+        top: -75em;
     }
 
     to {
@@ -219,6 +262,7 @@ h2 {
 .meteo {
     box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(15.990756034851074px);
+    width: 80% !important;
 }
 
 .color_meteo {
@@ -306,8 +350,7 @@ h2 {
 /*carte avion*/
 
 .img_card_bapteme {
-    width: 100%;
-    height: 25%;
+    filter : drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
 }
 
 .carte_avion {
@@ -381,6 +424,10 @@ input[type="text"] {
     cursor: pointer;
 }
 
+.select-custom-2 {
+    border: 1px solid #002962;
+}
+
 /*carte avion*/
 /*avis clients*/
 
@@ -427,6 +474,11 @@ input[type="text"] {
     height: 100% !important;
 }
 
+.carte3 {
+    background: linear-gradient(180deg, #FFF 0%, #CBD5E1 100%);
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
 /*formation*/
 
 /*service*/
@@ -454,6 +506,7 @@ input[type="text"] {
     background-image: url("../img/service/bapteme.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 65% 45%;
 }
 
 #maintenance {
@@ -552,7 +605,7 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
 
 .slider::before,
 .slider::after {
-background: linear-gradient(to right, #407BA7 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, #407BA7 0%, rgba(255, 255, 255, 0) 100%);
     content: ' ';
     height: 100%;
     position: absolute;
@@ -785,7 +838,6 @@ background: linear-gradient(to right, #407BA7 0%, rgba(255, 255, 255, 0) 100%);
 
 #degrade-custom {
     background: linear-gradient(180deg, #407BA7 0%, #6CA4AD 100%);
-    height: 180vh;
 }
 
 .arrive_avion {
@@ -814,20 +866,17 @@ background: linear-gradient(to right, #407BA7 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 
-.width-custom-contact-input{
+.width-custom-contact-input {
     width: 45%;
-    height: 5vh;
     cursor: text !important;
 }
+
 .input-custom-contact {
     border-radius: 10px !important;
     border: 0px solid #002962 !important;
     background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.50) 100%);
     backdrop-filter: blur(5px);
-    height: 5vh;
     cursor: text !important;
-    padding: 0.2em;
-    font-size: 0.9vw;
 }
 
 .input-custom-contact-textarea {
@@ -835,22 +884,21 @@ background: linear-gradient(to right, #407BA7 0%, rgba(255, 255, 255, 0) 100%);
     border: 0px solid #002962 !important;
     background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.50) 100%);
     backdrop-filter: blur(5px);
-    height: 10vh;
+    height: 12.5vh;
     resize: none;
-    padding: 0.2em;
-    font-size: 0.9vw;
 }
 
-.button-contact-custom{
+.button-contact-custom {
     box-shadow: 0px 4px 30.3px 0px rgba(0, 0, 0, 0.25);
     border: 1px solid transparent;
     background-color: #6AB04E;
     transition: all 0.5s ease;
 }
 
-.button-contact-custom:hover{
+.button-contact-custom:hover {
     border-color: #fff;
 }
+
 /*contact*/
 
 /*galerie*/
@@ -922,28 +970,37 @@ footer {
     height: 70vh;
 }
 
-.bg-custom-footer{
+.bg-custom-footer {
     background-color: #636363;
 }
 
-.lien-footer{
+.lien-footer {
     color: #FFF;
     transition: all 0.5s ease;
 }
 
-.lien-footer:hover{
+.lien-footer:hover {
     color: #2c3a5c;
 }
 
-.lien_compte{
+.lien_compte {
     left: 33%;
     top: 45%;
     font-family: aeronaves;
 }
 
-.lien_mention{
+.lien_mention {
     left: 29.5%;
     top: 61%;
     font-family: aeronaves;
 }
+
 /*footer*/
+
+#depart_avion{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
