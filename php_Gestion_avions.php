@@ -8,7 +8,7 @@ if(isset($_SESSION['mail'])){
     require_once "poo_repository.php";
     require_once "poo_models.php";
 
-    //Vérification si la personne est admin
+   
     try {
 
         $modele = new Model("adherant");
@@ -115,10 +115,10 @@ if(isset($_SESSION['mail'])){
 
 <div>
     <form action="_AjoutAvion.php" method="POST">
-        <input type="texte" id="Nom" name="Nom">
-        <input type="texte" id="Class" name="Class">
-        <input type="texte" id="Matricule" name="Matricule">
-        <input type="submit">
+        <input type="texte" id="Nom" name="Nom" onkeyup="vérifiNom()">
+        <input type="texte" id="Class" onkeyup="vérifiClass()" name="Class">
+        <input type="texte" id="Matricule" onkeyup="vérifiMatricule()" name="Matricule">
+        <input type="submit" id="push" disabled>
 
 
     </form>
