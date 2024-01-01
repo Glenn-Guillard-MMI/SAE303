@@ -244,8 +244,9 @@
                         pas être annulée.</p>
                     <div class="d-flex flex-row justify-content-around align-items-center w-100">
                         <p id="button_annul" onclick="annul()" class="px-2 py-1 rounded-3 bg-white">Annuler</p>
-                        <p id="button_suppr" onclick="supression(this.value)" value=""
-                            class="px-2 py-1 rounded-3 text-white">Supprimer</p>
+
+                        <p id="button_suppr" onclick="supression(this.value)" value="" class="px-2 py-1 rounded-3 text-white">Supprimer</p>
+
                     </div>
                 </div>
             </div>
