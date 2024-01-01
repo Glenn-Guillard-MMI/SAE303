@@ -205,7 +205,7 @@ session_start();
         ?>
             <div class='carte_avion w-25 color-blue-bapteme d-flex justify-content-around align-items-center flex-column'>
               <form action="_reservBapteme.php" method="POST" class='h-100 w-75 d-flex justify-content-around align-items-center flex-column mt-2'>
-                <img class='img_card_bapteme rounded-3 w-100 h-25' src='ImageBapteme/<?= $ligne["image"] ?>.png' alt='ULM pendulaire'>
+                <img class='img_card_bapteme rounded-3 w-100 h-25 object-fit-cover' src='ImageBapteme/<?= $ligne["image"] ?>.png' alt='ULM pendulaire'>
                 <h5 class='fw-medium text-center size-3'><?= $ligne["nom"] ?></h5>
                 <div class='d-flex flex-column w-100'>
                   <div class='custom-select mx-auto w-100'>
