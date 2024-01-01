@@ -29,14 +29,14 @@
 <body class="font-normal">
     <div class="d-flex flex-row w-100 h-100 mb-5">
         <section class="w-25 h-100 position-fixed start-0">
-            <nav class="bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+            <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
                 <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Accueil</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des utilisateurs</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>
-                <a class="text-blue text-decoration-none py-1 px-2 rounded-3 exclu bg-white" href="">Analytiques</a>
+                <a class="text-blue text-decoration-none py-1 px-2 rounded-3 exclu bg-white" href="php_analytique.php">Analytiques</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Demande de licence</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Avions</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Offres</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Événement</a>

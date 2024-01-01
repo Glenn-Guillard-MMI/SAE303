@@ -1,3 +1,15 @@
+function test(mail){
+  document.getElementById("button_suppr").value = mail;
+  document.getElementById("confirm").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+}
+
+function annul(){
+  document.getElementById("button_suppr").value = '';
+  document.getElementById("confirm").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+}
+
 function suppresion(mail) {
   const recupMail = mail;
   var escapedMail = recupMail.replace("@", "");
@@ -15,6 +27,9 @@ function suppresion(mail) {
       console.log(textStatus.reponseText);
     },
   });
+  document.getElementById("button_suppr").value = '';
+  document.getElementById("confirm").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
 }
 function ModificationStatus(mail) {
   const recupMail = mail;
