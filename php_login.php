@@ -126,7 +126,7 @@
                     </div>
                 </div>
             </article>
-            <form id="modif_compte" class="position-absolute bg-white text-blue w-50 p-4 rounded-4">
+            <form id="modif_compte" class="position-absolute bg-white text-blue w-50 p-4 rounded-4" action="_modification_compte.php" method="post">
                 <h2 class="font-avion text-center mb-5 text-blue">Profil</h2>
                 <article class="d-flex flex-row mb-5">
                     <div>
@@ -135,11 +135,11 @@
                             <div class="d-flex align-items-start flex-column">
                                 <span class="d-flex flex-row justify-content-center align-items-center">
                                     <p class="mb-0 me-4">Nom : </p>
-                                    <input class="input_modif rounded-3" type="text" value="<?php echo $ligne["nom"]; ?>">
+                                    <input name="nom" class="input_modif rounded-3" type="text" value="<?php echo $ligne["nom"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row justify-content-center align-items-center mt-2">
                                     <p class="mb-0 me-4">Prénom : </p>
-                                    <input class="input_modif rounded-3" type="text" value="<?php echo $ligne["prenom"]; ?>">
+                                    <input name="prenom" class="input_modif rounded-3" type="text" value="<?php echo $ligne["prenom"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row mt-2">
                                     <p class="mb-0 me-4">Nom : </p>
@@ -153,23 +153,23 @@
                             <div>
                                 <span class="d-flex flex-row justify-content-center align-items-center">
                                     <p class="mb-0 me-4">Adresse : </p>
-                                    <input class="input_modif rounded-3" type="text" value="<?php echo $ligne["adresse"]; ?>">
+                                    <input name="physique_addresse" class="input_modif rounded-3" type="text" value="<?php echo $ligne["adresse"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row justify-content-center align-items-center mt-2">
                                     <p class="mb-0 me-4">Code postale : </p>
-                                    <input class="input_modif rounded-3" type="text" value="<?php echo $ligne["code_postale"]; ?>">
+                                    <input name="code_addresse" class="input_modif rounded-3" type="text" value="<?php echo $ligne["code_postale"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row justify-content-center align-items-center mt-2">
                                     <p class="mb-0 me-4">Ville : </p>
-                                    <input class="input_modif rounded-3" type="text" value="<?php echo $ligne["ville"]; ?>">
+                                    <input name="ville" class="input_modif rounded-3" type="text" value="<?php echo $ligne["ville"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row justify-content-center align-items-center mt-2">
                                     <p class="mb-0 me-4">E-mail : </p>
-                                    <input class="input_modif rounded-3" type="text" value="<?php echo $ligne["mail"]; ?>">
+                                    <input name="email" class="input_modif rounded-3" type="text" value="<?php echo $ligne["mail"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row justify-content-center align-items-center mt-2">
                                     <p class="mb-0 me-4">Téléphone : </p>
-                                    <input class="input_modif rounded-3" type="text" value="<?php echo $ligne["num_tel"]; ?>">
+                                    <input name="num" class="input_modif rounded-3" type="text" value="<?php echo str_replace(' ','',$ligne["num_tel"]); ?>">
                                 </span>
                             </div>
                         </div>
