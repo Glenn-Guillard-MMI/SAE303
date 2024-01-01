@@ -1,0 +1,176 @@
+.bg-custom {
+    background-color: #002962;
+}
+
+.bg-custom-2 {
+    background: #407BA7;
+}
+
+.bg-custom-3 {
+    background: #004E89;
+}
+
+@font-face {
+    font-family: aeronaves;
+    src: url(../font/AeronavesPersonalUseOnly-0WWnz.ttf);
+}
+
+.font-avion {
+    font-family: aeronaves;
+}
+
+.font-normal {
+    font-family: nunito;
+}
+
+nav {
+    box-shadow: 7px 0px 15px 0px rgba(0, 0, 0, 0.25);
+    height: 100vh !important;
+}
+
+nav a:not(.exclu) {
+    transition: all 0.25s ease;
+}
+
+nav a:not(.exclu):hover {
+    background-color: #FFF !important;
+    color: #002962 !important;
+}
+
+.ml-custom {
+    margin-left: 27%;
+}
+
+.text-blue {
+    color: #002962 !important;
+}
+
+.width-custom-article {
+    width: 70% !important;
+}
+
+.shadow-box-stat {
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.buton_deco {
+    background: #ED0101;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.25s ease;
+}
+
+.buton_deco:hover {
+    background: #9B0B0B;
+}
+
+.bouton_modif {
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    background: #407BA7;
+    border: 1.5px solid #fff;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.bouton_modif:hover {
+    background: #fff !important;
+    color: #407BA7 !important;
+}
+
+.mdp_modif {
+    transition: color ease 0.3s;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.mdp_modif:hover {
+    color: #002962;
+}
+
+
+.mdp_modif::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #002962;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.mdp_modif:hover::after,
+.mdp_modif:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+
+
+.mdp_modif::after {
+    opacity: 1;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.mdp_modif:hover::after,
+.mdp_modif:focus::after {
+    transform: translate3d(0, 0, 0);
+}
+
+#modif_compte {
+    max-height: 95vh; 
+    top: 3.5%;
+    left: 52.5%;
+    transform: translateX(-50%);
+    border: 2px solid #002962;
+    display: none;
+    user-select: none;
+    z-index: 500;
+}
+
+.input_modif{
+    border: 2px solid #002962;
+}
+
+.buton_annul, .buton_enregistre{
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.buton_annul:hover{
+    background: #002962 !important;
+    color: #fff !important;
+}
+
+.buton_enregistre{
+    border: 1.5px solid transparent;
+}
+
+.buton_enregistre:hover{
+    border-color: #fff;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    backdrop-filter: blur(3px);
+}
+
+#modif_mdp{
+    top: 50%;
+    left: 50%;
+    border: 2px solid #002962;
+    transform: translate(-50%, -50%);
+    display: none;    
+    user-select: none;
+    z-index: 500;
+}
