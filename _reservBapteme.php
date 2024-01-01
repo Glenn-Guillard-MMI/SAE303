@@ -18,7 +18,8 @@ if (isset($_SESSION["mail"])) {
     $date_h = "'" . $date_h . "'";
     $modele = new Model("reservation");
 	$Repository = new Repository($modele->getTable());
-    $sql ="INSERT INTO ". $modele->getTable() ." (mail, nom, date_j, date_h, temps_presta, formule) VALUES ($mail, $nom, $date_j , $date_h , $temps_presta, $formule);";
+    // j'ai du mettre matricule dans le requete sinon erreur -- Thomas 
+    $sql ="INSERT INTO ". $modele->getTable() ." (mail, matricule, nom, date_j, date_h, temps_presta, formule) VALUES ($mail, '', $nom, $date_j , $date_h , $temps_presta, $formule);";
     $Repository->requete($sql);
     $_SESSION["message_cor"] = "Reservation valider";
     header("Location:index.php#margin_top_bapteme");
