@@ -204,14 +204,11 @@ session_start();
           foreach ($resultat as $ligne) {
         ?>
             <div class='carte_avion w-25 color-blue-bapteme d-flex justify-content-around align-items-center flex-column'>
-              <form action="_reservBapteme.php" method="POST" class='w-75 d-flex justify-content-around align-items-center flex-column'>
-                <img class='img_card_bapteme mx-auto mt-5 rounded-3 object-fit-cover w-100 h-25' src='ImageBapteme/<?= $ligne["image"] ?>.png' alt='ULM pendulaire'>
-                <h5 class='font-wheight-bapteme text-center mt-2 fs-3'>
-                  <input name="nom" type="text" style="display : none">
-                  <?= $ligne["nom"] ?> </input>
-                </h5>
-                <div class='d-flex flex-column mb-3 w-100'>
-                  <div class='custom-select mt-1 mx-auto w-100'>
+              <form action="_reservBapteme.php" method="POST" class='h-100 w-75 d-flex justify-content-around align-items-center flex-column mt-2'>
+                <img class='img_card_bapteme rounded-3 w-100 h-25' src='ImageBapteme/<?= $ligne["image"] ?>.png' alt='ULM pendulaire'>
+                <h5 class='fw-medium text-center size-3'><?= $ligne["nom"] ?></h5>
+                <div class='d-flex flex-column w-100'>
+                  <div class='custom-select mx-auto w-100'>
                     <select class='w-100' name="formule">
                       <option value='' disabled selected>Formule</option>
                       <?php
@@ -223,8 +220,8 @@ session_start();
                       ?>
                     </select>
                   </div>
-                  <div class='custom-select mt-1 mx-auto w-100'>
-                    <select class='w-100' name="temps">
+                  <div class='custom-select w-100'>
+                    <select class='w-100 mt-1' name="temps">
                       <option value='' disabled selected>Temps de prestation</option>
                       <?php
                       $min = $ligne["temps"];
@@ -235,20 +232,20 @@ session_start();
                       ?>
                     </select>
                   </div>
-                  <div class='mt-1 mx-auto w-100'>
-                    <input class='test-date w-100' name="date" type='text' placeholder='Choisir une date ..' readonly='readonly'>
+                  <div class='w-100'>
+                    <input class='test-date w-100 mt-1' name="date" type='text' placeholder='Choisir une date ..' readonly='readonly'>
                   </div>
-                  <div class='mt-1 mb-5'>
-                    <input class='test-time w-100' name="heure" type='text' placeholder='Choisir une heure ..' readonly='readonly'>
+                  <div class=''>
+                    <input class='test-time w-100 mt-1' name="heure" type='text' placeholder='Choisir une heure ..' readonly='readonly'>
                   </div>
                 </div>
-                <div class='d-flex flex-row align-items-center justify-content-around color-red-bapteme mb-4'>
+                <div class='d-flex flex-row align-items-center justify-content-around color-red-bapteme mt-5'>
                   <div>
                     <p class='m-0'><span class='non-strong-text'>à partir de</span><strong class='strong-text fst-italic'>
                         <?= $ligne["prix"] ?> €
                       </strong></p>
                   </div>
-                  <input onclick="popupBapteme()" type='submit' value='Réserver' class='button_reserver_bapteme px-2 text-white fs-5'>
+                  <input type='submit' value='Réserver' class='button_reserver_bapteme px-2 text-white size-2-5'>
                 </div>
               </form>
               <?php
