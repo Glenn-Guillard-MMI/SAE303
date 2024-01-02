@@ -31,12 +31,11 @@ function suppresion(mail) {
   document.getElementById("confirm").style.display = "none";
   document.getElementById("overlay").style.display = "none";
 }
-function ModificationStatus(mail) {
+function ModificationStatus(mail,status) {
   const recupMail = mail;
-  var escapedMail = recupMail.replace("@", "");
-  escapedMail = escapedMail.replace(".", "");
-  const IDModification = $("#Changement_" + escapedMail).val();
-
+  const IDModification = status;
+  console.log(IDModification);
+  
   jQuery.ajax({
     url: "_modificationStatus.php",
     type: "POST",
