@@ -13,6 +13,8 @@ require_once "poo_models.php";
 $nom = "'".($_POST["Nom"])."'";
 $Class ="'".($_POST["Class"])."'";
 $Matricule ="'".($_POST["Matricule"])."'";
+$now  = "'".date("Y-m-d H:i:s")."'";
+
 
 
 
@@ -21,7 +23,7 @@ try{
 
     $modele = new Model("avion");
 	$Repository = new Repository($modele->getTable());
-    $sql ="INSERT INTO ". $modele->getTable() ." (nom, matricule, type) VALUES ( $nom, $Class, $Matricule)";
+    $sql ="INSERT INTO ". $modele->getTable() ." (nom, matricule, type, date_crea) VALUES ( $nom, $Class, $Matricule, $now)";
     $Repository->requete($sql);
     header("Location: php_Gestion_avions.php");
 
