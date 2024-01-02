@@ -17,7 +17,7 @@
                     $resultat = $exemple1->requete($sql);
 
                     foreach ($resultat as $ligne) {
-                        if ($ligne["autorisation"] == 1) { 
+                        if ($ligne["autorisation"] == 1) {  
                             
                             ?>
 

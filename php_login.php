@@ -21,7 +21,9 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="img/SVG/logo.svg">
     <title>ACF2L</title>
 </head>
@@ -29,10 +31,13 @@
 <body class="font-normal text-white">
     <div class="d-flex flex-row w-100 h-100">
         <section class="w-25 h-100 position-fixed start-0">
-            <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+            <nav
+                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
                 <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_login.php">Accueil</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
+                <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                    href="php_login.php">Accueil</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                    href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Demande de licence</a>
@@ -113,10 +118,24 @@
                                     $sauvegarde = $ligne["autorisation"];
                                     echo "</div></div>";
                     ?>
-                                    <div class="d-flex flex-row justify-content-around mt-4 align-items-center">
-                                        <p onclick="modifCompte()" class="fs-4 mb-0 text-white rounded-4 bouton_modif px-2 py-1">Modifier</p>
-                                        <a href="_deconnexion.php" class="buton_deco rounded-4 text-decoration-none text-white text-center py-1 px-2 fs-4">Déconnexion</a>
-                                    </div>
+                    <div class="d-flex flex-row justify-content-around mt-4 align-items-center">
+                        <?php if($ligne["autorisation"] == 0 and ( $ligne["licence_valid"] == 0 or $ligne["licence_valid"] == 3)) { 
+                                        ?><div id="disparition">
+
+                            <label for="licence">Teste</label>
+                            <input type="file" id="licence" style="display:none" name="licence" accept="application/pdf"
+                                onchange="pushlicence()" />
+                        </div><?php
+                                        } ?>
+
+                        <p onclick="modifCompte()" class="fs-4 mb-0 text-white rounded-4 bouton_modif px-2 py-1">
+                            Modifier</p>
+                        <a href="_deconnexion.php"
+                            class="buton_deco rounded-4 text-decoration-none text-white text-center py-1 px-2 fs-4">Déconnexion</a>
+
+
+
+                    </div>
                 </div>
                 <div class="bg-custom-2 mt-4 p-4 rounded-4">
                     <h2>Sécurité</h2>
@@ -126,7 +145,8 @@
                     </div>
                 </div>
             </article>
-            <form id="modif_compte" class="position-absolute bg-white text-blue w-50 p-4 rounded-4" action="_modification_compte.php" method="post">
+            <form id="modif_compte" class="position-absolute bg-white text-blue w-50 p-4 rounded-4"
+                action="_modification_compte.php" method="post">
                 <h2 class="font-avion text-center mb-5 text-blue">Profil</h2>
                 <article class="d-flex flex-row mb-5">
                     <div>
@@ -135,11 +155,13 @@
                             <div class="d-flex align-items-start flex-column">
                                 <span class="d-flex flex-row justify-content-center align-items-center">
                                     <p class="mb-0 me-4">Nom : </p>
-                                    <input name="nom" class="input_modif rounded-3" type="text" value="<?php echo $ligne["nom"]; ?>">
+                                    <input name="nom" class="input_modif rounded-3" type="text"
+                                        value="<?php echo $ligne["nom"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row justify-content-center align-items-center mt-2">
                                     <p class="mb-0 me-4">Prénom : </p>
-                                    <input name="prenom" class="input_modif rounded-3" type="text" value="<?php echo $ligne["prenom"]; ?>">
+                                    <input name="prenom" class="input_modif rounded-3" type="text"
+                                        value="<?php echo $ligne["prenom"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row mt-2">
                                     <p class="mb-0 me-4">Nom : </p>
@@ -153,23 +175,28 @@
                             <div>
                                 <span class="d-flex flex-row justify-content-center align-items-center">
                                     <p class="mb-0 me-4">Adresse : </p>
-                                    <input name="physique_addresse" class="input_modif rounded-3" type="text" value="<?php echo $ligne["adresse"]; ?>">
+                                    <input name="physique_addresse" class="input_modif rounded-3" type="text"
+                                        value="<?php echo $ligne["adresse"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row justify-content-center align-items-center mt-2">
                                     <p class="mb-0 me-4">Code postale : </p>
-                                    <input name="code_addresse" class="input_modif rounded-3" type="text" value="<?php echo $ligne["code_postale"]; ?>">
+                                    <input name="code_addresse" class="input_modif rounded-3" type="text"
+                                        value="<?php echo $ligne["code_postale"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row justify-content-center align-items-center mt-2">
                                     <p class="mb-0 me-4">Ville : </p>
-                                    <input name="ville" class="input_modif rounded-3" type="text" value="<?php echo $ligne["ville"]; ?>">
+                                    <input name="ville" class="input_modif rounded-3" type="text"
+                                        value="<?php echo $ligne["ville"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row justify-content-center align-items-center mt-2">
                                     <p class="mb-0 me-4">E-mail : </p>
-                                    <input name="email" class="input_modif rounded-3" type="text" value="<?php echo $ligne["mail"]; ?>">
+                                    <input name="email" class="input_modif rounded-3" type="text"
+                                        value="<?php echo $ligne["mail"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row justify-content-center align-items-center mt-2">
                                     <p class="mb-0 me-4">Téléphone : </p>
-                                    <input name="num" class="input_modif rounded-3" type="text" value="<?php echo str_replace(' ','',$ligne["num_tel"]); ?>">
+                                    <input name="num" class="input_modif rounded-3" type="text"
+                                        value="<?php echo str_replace(' ','',$ligne["num_tel"]); ?>">
                                 </span>
                             </div>
                         </div>
@@ -198,13 +225,17 @@
                         ?>
                     </div>
                 </article>
-                <p class="text-center">Après la modification de vos informations, vous serez automatiquement déconnecté.</p>
+                <p class="text-center">Après la modification de vos informations, vous serez automatiquement déconnecté.
+                </p>
                 <article class="d-flex flex-row align-items-center justify-content-around">
-                    <p onclick="annulModif()" class="mb-0 buton_annul text-blue bg-white px-2 py-1 fs-5 rounded-3">Annuler</p>
-                    <input type="submit" value="Enregistrer" class="buton_enregistre text-white bg-custom fs-5 rounded-3">
+                    <p onclick="annulModif()" class="mb-0 buton_annul text-blue bg-white px-2 py-1 fs-5 rounded-3">
+                        Annuler</p>
+                    <input type="submit" value="Enregistrer"
+                        class="buton_enregistre text-white bg-custom fs-5 rounded-3">
                 </article>
             </form>
-            <form id="modif_mdp" class="position-absolute bg-white text-blue px-5 py-4 rounded-4" action="_modificationMDP.php" method="POST">
+            <form id="modif_mdp" class="position-absolute bg-white text-blue px-5 py-4 rounded-4"
+                action="_modificationMDP.php" method="POST">
                 <h4>Sécurité</h4>
                 <p>Créez un mot de passe sécurisé avec des lettres, des chiffres et des symboles.</p>
                 <div>
@@ -215,11 +246,13 @@
                     <label for="confirmation">Confirmation mot de passe :</label>
                     <input type="password" name="confirmation" class="input_modif rounded-3">
                 </div>
-                <article class="mt-5" >
+                <article class="mt-5">
                     <p>Après la modification de vos informations, vous serez automatiquement déconnecté.</p>
                     <div class="d-flex flex-row align-items-center justify-content-around">
-                        <p onclick="annulMdp()" class="mb-0 buton_annul text-blue bg-white px-2 py-1 fs-5 rounded-3">Annuler</p>
-                        <input type="submit" value="Enregistrer" class="buton_enregistre text-white bg-custom fs-5 rounded-3">
+                        <p onclick="annulMdp()" class="mb-0 buton_annul text-blue bg-white px-2 py-1 fs-5 rounded-3">
+                            Annuler</p>
+                        <input type="submit" value="Enregistrer"
+                            class="buton_enregistre text-white bg-custom fs-5 rounded-3">
                     </div>
                 </article>
             </form>
@@ -227,10 +260,11 @@
                 <?php
                                     if ($sauvegarde == 3) {
                 ?>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat mb-4">
-                        <p class="fs-5">Nombre de réservation</p>
-                        <p class="fs-1">
-                            <?php
+                <div
+                    class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat mb-4">
+                    <p class="fs-5">Nombre de réservation</p>
+                    <p class="fs-1">
+                        <?php
                                         try {
                                             $modele2 = new Model("reservation");
                                             $exemple2 = new Repository($modele2->getTable());
@@ -247,13 +281,14 @@
                             ?>
 
 
-                        </p>
-                        <p class="fs-5">En attente</p>
-                    </div>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat mb-4">
-                        <p class="fs-5">Demande de licence</p>
-                        <p class="fs-1">
-                            <?php
+                    </p>
+                    <p class="fs-5">En attente</p>
+                </div>
+                <div
+                    class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat mb-4">
+                    <p class="fs-5">Demande de licence</p>
+                    <p class="fs-1">
+                        <?php
                                         try {
                                             $sql3 = "Select COUNT(*) from " . $modele->getTable() . " where licence = 0  ";
                                             $resultat3 = $exemple1->requete($sql3);
@@ -268,13 +303,14 @@
 
 
                             ?>
-                        </p>
-                        <p class="fs-5">En attente</p>
-                    </div>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat mb-4">
-                        <p class="fs-5">Nombre de réservation</p>
-                        <p class="fs-1">
-                            <?php
+                    </p>
+                    <p class="fs-5">En attente</p>
+                </div>
+                <div
+                    class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat mb-4">
+                    <p class="fs-5">Nombre de réservation</p>
+                    <p class="fs-1">
+                        <?php
 
                                         $date = "'" . date("Y-m") . "%'";
                                         try {
@@ -291,14 +327,15 @@
 
 
                             ?>
-                        </p>
-                        <p class="fs-5">Ce mois ci</p>
-                    </div>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
+                    </p>
+                    <p class="fs-5">Ce mois ci</p>
+                </div>
+                <div
+                    class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
 
-                        <p class="fs-5">Moyenne avis</p>
-                        <p class="fs-1">
-                            <?php
+                    <p class="fs-5">Moyenne avis</p>
+                    <p class="fs-1">
+                        <?php
                                         try {
                                             $modele3 = new Model("avis");
                                             $exemple3 = new Repository($modele3->getTable());
@@ -316,8 +353,8 @@
                             ?>
 
 
-                        </p>
-                    </div>
+                    </p>
+                </div>
                 <?php
                                     }
                 ?>
@@ -325,10 +362,11 @@
                 <?php
                                     if ($sauvegarde == 2) {
                 ?>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
-                        <p>Nombre d'adhérant</p>
-                        <p>
-                            <?php
+                <div
+                    class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
+                    <p>Nombre d'adhérant</p>
+                    <p>
+                        <?php
                                         try {
 
                                             $sql2 = "Select COUNT(*) from " . $modele->getTable();
@@ -344,13 +382,14 @@
                             ?>
 
 
-                        </p>
-                    </div>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
+                    </p>
+                </div>
+                <div
+                    class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
 
-                        <p>Nombre de réservation</p>
-                        <p>
-                            <?php
+                    <p>Nombre de réservation</p>
+                    <p>
+                        <?php
                                         $date = "'" . date("Y-m") . "%'";
                                         try {
                                             $modele2 = new Model("reservation");
@@ -368,13 +407,14 @@
                             ?>
 
 
-                        </p>
-                        <p>Ce mois ci</p>
-                    </div>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
-                        <p>Moyenne avis</p>
-                        <p>
-                            <?php
+                    </p>
+                    <p>Ce mois ci</p>
+                </div>
+                <div
+                    class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
+                    <p>Moyenne avis</p>
+                    <p>
+                        <?php
                                         try {
                                             $modele3 = new Model("avis");
                                             $exemple3 = new Repository($modele3->getTable());
@@ -391,12 +431,13 @@
                             ?>
 
 
-                        </p>
-                    </div>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
-                        <p>Nombre de vue du site</p>
-                        <p>
-                            <?php
+                    </p>
+                </div>
+                <div
+                    class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
+                    <p>Nombre de vue du site</p>
+                    <p>
+                        <?php
 
                                         try {
                                             $modele4 = new Model("vu");
@@ -414,9 +455,9 @@
                             ?>
 
 
-                        </p>
-                        <p>Ce mois ci</p>
-                    </div>
+                    </p>
+                    <p>Ce mois ci</p>
+                </div>
 
 
 
@@ -429,10 +470,11 @@
                 <?php
                                     if ($sauvegarde == 1) {
                 ?>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
-                        <p>Nombre de vol</p>
-                        <p>
-                            <?php
+                <div
+                    class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
+                    <p>Nombre de vol</p>
+                    <p>
+                        <?php
                                         try {
                                             $modele6 = new Model("reservation");
                                             $exemple6 = new Repository($modele6->getTable());
@@ -449,12 +491,13 @@
                             ?>
 
 
-                        </p>
-                    </div>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
-                        <p>Nombre d'heure de vol</p>
-                        <p>
-                            <?php
+                    </p>
+                </div>
+                <div
+                    class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
+                    <p>Nombre d'heure de vol</p>
+                    <p>
+                        <?php
                                         try {
                                             $modele6 = new Model("reservation");
                                             $exemple6 = new Repository($modele6->getTable());
@@ -471,9 +514,9 @@
                             ?>
 
 
-                        </p>
-                        <p>Ce mois ci</p>
-                    </div>
+                    </p>
+                    <p>Ce mois ci</p>
+                </div>
 
                 <?php
                                     }
@@ -482,10 +525,11 @@
                 <?php
                                     if ($sauvegarde == 0) {
                 ?>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
-                        <p>Nombre de vol</p>
-                        <p>
-                            <?php
+                <div
+                    class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
+                    <p>Nombre de vol</p>
+                    <p>
+                        <?php
                                         try {
                                             $modele6 = new Model("reservation");
                                             $exemple6 = new Repository($modele6->getTable());
@@ -502,12 +546,13 @@
                             ?>
 
 
-                        </p>
-                    </div>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
-                        <p>Nombre d'heure de vol</p>
-                        <p>
-                            <?php
+                    </p>
+                </div>
+                <div
+                    class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat">
+                    <p>Nombre d'heure de vol</p>
+                    <p>
+                        <?php
                                         try {
                                             $modele6 = new Model("reservation");
                                             $exemple6 = new Repository($modele6->getTable());
@@ -524,13 +569,13 @@
                             ?>
 
 
-                        </p>
-                    </div>
+                    </p>
+                </div>
 
                 <?php
                                     }
                 ?>
-<?php
+                <?php
                                 };
                             }
                         } catch (PDOException $e) {
