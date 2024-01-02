@@ -204,7 +204,7 @@
                     <input type="submit" value="Enregistrer" class="buton_enregistre text-white bg-custom fs-5 rounded-3">
                 </article>
             </form>
-            <form id="modif_mdp" class="position-absolute bg-white text-blue px-5 py-4 rounded-4">
+            <form id="modif_mdp" class="position-absolute bg-white text-blue px-5 py-4 rounded-4" action="_modificationMDP.php" method="POST">
                 <h4>Sécurité</h4>
                 <p>Créez un mot de passe sécurisé avec des lettres, des chiffres et des symboles.</p>
                 <div>

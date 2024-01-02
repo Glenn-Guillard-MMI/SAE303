@@ -1,7 +1,7 @@
 <?php
 
 //initialisation de données
-if(!empty($_POST["nom"]) and !empty($_POST["prenom"]) and !empty($_POST["email"])and !empty($_POST["genre"] and !empty($_POST["birthday"])and !empty($_POST["code_addresse"])and !empty($_POST["physique_addresse"])and !empty($_POST["num"])and !empty($_POST["ville"]))){
+if(!empty($_POST["nom"]) and !empty($_POST["prenom"]) and !empty($_POST["email"])and !empty($_POST["code_addresse"])and !empty($_POST["physique_addresse"])and !empty($_POST["num"])and !empty($_POST["ville"])){
 
 
 //Recupération POO
@@ -16,8 +16,7 @@ $nom = "'".($_POST["nom"])."'";
 $prenom ="'".($_POST["prenom"])."'";
 $mail ="'".($_POST["email"])."'";
 $num ="'".substr($_POST["num"], 0, 2) . ' '.substr($_POST["num"], 2, 2) . ' '.substr($_POST["num"], 4, 2) . ' '.substr($_POST["num"], 6, 2) . ' '.substr($_POST["num"], 8, 2)."'";
-$genre ="'".($_POST["genre"])."'";
-$birthday ="'".($_POST["birthday"])."'";
+
 $addresse = "'".($_POST["physique_addresse"])."'";
 $ville = "'".($_POST["ville"])."'";
 $code = "'".($_POST["code_addresse"])."'";
@@ -28,7 +27,7 @@ $now  = "'".date("Y-m-d H:i:s")."'";
 try{
     $modele = new Model("adherant");
 	$Repository = new Repository($modele->getTable());
-    $sql ="UPDATE ". $modele->getTable() . " SET nom = $nom, prenom = $prenom, civilite = $genre, mail = $mail, code_postale = $code, ville = $ville, adresse = $addresse, num_tel = $num, date_naissance = $birthday, date_update = $now WHERE mail = $mail_secu";
+    $sql ="UPDATE ". $modele->getTable() . " SET nom = $nom, prenom = $prenom, mail = $mail, code_postale = $code, ville = $ville, adresse = $addresse, num_tel = $num, date_update = $now WHERE mail = $mail_secu";
     $Repository->requete($sql);
     session_destroy();
     header("Location: php_modifier_compte.php");
