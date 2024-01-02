@@ -168,7 +168,7 @@
                                     </p>
                                 </div>
                                 <div class="bg-custom-3 text-white p-2 text-center rounded-3 me-5 mb-0 w-25 shadow-custom">
-                                    <p class="fs-5">Nombre de minutes de vol</p>
+                                    <p class="fs-5">Temps de vol</p>
                                     <p class="fs-1">
                                         <?php
                                         try {
@@ -178,7 +178,7 @@
                                             $resultat8 = $exemple6->requete($sql8);
 
                                             foreach ($resultat8 as $ligne) { {
-                                                    echo  $ligne["SUM(temps_presta)"];
+                                                    echo  $ligne["SUM(temps_presta)"]. " min";
                                                 }
                                             }
                                         } catch (PDOException $e) {
