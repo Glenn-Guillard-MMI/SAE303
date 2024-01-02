@@ -82,7 +82,7 @@
     $resultat9= $exemple9->requete($sql9);
 
   foreach ($resultat9 as $ligne2) {
-      { 
+       
        ?>
         <tr>
             <th>
@@ -90,14 +90,65 @@
             </th>
             <th>
                 <?php
+                $mailChecker = "'".$ligne2["mail"]."'";
+                 try{
+                    $modele1 = new Model("adherant");
+                    $exemple1 = new Repository($modele1->getTable());
+                    $sql1 = "Select * from ".$modele1->getTable()." WHERE mail = $mailChecker";
+                    $resultat1= $exemple1->requete($sql1);
                 
+                  foreach ($resultat1 as $ligne3) {
+                    echo $ligne3["nom"]." ".$ligne3["prenom"];
+                  }}
+
+                  catch(PDOException $e){
+                      die($e->getMessage());
+                  }
                 ?>
             </th>
+            <th>
+                <?php
+                $matriculeChecker = "'".$ligne2["matricule"]."'";
+                 try{
+                    $modele0 = new Model("avion");
+                    $exemple0 = new Repository($modele0->getTable());
+                    $sql0 = "Select * from ".$modele0->getTable()." WHERE matricule = $matriculeChecker";
+                    $resultat0= $exemple0->requete($sql0);
+                
+                  foreach ($resultat0 as $ligne0) {
+                    echo $ligne3["type"];
+                  }}
+
+                  catch(PDOException $e){
+                      die($e->getMessage());
+                  }
+                ?>
+            </th>
+            <th>
+                <?php
+             
+                 try{
+                    $modele12 = new Model("adherant");
+                    $exemple12 = new Repository($modele12->getTable());
+                    $sql12 = "Select * from ".$modele12->getTable()." WHERE mail =  $mail";
+                    $resultat12= $exemple12->requete($sql12);
+                
+                  foreach ($resultat12 as $ligne12) {
+                    echo $ligne12["nom"]." ".$ligne12["prenom"];
+                  }}
+
+                  catch(PDOException $e){
+                      die($e->getMessage());
+                  }
+                ?>
+            </th>
+            <th><?= $ligne2["date_j"]?> </th>
+            <th><?= $ligne2["temps_presta"]?> </th>
         </tr>
 
         <?php
     
-    }
+    
   }}
 
   catch(PDOException $e){
@@ -109,5 +160,9 @@
         <?php
                         }}}catch(PDOException $e){
                             die($e->getMessage());
-                        }}            
+                        }}
+                        else {
+
+                            header("Location: php_connexion.php");
+                        }  
 ?>
