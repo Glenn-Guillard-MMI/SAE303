@@ -145,7 +145,7 @@
 
             ?>
                             <article class="d-flex flex-row mt-4">
-                                <div class="bg-custom-3 text-white py-2 px-4 text-center rounded-3 me-5 mb-0 w-25 shadow-custom">
+                                <div class="bg-custom-3 text-white p-4 text-center rounded-3 me-5 mb-0 w-25 shadow-custom d-flex flex-column justify-content-center align-items-center">
                                     <p class="fs-5">Nombre de vol</p>
                                     <p class="fs-1">
                                         <?php
@@ -167,7 +167,7 @@
 
                                     </p>
                                 </div>
-                                <div class="bg-custom-3 text-white p-2 text-center rounded-3 me-5 mb-0 w-25 shadow-custom">
+                                <div class="bg-custom-3 text-white p-4 text-center rounded-3 me-5 mb-0 w-25 shadow-custom d-flex flex-column justify-content-center align-items-center">
                                     <p class="fs-5">Temps de vol</p>
                                     <p class="fs-1">
                                         <?php
@@ -188,7 +188,6 @@
 
 
                                     </p>
-                                    <p class="fs-5">Ce mois ci</p>
                                 </div>
                             </article>
 
