@@ -21,7 +21,9 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="img/SVG/logo.svg">
     <title>ACF2L - Analytique</title>
 </head>
@@ -29,12 +31,15 @@
 <body class="font-normal">
     <div class="d-flex flex-row w-100 h-100 mb-5">
         <section class="w-25 h-100 position-fixed start-0">
-            <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+            <nav
+                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
                 <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                    href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>
-                <a class="text-blue text-decoration-none py-1 px-2 rounded-3 exclu bg-white" href="php_analytique.php">Analytiques</a>
+                <a class="text-blue text-decoration-none py-1 px-2 rounded-3 exclu bg-white"
+                    href="php_analytique.php">Analytiques</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Demande de licence</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Offres</a>
@@ -73,10 +78,10 @@
                 ?>
 
 
-                                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
-                                    <p class="mt-3">Nombre de réservation</p>
-                                    <p class="fs-1">
-                                        <?php
+                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
+                    <p class="mt-3">Nombre de réservation</p>
+                    <p class="fs-1">
+                        <?php
 
                                         $date = "'" . date("Y-m") . "%'";
                                         try {
@@ -95,13 +100,13 @@
 
 
                                         ?>
-                                    </p>
-                                    <p>ce mois ci</p>
-                                </div>
-                                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
-                                    <p class="mt-3">Moyenne avis</p>
-                                    <p class="fs-1">
-                                        <?php
+                    </p>
+                    <p>ce mois ci</p>
+                </div>
+                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
+                    <p class="mt-3">Moyenne avis</p>
+                    <p class="fs-1">
+                        <?php
                                         try {
                                             $modele3 = new Model("avis");
                                             $exemple3 = new Repository($modele3->getTable());
@@ -119,12 +124,12 @@
                                         ?>
 
 
-                                    </p>
-                                </div>
-                                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
-                                    <p class="mt-3">Nombre d'adhérant</p>
-                                    <p class="fs-1">
-                                        <?php
+                    </p>
+                </div>
+                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
+                    <p class="mt-3">Nombre d'adhérant</p>
+                    <p class="fs-1">
+                        <?php
 
                                         try {
 
@@ -141,21 +146,21 @@
                                         ?>
 
 
-                                    </p>
-                                </div>
-                                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
-                                    <p class="mt-3">Nombre de vue du site</p>
-                                    <p class="fs-1">
-                                        <?php
-
+                    </p>
+                </div>
+                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
+                    <p class="mt-3">Nombre de vue du site</p>
+                    <p class="fs-1">
+                        <?php
+$date = "'".date('Y-m')."'";
                                         try {
                                             $modele4 = new Model("vu");
-                                            $exemple7 = new Repository($modele2->getTable());
-                                            $sql7 = "Select COUNT(*) from " . $modele2->getTable();
+                                            $exemple7 = new Repository($modele4->getTable());
+                                            $sql7 = "Select compteur from " . $modele4->getTable(). " Where date = $date";
                                             $resultat7 = $exemple7->requete($sql7);
 
-                                            foreach ($resultat7 as $ligne) { {
-                                                    echo $ligne["COUNT(*)"];
+                                            foreach ($resultat7 as $ligne25) { {
+                                                    echo $ligne25["compteur"];
                                                 }
                                             }
                                         } catch (PDOException $e) {
@@ -164,9 +169,9 @@
                                         ?>
 
 
-                                    </p>
-                                    <p>ce mois ci</p>
-                                </div>
+                    </p>
+                    <p>ce mois ci</p>
+                </div>
             </article>
             <div class="shadow mt-5 rounded-3 p-3 w-75 mx-auto">
                 <canvas id="myChart"></canvas>
@@ -201,28 +206,28 @@
 
 
             <script>
-                const ctx = document.getElementById('myChart');
+            const ctx = document.getElementById('myChart');
 
-                new Chart(ctx, {
-                    type: 'bar',
+            new Chart(ctx, {
+                type: 'bar',
 
-                    data: {
-                        labels: <?php echo json_encode($mountExist) ?>,
-                        datasets: [{
-                            label: 'NOMBRE DE RÉSERVATION',
-                            data: <?php echo json_encode($result) ?>,
-                            backgroundColor: '#6AB04E',
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
+                data: {
+                    labels: <?php echo json_encode($mountExist) ?>,
+                    datasets: [{
+                        label: 'NOMBRE DE RÉSERVATION',
+                        data: <?php echo json_encode($result) ?>,
+                        backgroundColor: '#6AB04E',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
                         }
                     }
-                });
+                }
+            });
             </script>
 
 
@@ -261,28 +266,28 @@
 
 
             <script>
-                const nbrvue = document.getElementById('nbrvue');
+            const nbrvue = document.getElementById('nbrvue');
 
-                new Chart(nbrvue, {
-                    type: 'bar',
+            new Chart(nbrvue, {
+                type: 'bar',
 
-                    data: {
-                        labels: <?php echo json_encode($mountExistVu) ?>,
-                        datasets: [{
-                            label: 'NOMBRE DE VUE',
-                            data: <?php echo json_encode($resultVu) ?>,
-                            backgroundColor: '#6AB04E',
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
+                data: {
+                    labels: <?php echo json_encode($mountExistVu) ?>,
+                    datasets: [{
+                        label: 'NOMBRE DE VUE',
+                        data: <?php echo json_encode($resultVu) ?>,
+                        backgroundColor: '#6AB04E',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
                         }
                     }
-                });
+                }
+            });
             </script>
 
 
@@ -320,32 +325,32 @@
 
 
             <script>
-                const MoyennAvis = document.getElementById('MoyennAvis');
+            const MoyennAvis = document.getElementById('MoyennAvis');
 
-                new Chart(MoyennAvis, {
-                    type: 'line',
+            new Chart(MoyennAvis, {
+                type: 'line',
 
-                    data: {
-                        labels: <?php echo json_encode($mountExistAvis) ?>,
-                        datasets: [{
-                            label: 'MOYENNE AVIS',
-                            data: <?php echo json_encode($resultAvis) ?>,
-                            backgroundColor: '#CE2A96',
-                            borderColor: '#CE2A96',
-                            borderWidth: 2
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                            }
+                data: {
+                    labels: <?php echo json_encode($mountExistAvis) ?>,
+                    datasets: [{
+                        label: 'MOYENNE AVIS',
+                        data: <?php echo json_encode($resultAvis) ?>,
+                        backgroundColor: '#CE2A96',
+                        borderColor: '#CE2A96',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
                         }
                     }
-                });
+                }
+            });
             </script>
 
-<?php
+            <?php
                             } else {
                                 header("Location: php_connexion.php");
                             }
