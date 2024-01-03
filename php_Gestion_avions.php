@@ -21,9 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
     <link rel="icon" href="img/SVG/logo.svg">
     <title>ACF2L</title>
 </head>
@@ -31,7 +29,7 @@
 <body class="font-normal">
     <div class="d-flex flex-row w-100 h-100">
         <section class="w-25 h-100 position-fixed start-0">
-            <?php 
+            <?php
             //Lancement session
             session_start();
 
@@ -42,150 +40,121 @@
                 require_once "poo_models.php";
                 try {
                     $modele = new Model("adherant");
-                
+
                     $exemple1 = new Repository($modele->getTable());
-                
-                    $sql = "Select * from ".$modele->getTable()." where mail = $mail  ";
-                
+
+                    $sql = "Select * from " . $modele->getTable() . " where mail = $mail  ";
+
                     $resultat = $exemple1->requete($sql);
-                
-                    foreach ($resultat as $ligne) {
-                       {
+
+                    foreach ($resultat as $ligne) { {
                             $sauvegarde = $ligne["autorisation"];
                             if ($sauvegarde == 3) {
-                                ?>
-            <nav
-                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">admin</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                    href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Demande de licence</a>
-                <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
-                    href="php_Gestion_avions.php">Avions</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Offres</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Événement</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Galerie</a>
-            </nav>
+            ?>
+                                <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+                                    <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_DemandeLicence.php">Demande de licence</a>
+                                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_Gestion_avions.php">Avions</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Offres</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Événement</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Galerie</a>
+                                </nav>
+                            <?php
+
+                            }
+                            if ($sauvegarde == 2) {
+                            ?>
+                                <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+                                    <img class="w-50 logo-shadow mt-3" src="img/SVG/logo.svg" alt="logo aero club">
+                                    <div class="d-flex flex-column h-25 justify-content-around my-auto">
+                                        <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_login.php">Accueil</a>
+                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
+                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
+                                    </div>
+                                </nav>
+                            <?php
+
+                            }
+
+
+                            if ($sauvegarde == 1) {
+                            ?>
+                                <nav class="text-center bg-custom text-white d-flex flex-column align-items-center font-avion">
+                                    <img class="w-50 logo-shadow mt-3" src="img/SVG/logo.svg" alt="logo aero club">
+                                    <div class="d-flex flex-column h-25 justify-content-around my-auto">
+                                        <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_login.php">Accueil</a>
+                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Réservations</a>
+                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
+                                    </div>
+                                </nav>
+                            <?php
+
+                            }
+
+
+
+
+                            if ($sauvegarde == 0) {
+                            ?>
+                                <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+                                    <img class="w-50 logo-shadow mt-3" src="img/SVG/logo.svg" alt="logo aero club">
+                                    <div class="d-flex flex-column h-25 justify-content-around my-auto">
+                                        <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_login.php">Accueil</a>
+                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Réservations</a>
+                                    </div>
+                                </nav>
             <?php
-                                
-                                                        } if ($sauvegarde == 2) {
-                                                            ?>
-            <nav
-                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">staff</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                    href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Demande de licence</a>
-                <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
-                    href="php_Gestion_avions.php">Avions</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Offres</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Événement</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Galerie</a>
-            </nav>
-            <?php
-                                                            
-                                                                                    }
 
-
-                                                                                    if ($sauvegarde == 1) {
-                                                                                        ?>
-            <nav
-                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">pilote</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                    href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Demande de licence</a>
-                <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
-                    href="php_Gestion_avions.php">Avions</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Offres</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Événement</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Galerie</a>
-            </nav>
-            <?php
-                                                                                        
-                                                                                                                }
-
-
-
-
-                                                                                                                if ($sauvegarde == 0) {
-                                                                                                                    ?>
-            <nav
-                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">adheran</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                    href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Demande de licence</a>
-                <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
-                    href="php_Gestion_avions.php">Avions</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Offres</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Événement</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Galerie</a>
-            </nav>
-            <?php
-                                                                                                                    
-                                                                                                                                            }
-                        
-                        }}}catch(PDOException $e){
-                            die($e->getMessage());
-                        }} else {
-                            header("Location: php_connexion.php");
+                            }
                         }
-                        ?>
-
-
-
+                    }
+                } catch (PDOException $e) {
+                    die($e->getMessage());
+                }
+            } else {
+                header("Location: php_connexion.php");
+            }
+            ?>
         </section>
         <section class="w-75 ml-custom">
             <h1 class="text-blue mt-4">Gestion des utilisateurs</h1>
             <article class="d-flex flex-row align-items-center w-50 justify-content-start mb-4 mt-3">
                 <h4 class="text-blue me-5 mb-0">Liste des avions disponible</h4>
                 <?php
-               
 
 
-                    try {
 
-                        $modele = new Model("adherant");
-                        $exemple1 = new Repository($modele->getTable());
-                        $sql = "Select autorisation from " . $modele->getTable() . " where mail = $mail  ";
-                        $resultat = $exemple1->requete($sql);
+                try {
 
-                        foreach ($resultat as $ligne) {
-                            if ($ligne["autorisation"] == 3 || $ligne["autorisation"] == 2 || $ligne["autorisation"] == 1) {
-                                if ($ligne["autorisation"] == 3) {
+                    $modele = new Model("adherant");
+                    $exemple1 = new Repository($modele->getTable());
+                    $sql = "Select autorisation from " . $modele->getTable() . " where mail = $mail  ";
+                    $resultat = $exemple1->requete($sql);
+
+                    foreach ($resultat as $ligne) {
+                        if ($ligne["autorisation"] == 3 || $ligne["autorisation"] == 2 || $ligne["autorisation"] == 1) {
+                            if ($ligne["autorisation"] == 3) {
                 ?>
-                <p onclick="ajoutAvion()" class="fs-4 text-blue bg-white ajout_avion rounded-3 mb-0">+</p>
-                <?php
-                                }
+                                <p onclick="ajoutAvion()" class="fs-4 text-blue bg-white ajout_avion rounded-3 mb-0">+</p>
+                            <?php
+                            }
 
-                                ?>
+                            ?>
 
-                <?php
-                                try {
+                            <?php
+                            try {
 
-                                    $modele = new Model("adherant");
-                                    $exemple1 = new Repository($modele->getTable());
-                                    $sql = "Select autorisation from " . $modele->getTable() . " where mail = $mail  ";
-                                    $resultat = $exemple1->requete($sql);
-                                    foreach ($resultat as $ligne) {
-                                ?>
+                                $modele = new Model("adherant");
+                                $exemple1 = new Repository($modele->getTable());
+                                $sql = "Select autorisation from " . $modele->getTable() . " where mail = $mail  ";
+                                $resultat = $exemple1->requete($sql);
+                                foreach ($resultat as $ligne) {
+                            ?>
 
             </article>
             <table>
@@ -194,48 +163,47 @@
                         <th>Nom</th>
                         <th>Class</th>
                         <th>Matricule</th>
-                        <?php if ($ligne["autorisation"] == 3) {
-                                            echo " <th>Plus d'option</th>";
-                                        }
-                                    } ?>
+                    <?php if ($ligne["autorisation"] == 3) {
+                                        echo " <th>Plus d'option</th>";
+                                    }
+                                } ?>
 
 
                     </tr>
                 </thead>
                 <tbody class="text-blue">
                     <?php
-                                    try {
-                                        $modele2 = new Model("avion");
-                                        $exemple2 = new Repository($modele2->getTable());
-                                        $sql2 = "Select * from " . $modele2->getTable() . " WHERE Active = 1";
-                                        $resultat2 = $exemple2->requete($sql2);
-                                        foreach ($resultat2 as $ligne2) {
+                                try {
+                                    $modele2 = new Model("avion");
+                                    $exemple2 = new Repository($modele2->getTable());
+                                    $sql2 = "Select * from " . $modele2->getTable() . " WHERE Active = 1";
+                                    $resultat2 = $exemple2->requete($sql2);
+                                    foreach ($resultat2 as $ligne2) {
 
 
 
 
 
                     ?>
-                    <tr id="<?php echo "Matricule_" . $ligne2["matricule"] ?>">
-                        <th><?= $ligne2["nom"] ?></th>
-                        <th><?= $ligne2["type"] ?></th>
-                        <th><?= $ligne2["matricule"] ?></th>
-                        <?php if ($ligne["autorisation"] == 3) {
-                                                $supr = "'" . $ligne2["matricule"] . "'";
+                            <tr id="<?php echo "Matricule_" . $ligne2["matricule"] ?>">
+                                <th><?= $ligne2["nom"] ?></th>
+                                <th><?= $ligne2["type"] ?></th>
+                                <th><?= $ligne2["matricule"] ?></th>
+                                <?php if ($ligne["autorisation"] == 3) {
+                                            $supr = "'" . $ligne2["matricule"] . "'";
                                 ?>
-                        <th class="text-danger">
-                            <span onclick="test(<?= $supr ?>)"
-                                class="d-flex flex-row justify-content-start align-items-center width-custom pe-auto cursor-pointer">
-                                <i class="fas fa-trash trash-icon icon_supp me-3 mb-0"></i>
-                                <p class="mb-0">Supprimer</p>
-                            </span>
-                        </th>
+                                    <th class="text-danger">
+                                        <span onclick="test(<?= $supr ?>)" class="d-flex flex-row justify-content-start align-items-center width-custom pe-auto cursor-pointer">
+                                            <i class="fas fa-trash trash-icon icon_supp me-3 mb-0"></i>
+                                            <p class="mb-0">Supprimer</p>
+                                        </span>
+                                    </th>
 
-                        <?php }
+                                <?php }
                                 ?>
 
-                    </tr>
-                    <?php } ?>
+                            </tr>
+                        <?php } ?>
                 </tbody>
             </table>
             <div id="confirm" class="rounded-4 bg-white">
@@ -253,71 +221,65 @@
             <div id="overlay"></div>
 
 
-            <?php
+    <?php
 
 
 
-                                    } catch (PDOException $e) {
-                                        die($e->getMessage());
-                                        header("Location: php_connexion.php");
-                                    }
                                 } catch (PDOException $e) {
                                     die($e->getMessage());
                                     header("Location: php_connexion.php");
                                 }
+                            } catch (PDOException $e) {
+                                die($e->getMessage());
+                                header("Location: php_connexion.php");
+                            }
     ?>
 
 
-            <?php
-                            } else {
-                                header("Location: php_connexion.php");
-                            }
+<?php
+                        } else {
+                            header("Location: php_connexion.php");
+                        }
 
 
-                            if ($ligne["autorisation"] == 3) {
+                        if ($ligne["autorisation"] == 3) {
 ?>
 
-            <div id="ajout_avion_form" class="bg-white rounded-3">
-                <div class="d-flex justify-content-center align-items-center flex-column">
-                    <h2 class="mt-3 text-blue font-avion">Ajouter un Avion</h2>
-                    <form action="_AjoutAvion.php" method="POST"
-                        class="d-flex flex-column w-75 mt-5 mb-4 text-blue justify-content-center align-items-center">
-                        <div class="d-flex flex-column text-blue justify-content-end align-items-end">
-                            <div class="width-custom d-flex flex-row">
-                                <label for="Nom">Nom : </label>
-                                <input type="texte" id="Nom" name="Nom" onkeyup="vérifiNom()"
-                                    class="w-50 ms-5 mb-0 input_crea_avion rounded-3">
-                            </div>
-                            <div class="width-custom d-flex flex-row mt-3">
-                                <label for="Class">Classe : </label>
-                                <input type="texte" id="Class" onkeyup="vérifiClass()" name="Class"
-                                    class="w-50 ms-5 mb-0 input_crea_avion rounded-3">
-                            </div>
-                            <div class="width-custom d-flex flex-row mt-3 mb-5">
-                                <label for="Matricule">Matricule : </label>
-                                <input type="texte" id="Matricule" onkeyup="vérifiMatricule()" name="Matricule"
-                                    class="w-50 ms-5 mb-0 input_crea_avion rounded-3">
-                            </div>
-                        </div>
-                        <div class="w-75 d-flex flex-row mt-4 justify-content-between">
-                            <input onclick="annulCrea()" type="button" id="annul" value="Annuler"
-                                class="bouton_annul bg-white rounded-3 fs-5">
-                            <input type="submit" id="push" value="Ajouter" disabled
-                                class="bouton_ajout rounded-3 bg-custom text-white fs-5">
-                        </div>
-                    </form>
+    <div id="ajout_avion_form" class="bg-white rounded-3">
+        <div class="d-flex justify-content-center align-items-center flex-column">
+            <h2 class="mt-3 text-blue font-avion">Ajouter un Avion</h2>
+            <form action="_AjoutAvion.php" method="POST" class="d-flex flex-column w-75 mt-5 mb-4 text-blue justify-content-center align-items-center">
+                <div class="d-flex flex-column text-blue justify-content-end align-items-end">
+                    <div class="width-custom d-flex flex-row">
+                        <label for="Nom">Nom : </label>
+                        <input type="texte" id="Nom" name="Nom" onkeyup="vérifiNom()" class="w-50 ms-5 mb-0 input_crea_avion rounded-3">
+                    </div>
+                    <div class="width-custom d-flex flex-row mt-3">
+                        <label for="Class">Classe : </label>
+                        <input type="texte" id="Class" onkeyup="vérifiClass()" name="Class" class="w-50 ms-5 mb-0 input_crea_avion rounded-3">
+                    </div>
+                    <div class="width-custom d-flex flex-row mt-3 mb-5">
+                        <label for="Matricule">Matricule : </label>
+                        <input type="texte" id="Matricule" onkeyup="vérifiMatricule()" name="Matricule" class="w-50 ms-5 mb-0 input_crea_avion rounded-3">
+                    </div>
                 </div>
-            </div>
+                <div class="w-75 d-flex flex-row mt-4 justify-content-between">
+                    <input onclick="annulCrea()" type="button" id="annul" value="Annuler" class="bouton_annul bg-white rounded-3 fs-5">
+                    <input type="submit" id="push" value="Ajouter" disabled class="bouton_ajout rounded-3 bg-custom text-white fs-5">
+                </div>
+            </form>
+        </div>
+    </div>
 
 
-            <?php
-                            }
+<?php
                         }
-                    } catch (PDOException $e) {
-                        die($e->getMessage());
-                        header("Location: php_connexion.php");
                     }
-                
+                } catch (PDOException $e) {
+                    die($e->getMessage());
+                    header("Location: php_connexion.php");
+                }
+
 
 ?>
 

@@ -149,3 +149,7 @@ select{
 .logo-shadow{
     filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
 }
+
+.icon-shadow{
+    box-shadow: 0px 3.409px 11.93px 0px rgba(0, 0, 0, 0.25);
+}
