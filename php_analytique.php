@@ -33,7 +33,9 @@
         <section class="w-25 h-100 position-fixed start-0">
             <nav
                 class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                <a class="exclu" href="index.php">
+                    <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                </a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3"
                     href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
@@ -42,9 +44,9 @@
                     href="php_analytique.php">Analytiques</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_DemandeLicence.php">Demande de licence</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Offres</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_offre.php">Offres</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Événement</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_evenement.php">Événement</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Galerie</a>
             </nav>
         </section>

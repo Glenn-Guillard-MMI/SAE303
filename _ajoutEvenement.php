@@ -64,8 +64,6 @@ catch(PDOException $e){
 
 }
 else {
-
    header("Location:php_evenement.php");
-
 }
  

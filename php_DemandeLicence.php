@@ -61,9 +61,9 @@
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
                                     <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_DemandeLicence.php">Demande de licence</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Offres</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_offre.php">Offres</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Événement</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_evenement.php">Événement</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Galerie</a>
                                 </nav>
                             <?php
@@ -72,7 +72,9 @@
                             if ($sauvegarde == 2) {
                             ?>
                                 <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                                    <img class="w-50 logo-shadow mt-3" src="img/SVG/logo.svg" alt="logo aero club">
+                                    <a class="exclu" href="index.php">
+                                        <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                                    </a>
                                     <div class="d-flex flex-column h-25 justify-content-around my-auto">
                                         <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_login.php">Accueil</a>
                                         <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
@@ -87,7 +89,9 @@
                             if ($sauvegarde == 1) {
                             ?>
                                 <nav class="text-center bg-custom text-white d-flex flex-column align-items-center font-avion">
-                                    <img class="w-50 logo-shadow mt-3" src="img/SVG/logo.svg" alt="logo aero club">
+                                    <a class="exclu" href="index.php">
+                                        <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                                    </a>
                                     <div class="d-flex flex-column h-25 justify-content-around my-auto">
                                         <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_login.php">Accueil</a>
                                         <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Réservations</a>
@@ -104,7 +108,9 @@
                             if ($sauvegarde == 0) {
                             ?>
                                 <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                                    <img class="w-50 logo-shadow mt-3" src="img/SVG/logo.svg" alt="logo aero club">
+                                    <a class="exclu" href="index.php">
+                                        <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                                    </a>
                                     <div class="d-flex flex-column h-25 justify-content-around my-auto">
                                         <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_login.php">Accueil</a>
                                         <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Réservations</a>
