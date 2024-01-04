@@ -63,7 +63,7 @@
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Offres</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Événement</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_evenement.php">Événement</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Galerie</a>
                                 </nav>
                             <?php
