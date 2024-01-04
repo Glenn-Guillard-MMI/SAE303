@@ -19,6 +19,12 @@ function retirer() {
   document.getElementById("cookie").style.userSelect = 'none';
 }
 
+function accepter() {
+  document.getElementById("cookie").style.display = 'none';
+  document.getElementById("cookie").style.userSelect = 'none';
+  document.location.href = '_cookie.php';
+}
+
 var hauteurNavigateur = window.innerHeight,
   nuage = document.getElementById('depart_avion').getBoundingClientRect();
 message = false;
