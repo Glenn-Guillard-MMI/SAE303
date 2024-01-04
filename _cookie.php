@@ -8,7 +8,45 @@ $arr_cookie_options = array (
                 );
 setcookie('ACF2L', 'vu', $arr_cookie_options);  
 
-//GLENN faire la vu qui augmente à chaque et qui l'envoie à la base de donnée
+
+
+$date = "'".date("Y-m")."'";
+require_once "poo_repository.php";
+require_once "poo_models.php";
+try {
+    $modele = new Model("VU");
+    $exemple1 = new Repository($modele->getTable());
+    $sql = "Select sum(compteur) from " . $modele->getTable() . " where date = $date  ";
+    $resultat = $exemple1->requete($sql);
+
+    foreach ($resultat as $ligne) { 
+          if ($ligne["sum(compteur)"] == ""){
+            try {
+                $modele2 = new Model("VU");
+                $exemple2 = new Repository($modele2->getTable());
+                $sql2 = "INSERT INTO " . $modele2->getTable() . " VALUE ($date, 1)  ";
+                $exemple2->requete($sql2);}
+                catch (PDOException $e) {
+                    die($e->getMessage());
+                }
+          }
+          else{
+            try {
+                $newCompteur = $ligne["sum(compteur)"] + 1;
+                $modele3 = new Model("VU");
+                $exemple3 = new Repository($modele3->getTable());
+                $sql3 = "UPDATE " . $modele3->getTable() . " SET compteur = $newCompteur where date = $date";
+                $exemple3->requete($sql3);}
+                catch (PDOException $e) {
+                    die($e->getMessage());
+                }
+          };          
+        }
+        } catch (PDOException $e) {
+                die($e->getMessage());
+            }
+
+
 
 header('location: index.php');
 } else {

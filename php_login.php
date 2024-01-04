@@ -62,7 +62,8 @@
                     href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_DemandeLicence.php">Demande de licence</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_DemandeLicence.php">Demande de
+                    licence</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_offre.php">Offres</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
@@ -434,7 +435,7 @@
                                             $resultat5 = $exemple3->requete($sql5);
 
                                             foreach ($resultat5 as $ligne) { {
-                                                    echo  $ligne["AVG(note)"];
+                                                    echo  round($ligne["AVG(note)"],1);
                                                 }
                                             }
                                         } catch (PDOException $e) {
@@ -513,7 +514,7 @@
                                             $resultat5 = $exemple3->requete($sql5);
 
                                             foreach ($resultat5 as $ligne) { {
-                                                    echo  $ligne["AVG(note)"];
+                                                    echo  round($ligne["AVG(note)"],1);
                                                 }
                                             }
                                         } catch (PDOException $e) {
