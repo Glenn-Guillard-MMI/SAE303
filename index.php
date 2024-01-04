@@ -73,7 +73,9 @@ session_start();
       </div>
     </section>
   </nav>
-
+  <?php 
+  if (!isset($_COOKIE['ACF2L'])) {
+    ?>
   <section id="cookie" class="position-fixed w-25 rounded-4">
     <article class="size-2 p-3">
       Ce site utilise des cookies, le fait de ne pas consentir ou de retirer son consentement peut avoir un effet
@@ -86,6 +88,7 @@ session_start();
       <p onclick="accepter()" class="button_reserver_bapteme px-2 text-white rounded-5" type="button">Tout accepter</p>
     </form>
   </section>
+  <?php } ?>
 
   <section id="backToTop">
     <a href="#"><img id="fleche_haut" src="img/SVG/back_to_top.svg" alt="bouton remonte en haut de la page"></a>
