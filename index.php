@@ -79,12 +79,12 @@ session_start();
       Ce site utilise des cookies, le fait de ne pas consentir ou de retirer son consentement peut avoir un effet
       négatif sur certaines caractéristiques et fonctions.
     </article>
-    <article class="d-flex justify-content-around pb-2">
+    <form class="d-flex justify-content-around pb-2" action="_cookie.php">
       <p onclick="retirer()"
         class="button_cookie_refus px-2 rounded-5 d-inline-flex justify-content-center align-items-center"
         type="button">Tout refuser</p>
-      <p onclick="retirer()" class="button_reserver_bapteme px-2 text-white rounded-5" type="button">Tout accepter</p>
-    </article>
+      <p onclick="accepter()" class="button_reserver_bapteme px-2 text-white rounded-5" type="button">Tout accepter</p>
+    </form>
   </section>
 
   <section id="backToTop">
@@ -699,7 +699,7 @@ session_start();
                 plus</a>
             </div>
           </div>
-        <?php
+          <?php
         }
       } catch (PDOException $e) {
         die($e->getMessage());
