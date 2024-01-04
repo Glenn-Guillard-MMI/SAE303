@@ -26,6 +26,16 @@
     <link rel="icon" href="img/SVG/logo.svg">
     <title>ACF2L - Création compte</title>
 </head>
+<?php
+ session_start();
+
+ //Vérification si quelq'un est connecter
+ if (isset($_SESSION['mail'])) {
+
+    header("Location:php_login.php");
+    exit();
+ }
+?>
 
 <body class="bg-body overflow-x-hidden mb-5">
     <nav class="container-fluid p-3 w-100 text-white">
@@ -160,7 +170,8 @@
                 <div class="d-flex justify-content-around flex-row mt-2">
                     <button onclick="return_card2()"
                         class="button_return bg-white mt-3 text-blue px-2 py-1 rounded-2">Retour</button>
-                    <input type="submit" disabled id="push" value="S'inscrire" class="button_inscri mt-3 text-white px-2 py-1 rounded-2">
+                    <input type="submit" disabled id="push" value="S'inscrire"
+                        class="button_inscri mt-3 text-white px-2 py-1 rounded-2">
                 </div>
             </section>
         </div>

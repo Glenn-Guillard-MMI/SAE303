@@ -18,7 +18,16 @@
     <link rel="icon" href="img/SVG/logo.svg">
     <title>Connexion - ACF2L</title>
 </head>
+<?php
+ session_start();
 
+ //Vérification si quelq'un est connecter
+ if (isset($_SESSION['mail'])) {
+
+    header("Location:php_login.php");
+    exit();
+ }
+?>
 <body class="bg-body">
     <nav class="container-fluid p-3 w-100 text-white">
         <section class="row">
