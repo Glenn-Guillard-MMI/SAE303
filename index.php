@@ -677,9 +677,9 @@ session_start();
         $result = $ex->requete($sql2);
         foreach ($result as $lign) {
           ?>
-          <div class="d-flex flex-row">
+          <div class="d-flex flex-row mt-5">
             <div class="w-25 rounded-4 bg-white d-grid justify-content-center align-content-center">
-              <img src="ImagesEvenement/<?= $lign["image"] ?>" alt="<?= $lign["nom"] ?>"
+              <img src="ImagesEvenement/<?= $lign["image"] ?>.png" alt="<?= $lign["nom"] ?>"
                 class="w-100 rounded-4 box-shadow-custom-event">
             </div>
             <div class="w-75 d-flex flex-column justify-content-start ml-custom-event text-white">
