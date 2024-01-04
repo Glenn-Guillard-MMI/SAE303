@@ -41,26 +41,30 @@ nav a:not(.exclu):hover {
     filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
 }
 
-#ajout-event{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    z-index: 500;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
-    border: 1px solid #002962;
+.card-container {
+    overflow-x: auto;
 }
 
-.ajout_event{
-    transition: all 0.25s ease;
-    box-shadow: 0px 4px 15px 0px rgba(0, 41, 98, 0.20);
+.carte {
+    margin-right: 2em;
+    display: inline-block;
+    flex: 0 0 auto;
+    border: 2px solid #002962;
+    width: 30%;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+}
+
+.img-bapteme {
+    width: 90%;
+}
+
+.icon-event {
+    box-shadow: 0px 4.353px 15.237px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    padding: 0 0.5em;
 }
 
-.ajout_event:hover{
-    background: #002962 !important;
-    color: #FFF !important;
+.bapteme-container, .formation-container, .forfait-container{
+    width: 85%;
 }
 
 #overlay {
@@ -77,9 +81,9 @@ nav a:not(.exclu):hover {
     backdrop-filter: blur(3px);
 }
 
-#confirm {
+#confirmBapt, #confirmForfait, #confirmForm {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -90,40 +94,55 @@ nav a:not(.exclu):hover {
     border: 1px solid #002962;
 }
 
-.ligne{
-    height: 10%;
-}
-
-.lien-event{
-    transition: color 0.25s ease;
-}
-
-.lien-event:hover{
-    color: #407BA7 !important;
-}
-
-.icon-event{
-    box-shadow: 0px 4.353px 15.237px 0px rgba(0, 0, 0, 0.25);
+.annul_buton {
+    border: 1px solid #002962;
     cursor: pointer;
-}
-
-.img-shadow{
-    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
-}
-
-#confirm div div p{
-    cursor: pointer;
-    color: #002962;
     transition: all 0.25s ease;
+}
+
+.suppr_buton {
+    border: 2px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.annul_buton:hover {
+    background: #002962 !important;
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+.suppr_buton:hover {
+    border-color: #fff !important;
+}
+
+#modif-bapteme,
+#modif-forfait,
+#modif-formation,
+#ajout-bapteme,
+#ajout-forfait,
+#ajout-formation {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid #002962;
+    z-index: 500;
+    display: none;
+}
+
+textarea {
+    resize: none !important;
 }
 
 #button_suppr{
     background: rgba(0, 41, 98, 0.80) !important;
     border: 1px solid rgba(0, 41, 98, 0.80) !important;
+    cursor: pointer;
 }
 
 #button_annul{
     border: 1px solid #002962;
+    cursor: pointer;
 }
 
 #button_suppr:hover{
@@ -136,40 +155,21 @@ nav a:not(.exclu):hover {
     color: #fff !important;
 }
 
-.ajout_input:not(.exclus){
-    border: 2px solid #002962;
-}
-
-#file-upload-button{
-    background: #fff;
-}
-
-.annul_buton{
-    border: 1px solid #002962;
-    cursor: pointer;
+.plus-icon{
     transition: all 0.25s ease;
 }
 
-.suppr_buton{
-    border: 2px solid transparent;
-    transition: all 0.25s ease;
-}
-
-.annul_buton:hover{
+.plus-icon:hover{
     background: #002962 !important;
-    border-color: #fff !important;
     color: #fff !important;
 }
 
-.suppr_buton:hover{
-    border-color: #fff !important;
+.cursor{
+    cursor: pointer;
 }
 
-#modif-event{
-    display: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 500;
-    border: 1px solid #002962;
+input[type="text"], input[type="number"]{
+    border: 2px solid #002962;
+    border-radius: 10px;
+    color: #002962;
 }
