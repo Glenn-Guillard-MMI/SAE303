@@ -62,7 +62,7 @@
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Demande de licence</a>
                                     <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_Gestion_avions.php">Avions</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Offres</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_offre.php">Offres</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Événement</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Galerie</a>
