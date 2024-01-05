@@ -85,7 +85,7 @@
             }
             ?>
 
-            <form action="_ajoutEvenement.php" method="POST" enctype="multipart/form-data" id="ajout-event" class="position-absolute w-50 bg-white p-3 rounded-3">
+            <form action="_ajoutEvenement.php" method="POST" enctype="multipart/form-data" id="ajout-event" class="position-fixed w-50 bg-white p-3 rounded-3">
                 <div class="d-flex flex-column">
                     <h1 class="font-avion text-center">Ajouter un événement</h1>
                     <input id="test" class="ajout_input w-50 mx-auto exclus" type="file" name="images" accept=".png">
@@ -165,7 +165,7 @@
             require_once "UID.php";
 
             ?>
-            <form action="_modificationevenement.php" method="POST" class="position-absolute w-50 bg-white p-3 rounded-3" id="modif-event">
+            <form action="_modificationevenement.php" method="POST" class="position-fixed w-50 bg-white p-3 rounded-3" id="modif-event">
                 <div class="d-flex flex-column">
                     <h1 class="font-avion text-center">Ajouter un événement</h1>
                     <span class="d-flex flex-row justify-content-start align-items-center w-50 mx-auto mt-3">
@@ -199,7 +199,7 @@
 
         </section>
     </div>
-    <div id="confirm" class="rounded-4 bg-white">
+    <div id="confirm" class="rounded-4 bg-white position-fixed">
         <div class="d-flex justify-content-around align-items-center flex-column h-100">
             <p class="text-blue text-center px-2">Voulez-vous supprimer cette information ? Cette action ne peut
                 pas être annulée.</p>

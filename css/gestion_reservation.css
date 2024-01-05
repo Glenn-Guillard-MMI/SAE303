@@ -1,0 +1,113 @@
+.bg-custom {
+    background-color: #002962;
+}
+
+@font-face {
+    font-family: aeronaves;
+    src: url(../font/AeronavesPersonalUseOnly-0WWnz.ttf);
+}
+
+.font-avion {
+    font-family: aeronaves;
+}
+
+.font-normal {
+    font-family: nunito;
+}
+
+nav {
+    box-shadow: 7px 0px 15px 0px rgba(0, 0, 0, 0.25);
+    height: 100vh !important;
+}
+
+nav a:not(.exclu) {
+    transition: all 0.25s ease;
+}
+
+nav a:not(.exclu):hover {
+    background-color: #FFF !important;
+    color: #002962 !important;
+}
+
+.ml-custom {
+    margin-left: 27%;
+}
+
+.text-blue {
+    color: #002962 !important;
+}
+
+.logo-shadow {
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+}
+
+/*tableau*/
+
+table {
+    width: 95% !important;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    border-collapse: separate !important;
+    border-spacing: 0px;
+    border-radius: 10px;
+    border: 2px solid #407BA7;
+}
+
+td,
+th {
+    padding: 0.5vw;
+}
+
+table thead th:first-child {
+    border-top-left-radius: 5px;
+}
+
+table thead th:last-child {
+    border-top-right-radius: 5px;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+thead {
+    background-color: #407BA7;
+}
+
+/*tableau*/
+
+.w-custom{
+    width: fit-content;
+}
+
+.icon_confirm{
+    cursor: pointer;
+}
+
+.icon-shadow{
+    box-shadow: 0px 3.409px 11.93px 0px rgba(0, 0, 0, 0.25);
+}
+
+#attente-button{
+    border: 2px solid #002962;
+    transition: all 0.25s ease;
+}
+
+#attente-button:hover{
+    border-color: #FFF;
+    cursor: pointer;
+}
+
+#valid-button{
+    border: 2px solid transparent;
+    transition: all 0.25s ease;
+    background: #002962;
+    color: #fff;
+}
+
+#valid-button:hover{
+    border-color: #fff;
+    cursor: pointer;
+}
