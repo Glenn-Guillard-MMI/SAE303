@@ -1,0 +1,146 @@
+.bg-custom {
+    background-color: #002962;
+}
+
+@font-face {
+    font-family: aeronaves;
+    src: url(../font/AeronavesPersonalUseOnly-0WWnz.ttf);
+}
+
+.font-avion {
+    font-family: aeronaves;
+}
+
+.font-normal {
+    font-family: nunito;
+}
+
+nav {
+    box-shadow: 7px 0px 15px 0px rgba(0, 0, 0, 0.25);
+    height: 100vh !important;
+}
+
+nav a:not(.exclu) {
+    transition: all 0.25s ease;
+}
+
+nav a:not(.exclu):hover {
+    background-color: #FFF !important;
+    color: #002962 !important;
+}
+
+.ml-custom {
+    margin-left: 27%;
+}
+
+.text-blue {
+    color: #002962 !important;
+}
+
+.logo-shadow {
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+}
+
+.ajout_event {
+    transition: all 0.25s ease;
+    box-shadow: 0px 4px 15px 0px rgba(0, 41, 98, 0.20);
+    cursor: pointer;
+    padding: 0 0.5em;
+}
+
+.ajout_event:hover {
+    background: #002962 !important;
+    color: #FFF !important;
+}
+
+.shadow-img {
+    box-shadow: 0px 3.539px 13.27px 0px rgba(0, 0, 0, 0.25);
+}
+
+.icon-suppr {
+    box-shadow: 0px 4.353px 15.237px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    backdrop-filter: blur(3px);
+}
+
+#confirm {
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: 25%;
+    z-index: 500;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid #002962;
+}
+
+#button_suppr {
+    background: rgba(0, 41, 98, 0.80) !important;
+    border: 1px solid rgba(0, 41, 98, 0.80) !important;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+}
+
+#button_annul {
+    border: 1px solid #002962;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+}
+
+#button_suppr:hover {
+    border-color: #002962 !important;
+    background: #002962 !important;
+}
+
+#button_annul:hover {
+    background: #002962 !important;
+    color: #fff !important;
+}
+
+.buton-ajout {
+    border: 2px solid transparent;
+    transition: all 0.25s ease;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+}
+
+.buton-ajout:hover {
+    border-color: #fff;
+}
+
+.annul_buton {
+    border: 1px solid #002962;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    width: fit-content;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+}
+
+.annul_buton:hover {
+    background: #002962 !important;
+    color: #fff !important;
+}
+
+#form-ajout{
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #002962;
+    z-index: 500;
+}
