@@ -20,8 +20,109 @@ function verification_nom() {
 }
 
 function verification_password() {
-  const password = document.getElementById("password").value;
-  if (password !== "") {
+  const input = document.getElementById("password").value;
+  majuscule = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+  miniscule = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+  chiffre = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  CaractereSpecial = [
+    ";",
+    ",",
+    ".",
+    ":",
+    "?",
+    "!",
+    "/",
+    "|",
+    "&",
+    "+",
+    "-",
+    "*",
+    "=",
+    "<",
+    ">",
+    "%",
+    "#",
+    "@",
+    "~",
+    "^",
+    "_",
+    "`",
+    "$",
+    "'",
+    '"',
+    "(",
+    ")",
+    "[",
+    "]",
+    "{",
+    "}",
+  ];
+
+  const contientMajuscule = majuscule.some((maj) => input.includes(maj));
+  const contientMinicule = miniscule.some((maj) => input.includes(maj));
+  const contientchiffre = chiffre.some((maj) => input.includes(maj));
+  const contientcaractere = CaractereSpecial.some((maj) => input.includes(maj));
+  if (
+    contientMajuscule &&
+    contientMinicule &&
+    contientchiffre &&
+    contientcaractere &&
+    input.length > 7
+  ) {
     verif_password = true;
   } else {
     verif_password = false;
