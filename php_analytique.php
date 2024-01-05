@@ -48,7 +48,7 @@
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_offre.php">Offres</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_evenement.php">Événement</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Galerie</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_galerie.php">Galerie</a>
             </nav>
         </section>
         <section class="ml-custom w-75">

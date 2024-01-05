@@ -35,7 +35,6 @@ function modifier(arg) {
 }
 
 function suppr(id) {
-  console.log(id);
   document.getElementById('button_suppr').value = id;
   document.getElementById('overlay').style.display = 'block';
   document.getElementById('confirm').style.display = 'block';
