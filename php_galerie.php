@@ -192,7 +192,7 @@
                 $resultat2 = $exemple2->requete($sql2);
                 foreach ($resultat2 as $ligne2) {
                     $img = $ligne2["image"];
-                    $alt = $ligne2["Titre"];
+                    $alt = $ligne2["titre"];
                     $id = "'" . $img . "'"
             ?> <div class="d-flex flex-row justify-content-start align-items-center">
                         <img class="w-50 mt-3 rounded-4 shadow-img" src="ImagesGalerie/<?= $img ?>.png" alt="<?= $alt ?>">

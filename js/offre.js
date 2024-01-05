@@ -33,9 +33,15 @@ function confirmSuppForfait(arg) {
     document.getElementById("overlay").style.display = "none";
 }
 
-function modifBapt() {
+function modifBapt(arg) {
     document.getElementById('modif-bapteme').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
+
+    const nom = document.getElementById("nom_" + arg).innerText;
+    const prix = document.getElementById("prix_" + arg).value;
+
+    document.getElementById("newnom").value = nom;
+    document.getElementById("newprix").value = prix;
 }
 
 function annModBapt() {

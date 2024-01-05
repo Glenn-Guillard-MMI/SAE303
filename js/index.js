@@ -58,3 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 5000);
   }
 } );
+
+var maDiv = document.getElementById('comptebatard');
+var nombreEnfants = maDiv.childElementCount;
+maDiv.style.width = "calc(25vw*" + nombreEnfants + ")";
