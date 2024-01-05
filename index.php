@@ -73,21 +73,21 @@ session_start();
       </div>
     </section>
   </nav>
-  <?php 
+  <?php
   if (!isset($_COOKIE['ACF2L'])) {
     ?>
-  <section id="cookie" class="position-fixed w-25 rounded-4">
-    <article class="size-2 p-3">
-      Ce site utilise des cookies, le fait de ne pas consentir ou de retirer son consentement peut avoir un effet
-      négatif sur certaines caractéristiques et fonctions.
-    </article>
-    <form class="d-flex justify-content-around pb-2" action="_cookie.php">
-      <p onclick="retirer()"
-        class="button_cookie_refus px-2 rounded-5 d-inline-flex justify-content-center align-items-center"
-        type="button">Tout refuser</p>
-      <p onclick="accepter()" class="button_reserver_bapteme px-2 text-white rounded-5" type="button">Tout accepter</p>
-    </form>
-  </section>
+    <section id="cookie" class="position-fixed w-25 rounded-4">
+      <article class="size-2 p-3">
+        Ce site utilise des cookies, le fait de ne pas consentir ou de retirer son consentement peut avoir un effet
+        négatif sur certaines caractéristiques et fonctions.
+      </article>
+      <form class="d-flex justify-content-around pb-2" action="_cookie.php">
+        <p onclick="retirer()"
+          class="button_cookie_refus px-2 rounded-5 d-inline-flex justify-content-center align-items-center"
+          type="button">Tout refuser</p>
+        <p onclick="accepter()" class="button_reserver_bapteme px-2 text-white rounded-5" type="button">Tout accepter</p>
+      </form>
+    </section>
   <?php } ?>
 
   <section id="backToTop">
@@ -716,32 +716,27 @@ session_start();
     <h2 id="galerie" class="text-white text-center">GALERIE</h2>
 
     <article class="slider3 position-relative w-100 d-grid overflow-hidden mb-5">
-      <div class="slide-track3 h-75 d-flex overflow-hidden">
-        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/course-3.jpg"
-            alt=""></div>
-        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3"
-            src="img/troisAutogires.jpg" alt=""></div>
-        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/pendulaire1.jpg"
-            alt=""></div>
-        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/pendulaire.jpg"
-            alt=""></div>
-        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/slide-3.jpg"
-            alt=""></div>
-        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/cours-5.jpg"
-            alt=""></div>
+      <div class="slide-track3 h-75 d-flex overflow-hidden" id="comptebatard">
+        <?php
+        for ($i = 0; $i <= 1; $i++) {
+          try {
 
-        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/course-3.jpg"
-            alt=""></div>
-        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3"
-            src="img/troisAutogires.jpg" alt=""></div>
-        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/pendulaire1.jpg"
-            alt=""></div>
-        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/pendulaire.jpg"
-            alt=""></div>
-        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/slide-3.jpg"
-            alt=""></div>
-        <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3" src="img/cours-5.jpg"
-            alt=""></div>
+            $model3 = new Model("galerie");
+            $ex3 = new Repository($model3->getTable());
+            $sql3 = "Select * from " . $model3->getTable();
+            $result3 = $ex3->requete($sql3);
+            foreach ($result3 as $lign3) {
+              ?>
+              <div class="slide3 d-flex align-items-center h-100 my-auto p-3"><img class="rounded-3"
+                  src="ImagesGalerie/<?= $lign3["image"] ?>.png" alt="<?= $lign3["titre"] ?>"></div>
+              <?php
+            }
+          } catch (PDOException $e) {
+            die($e->getMessage());
+          }
+        }
+        ?>
+      </div>
     </article>
   </section>
 

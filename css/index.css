@@ -905,7 +905,6 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
 }
 
 .slide-track3 {
-    width: calc(25vw * 12);
     animation: scroll 50s linear infinite;
 }
 
