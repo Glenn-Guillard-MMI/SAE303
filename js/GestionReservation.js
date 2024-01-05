@@ -83,6 +83,31 @@ function RefuserFormation(arg) {
     },
   });
 }
+function AccepterForfait(arg) {
+  jQuery.ajax({
+    url: "_accepteReservationforfait.php",
+    type: "POST",
+    data: {
+      id: arg,
+    },
+    success: function (data, textStatus, xhr) {
+      location.reload();
+    },
+  });
+}
+
+function RefuserForfait(arg) {
+  jQuery.ajax({
+    url: "_refuserReservationforfait.php",
+    type: "POST",
+    data: {
+      id: arg,
+    },
+    success: function (data, textStatus, xhr) {
+      location.reload();
+    },
+  });
+}
 
 let attente = true,
   valid = false;
