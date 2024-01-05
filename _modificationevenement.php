@@ -49,7 +49,7 @@ try{
 
 }
 catch(PDOException $e){
-   header("Location: php_Gestion_avions.php");
+   header("Location: php_evenement.php");
    die($e->getMessage());
 }
 

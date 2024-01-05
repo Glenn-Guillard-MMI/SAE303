@@ -453,27 +453,28 @@
 
     <section id="modif-bapteme" class="position-fixed bg-white py-4 w-50 rounded-4">
         <h1 class="font-avion text-center">Modifier un baptême de l'air</h1>
-        <form method="post" action="" id="form-modif-bapteme" class="text-blue w-50 mx-auto mt-5">
+        <form method="post" action="_modificationbapteme.php" id="form-modif-bapteme" class="text-blue w-50 mx-auto mt-5">
             <span class="d-flex flex-row mt-3">
-                <label for="titre">Titre : </label>
-                <input id="newnom" type="text" name="titre" class="ms-4 mb-0">
+                <label for="titre">Nom : </label>
+                <input id="newnom" type="text" class="ms-4 mb-0" disabled>
+                <input id="newnom2" type="hidden" name="nom" class="ms-4 mb-0">
             </span>
             <span class="d-flex flex-row justify-content-start mt-3">
                 <label for="formule">Formule :</label>
                 <div class="ms-3 mb-0">
                     <label for="solo">Solo</label>
-                    <input type="checkbox" name="formule1" id="solo" checked>
+                    <input type="checkbox" name="solo" id="solo" checked>
                     <label for="duo" class="ms-2 mb-0">Duo</label>
-                    <input type="checkbox" name="formule2" id="duo">
+                    <input type="checkbox" name="duo" id="duo">
                 </div>
             </span>
             <span class="d-flex flex-row mt-3">
                 <label for="formule">Temps :</label>
                 <div class="ms-3 mb-0">
                     <label for="20">20 min</label>
-                    <input type="checkbox" name="temps1" id="20" checked>
+                    <input type="checkbox" name="20" id="20" checked>
                     <label for="30" class="ms-2 mb-0">30 min</label>
-                    <input type="checkbox" name="temps2" id="30">
+                    <input type="checkbox" name="30" id="30">
                 </div>
             </span>
             <span class="d-flex flex-row mt-3">
@@ -504,7 +505,7 @@
                         onclick="supprInfo('modif-info-form','input-modif-formation')">Supprimer Info</p>
                 </div>
                 <span id='modif-info-form' class="d-flex flex-column mt-3">
-                    <input type="text" name="titre" class="ms-4 w-75 mb-0 input-modif-formation">
+                    <input type="text" name="titre_0" class="ms-4 w-75 mb-0 input-modif-formation">
                 </span>
             </div>
             <span class="d-flex flex-row mt-3">

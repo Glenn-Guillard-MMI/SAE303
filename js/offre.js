@@ -41,6 +41,7 @@ function modifBapt(arg) {
     const prix = document.getElementById("prix_" + arg).value;
 
     document.getElementById("newnom").value = nom;
+    document.getElementById("newnom2").value = nom;
     document.getElementById("newprix").value = prix;
 }
 
@@ -166,6 +167,8 @@ function annAjoutForfait(){
     }
 }
 
+var compte = 1;
+
 function ajouterInfo(containerId) {
     var container = document.getElementById(containerId);
 
@@ -181,11 +184,12 @@ function ajouterInfo(containerId) {
     if (tousOntDuTexte || champsTexte.length === 0) {
         var nouvelInput = document.createElement('input');
         nouvelInput.type = 'text';
-        nouvelInput.name = 'titre';
+        nouvelInput.name = 'titre_'+compte;
         nouvelInput.classList.add('ms-4', 'mb-0','mt-3');
 
         // Ajouter le nouvel input au conteneur
         container.appendChild(nouvelInput);
+        compte++;
     }
 }
 
@@ -196,6 +200,6 @@ function supprInfo(containerId) {
 
     if (dernierEnfant && dernierEnfant.tagName.toLowerCase() === 'input') {
         container.removeChild(dernierEnfant);
+        compte--;
     }
 }
-
