@@ -23,8 +23,8 @@ if (isset($_SESSION["mail"])) {
         }
         require_once "poo_repository.php";
         require_once "poo_models.php";
-        $type = $_POST["type"];
-        $commentaire = $_POST["commentaire"];
+        $type = htmlspecialchars($_POST["type"]);
+        $commentaire = htmlspecialchars($_POST["commentaire"]);
         $type = "'" . $type . "'";
         $commentaire = "'" . $commentaire . "'";
         try {
