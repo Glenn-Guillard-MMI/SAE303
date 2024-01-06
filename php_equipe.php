@@ -155,7 +155,6 @@
             <form action="_modificationequipe.php" method="POST" id="modif-equipe" class="position-fixed bg-white p-5 text-blue rounded-4">
                 <div class="d-flex flex-column">
                     <h1 class="text-center font-avion">Modifier un membre</h1>
-                    <input type="file" name="images" accept="image/*" class="mt-5">
                     <span class="d-flex flex-row mt-4">
                         <label for="nom">Nom :</label>
                         <input class="ms-4 mb-0 rounded-3 input-custom" type="text" name="nom" id="newnom">
