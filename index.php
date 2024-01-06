@@ -649,147 +649,33 @@ session_start();
 
     <article class="slider position-relative d-grid overflow-hidden mt-5">
       <div class="slide-track d-flex">
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_0">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Jacques ADIT</p>
-                <p class="text-center text-white shadow-custom">Président</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_1">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Igor CLEPLATTE</p>
-                <p class="text-center text-white shadow-custom">Mécanicien</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_2">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Kevin SAITOUT</p>
-                <p class="text-center text-white shadow-custom">Chef pilote</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php
+        for ($i = 0; $i <= 1; $i++) {
+          try {
 
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_3">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Céline LAPLUME</p>
-                <p class="text-center text-white shadow-custom">Secrétaire</p>
+            $modele7 = new Model("equipe");
+            $exemple7 = new Repository($modele7->getTable());
+            $sql7 = "Select * from " . $modele7->getTable();
+            $resultat7 = $exemple7->requete($sql7);
+            foreach ($resultat7 as $ligne7) {
+              ?>
+              <div class="slide">
+                <div class="card_equipe" style="background-image: url(ImagesEquipe/<?= $ligne7["image"] ?>.png)">
+                  <div class="content">
+                    <div class="d-flex h-75 flex-column justify-content-center align-content-center">
+                      <p class="text-center text-white size-2-5 shadow-custom"><?= $ligne7["prenom"] ?> <?= $ligne7["nom"] ?></p>
+                      <p class="text-center text-white shadow-custom"><?= $ligne7["fonction"] ?></p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_4">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Claudine MONET</p>
-                <p class="text-center text-white shadow-custom">Trésorière</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_5">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Justine VOLAVU</p>
-                <p class="text-center text-white shadow-custom">Instructrice</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_6">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Alain STRUMENT</p>
-                <p class="text-center text-white shadow-custom">Instructeur</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_0">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Jacques ADIT</p>
-                <p class="text-center text-white shadow-custom">Président</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_1">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Igor CLEPLATTE</p>
-                <p class="text-center text-white shadow-custom">Mécanicien</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_2">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Kevin SAITOUT</p>
-                <p class="text-center text-white shadow-custom">Chef pilote</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_3">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Céline LAPLUME</p>
-                <p class="text-center text-white shadow-custom">Secrétaire</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_4">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Claudine MONET</p>
-                <p class="text-center text-white shadow-custom">Trésorière</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_5">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Justine VOLAVU</p>
-                <p class="text-center text-white shadow-custom">Instructrice</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="card_equipe url_card_equipe_6">
-            <div class="content">
-              <div class="d-flex h-75 flex-column justify-content-center align-content-center">
-                <p class="text-center text-white size-2-5 shadow-custom">Alain STRUMENT</p>
-                <p class="text-center text-white shadow-custom">Instructeur</p>
-              </div>
-            </div>
-          </div>
-        </div>
+              <?php
+            }
+          } catch (PDOException $e) {
+            die($e->getMessage());
+          }
+        }
+        ?>
       </div>
     </article>
   </section>
