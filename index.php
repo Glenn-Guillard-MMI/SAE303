@@ -293,6 +293,75 @@ session_start();
     </article>
   </section>
 
+  <section class="font">
+    <h3 class="text-white text-center mt-5 size-3">Avis Clients</h3>
+    <?php
+    try {
+
+      $modele6 = new Model("avis");
+      $exemple6 = new Repository($modele6->getTable());
+      $sql6 = "Select * from " . $modele6->getTable() . " WHERE (type) = 'bapteme' ORDER BY (date) DESC LIMIT 2;";
+      $resultat6 = $exemple6->requete($sql6);
+      foreach ($resultat6 as $ligne6) {
+        ?>
+        <article class="w-50 mx-auto avis_clients mt-4">
+          <div class="d-flex flex-row">
+            <div class="w-25">
+              <p class="fw-bold fs-4">
+                <?= $ligne6["prenom"] ?>
+                <?= $ligne6["nom"] ?>
+              </p>
+              <p class="fs-5">
+                <?= $ligne6["type"] ?>
+              </p>
+            </div>
+            <div class="w-75 rating">
+              <?php
+
+              if (($ligne6["note"]) == 5) {
+                for ($i = 0; $i < 5; $i++) {
+                  echo "<i class='fas fa-star'></i>";
+                }
+              } elseif (($ligne6["note"]) == 4) {
+                echo "<i class='far fa-star'></i>";
+                for ($i = 0; $i < 4; $i++) {
+                  echo "<i class='fas fa-star'></i>";
+                }
+              } elseif (($ligne6["note"]) == 3) {
+                for ($i = 0; $i < 2; $i++) {
+                  echo "<i class='far fa-star'></i>";
+                }
+                for ($i = 0; $i < 3; $i++) {
+                  echo "<i class='fas fa-star'></i>";
+                }
+              } elseif (($ligne6["note"]) == 2) {
+                for ($i = 0; $i < 3; $i++) {
+                  echo "<i class='far fa-star'></i>";
+                }
+                for ($i = 0; $i < 2; $i++) {
+                  echo "<i class='fas fa-star'></i>";
+                }
+              } elseif (($ligne6["note"]) == 1) {
+                for ($i = 0; $i < 4; $i++) {
+                  echo "<i class='far fa-star'></i>";
+                }
+                echo "<i class='fas fa-star'></i>";
+              }
+              ?>
+            </div>
+          </div>
+          <div class="size-1">
+            <?= $ligne6["commentaire"] ?>
+          </div>
+        </article>
+        <?php
+      }
+    } catch (PDOException $e) {
+      die($e->getMessage());
+    }
+    ?>
+  </section>
+
   <section id="formation" class="w-100">
     <h2 id="container_formation" class="text-white text-center size-4">FORMATIONS</h2>
     <div class="w-100 d-flex justify-content-around align-items-stretch mt-5">
@@ -340,35 +409,71 @@ session_start();
 
   <section class="font">
     <h3 class="text-white text-center mt-5 size-3">Avis Clients</h3>
-    <article class="w-50 mx-auto avis_clients mt-4">
-      <div class="d-flex flex-row">
-        <div class="w-25">
-          <p class="fw-bold fs-4">Bessie Cooper</p>
-          <p class="fs-5">ULM Multiaxiale</p>
-        </div>
-        <div class="w-75">
-          <img src="" alt="stars">
-          <img src="" alt="stars">
-          <img src="" alt="stars">
-          <img src="" alt="stars">
-          <img src="" alt="stars">
-        </div>
-      </div>
-      <div class="size-1">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto recusandae sint sunt sapiente porro
-        provident
-        quas doloribus ex odit pariatur ab deleniti, reiciendis ipsam iste facere distinctio nihil facilis
-        assumenda
-        ipsa repellendus mollitia laboriosam rem! In tempore repellendus, autem, iusto quos sunt molestiae fugit
-        delectus enim libero beatae, pariatur inventore facilis sapiente. Amet, repudiandae nisi a eveniet,
-        rerum
-        reprehenderit voluptatem dolor, qui cum suscipit soluta. Aliquid dolorum reprehenderit laboriosam
-        commodi
-        quisquam, quibusdam et vero earum quasi non inventore quia fugiat illo aperiam consequatur quidem vel
-        deleniti
-        dignissimos nam quas excepturi eius nesciunt provident dolorem? Quae similique iure culpa soluta fugiat!
-      </div>
-    </article>
+    <?php
+    try {
+
+      $modele6 = new Model("avis");
+      $exemple6 = new Repository($modele6->getTable());
+      $sql6 = "Select * from " . $modele6->getTable() . " WHERE (type) = 'formation' ORDER BY (date) DESC LIMIT 2;";
+      $resultat6 = $exemple6->requete($sql6);
+      foreach ($resultat6 as $ligne6) {
+        ?>
+        <article class="w-50 mx-auto avis_clients mt-4">
+          <div class="d-flex flex-row">
+            <div class="w-25">
+              <p class="fw-bold fs-4">
+                <?= $ligne6["prenom"] ?>
+                <?= $ligne6["nom"] ?>
+              </p>
+              <p class="fs-5">
+                <?= $ligne6["type"] ?>
+              </p>
+            </div>
+            <div class="w-75 rating">
+              <?php
+
+              if (($ligne6["note"]) == 5) {
+                for ($i = 0; $i < 5; $i++) {
+                  echo "<i class='fas fa-star'></i>";
+                }
+              } elseif (($ligne6["note"]) == 4) {
+                echo "<i class='far fa-star'></i>";
+                for ($i = 0; $i < 4; $i++) {
+                  echo "<i class='fas fa-star'></i>";
+                }
+              } elseif (($ligne6["note"]) == 3) {
+                for ($i = 0; $i < 2; $i++) {
+                  echo "<i class='far fa-star'></i>";
+                }
+                for ($i = 0; $i < 3; $i++) {
+                  echo "<i class='fas fa-star'></i>";
+                }
+              } elseif (($ligne6["note"]) == 2) {
+                for ($i = 0; $i < 3; $i++) {
+                  echo "<i class='far fa-star'></i>";
+                }
+                for ($i = 0; $i < 2; $i++) {
+                  echo "<i class='fas fa-star'></i>";
+                }
+              } elseif (($ligne6["note"]) == 1) {
+                for ($i = 0; $i < 4; $i++) {
+                  echo "<i class='far fa-star'></i>";
+                }
+                echo "<i class='fas fa-star'></i>";
+              }
+              ?>
+            </div>
+          </div>
+          <div class="size-1">
+            <?= $ligne6["commentaire"] ?>
+          </div>
+        </article>
+        <?php
+      }
+    } catch (PDOException $e) {
+      die($e->getMessage());
+    }
+    ?>
   </section>
 
   <section id="formation2">
@@ -423,35 +528,70 @@ session_start();
 
   <section class="font">
     <h3 class="text-white text-center mt-5 size-3">Avis Clients</h3>
-    <article class="w-50 mx-auto avis_clients mt-4">
-      <div class="d-flex flex-row">
-        <div class="w-25">
-          <p class="fw-bold fs-4">Bessie Cooper</p>
-          <p class="fs-5">ULM Multiaxiale</p>
-        </div>
-        <div class="w-75">
-          <img src="" alt="stars">
-          <img src="" alt="stars">
-          <img src="" alt="stars">
-          <img src="" alt="stars">
-          <img src="" alt="stars">
-        </div>
-      </div>
-      <div class="size-1">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto recusandae sint sunt sapiente porro
-        provident
-        quas doloribus ex odit pariatur ab deleniti, reiciendis ipsam iste facere distinctio nihil facilis
-        assumenda
-        ipsa repellendus mollitia laboriosam rem! In tempore repellendus, autem, iusto quos sunt molestiae fugit
-        delectus enim libero beatae, pariatur inventore facilis sapiente. Amet, repudiandae nisi a eveniet,
-        rerum
-        reprehenderit voluptatem dolor, qui cum suscipit soluta. Aliquid dolorum reprehenderit laboriosam
-        commodi
-        quisquam, quibusdam et vero earum quasi non inventore quia fugiat illo aperiam consequatur quidem vel
-        deleniti
-        dignissimos nam quas excepturi eius nesciunt provident dolorem? Quae similique iure culpa soluta fugiat!
-      </div>
-    </article>
+    <?php
+    try {
+
+      $modele6 = new Model("avis");
+      $exemple6 = new Repository($modele6->getTable());
+      $sql6 = "Select * from " . $modele6->getTable() . " WHERE (type) = 'forfait' ORDER BY (date) DESC LIMIT 2;";
+      $resultat6 = $exemple6->requete($sql6);
+      foreach ($resultat6 as $ligne6) {
+        ?>
+        <article class="w-50 mx-auto avis_clients mt-4">
+          <div class="d-flex flex-row">
+            <div class="w-25">
+              <p class="fw-bold fs-4">
+                <?= $ligne6["prenom"] ?>
+                <?= $ligne6["nom"] ?>
+              </p>
+              <p class="fs-5">
+                <?= $ligne6["type"] ?>
+              </p>
+            </div>
+            <div class="w-75 rating">
+              <?php
+              if (($ligne6["note"]) == 5) {
+                for ($i = 0; $i < 5; $i++) {
+                  echo "<i class='fas fa-star'></i>";
+                }
+              } elseif (($ligne6["note"]) == 4) {
+                echo "<i class='far fa-star'></i>";
+                for ($i = 0; $i < 4; $i++) {
+                  echo "<i class='fas fa-star'></i>";
+                }
+              } elseif (($ligne6["note"]) == 3) {
+                for ($i = 0; $i < 2; $i++) {
+                  echo "<i class='far fa-star'></i>";
+                }
+                for ($i = 0; $i < 3; $i++) {
+                  echo "<i class='fas fa-star'></i>";
+                }
+              } elseif (($ligne6["note"]) == 2) {
+                for ($i = 0; $i < 3; $i++) {
+                  echo "<i class='far fa-star'></i>";
+                }
+                for ($i = 0; $i < 2; $i++) {
+                  echo "<i class='fas fa-star'></i>";
+                }
+              } elseif (($ligne6["note"]) == 1) {
+                for ($i = 0; $i < 4; $i++) {
+                  echo "<i class='far fa-star'></i>";
+                }
+                echo "<i class='fas fa-star'></i>";
+              }
+              ?>
+            </div>
+          </div>
+          <div class="size-1">
+            <?= $ligne6["commentaire"] ?>
+          </div>
+        </article>
+        <?php
+      }
+    } catch (PDOException $e) {
+      die($e->getMessage());
+    }
+    ?>
   </section>
 
   <section id="formation" class="w-100">
@@ -732,7 +872,8 @@ session_start();
   </section>
   <section class="bg-white pb-5 pt-2 z-2 position-relative">
     <h2 id="avis" class="text-center color-blue-bapteme">LAISSER UN AVIS</h2>
-    <form method="post" action="_avis.php"  class="w-50 d-flex align-content-center justify-content-around flex-column mx-auto">
+    <form method="post" action="_avis.php"
+      class="w-50 d-flex align-content-center justify-content-around flex-column mx-auto">
       <label class="mt-4 size-2-5">Note</label>
       <div class="rating">
         <input type="radio" id="star-1" name="star-1" value="star-1">
