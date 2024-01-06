@@ -32,7 +32,7 @@
     <nav class="container-fluid p-3 w-100 text-white">
         <section class="row">
             <div class="col">
-                <a href="#"><img class="w-100" src="img/SVG/logo.svg" alt="logo Aéro club de Frotey-les-Lure"></a>
+                <a href="index.php"><img class="w-100" src="img/SVG/logo.svg" alt="logo Aéro club de Frotey-les-Lure"></a>
             </div>
             <div class="col text-center mt-2">
                 <a class="lien_nav text-decoration-none text-white size-2-5" href="index.php#bapteme">BAPTÈME DE L'AIR</a>
@@ -83,7 +83,7 @@
                     class="p-1 rounded-3 input_connexion w-100 size-2">
                 <span class="d-flex flex-row mt-4 justify-content-center size-2">
                     <p>Vous n'avez pas de compte ?</p>
-                    <a href="" class="text-decoration-none text-blue fw-bold">Créer un compte</a>
+                    <a href="php_cree_compte.php" class="text-decoration-none text-blue fw-bold">Créer un compte</a>
                 </span>
                 <input type="submit" value="SE CONNECTER" id="push"
                     class="size-2-5 mt-2 mb-5 text-blue w-75 mx-auto rounded-3 py-1 connexion_button text-white">
