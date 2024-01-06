@@ -186,7 +186,11 @@
                                             $resultat8 = $exemple6->requete($sql8);
 
                                             foreach ($resultat8 as $ligne) { {
-                                                    echo  $ligne["SUM(temps_presta)"] . " min";
+                                                    if ($ligne["SUM(temps_presta)"] == 0) {
+                                                        echo "0 min";
+                                                    } else {
+                                                        echo  $ligne["SUM(temps_presta)"] . " min";
+                                                    }
                                                 }
                                             }
                                         } catch (PDOException $e) {

@@ -130,7 +130,7 @@
             ?>
         </section>
         <section class="w-75 ml-custom">
-            <h1 class="text-blue mt-4">Gestion des utilisateurs</h1>
+            <h1 class="text-blue mt-4">Avions</h1>
             <article class="d-flex flex-row align-items-center w-50 justify-content-start mb-4 mt-3">
                 <h4 class="text-blue me-5 mb-0">Liste des avions disponible</h4>
                 <?php
