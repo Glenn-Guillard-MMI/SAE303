@@ -60,7 +60,7 @@
                     href="php_login.php">Accueil</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3"
                     href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_gestionReservation.php">Gestion des réservations</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
                 <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_DemandeLicence.php">Demande de
                     licence</a>

@@ -118,7 +118,10 @@ function verifButton() {
   var buttonAtt = document.getElementById("attente-button"),
     buttonValid = document.getElementById("valid-button"),
     liste_attente = document.getElementById("bapteme-attente"),
-    liste_licence = document.getElementById("bapteme-valid");
+    liste_licence = document.getElementById("bapteme-valid"),
+    liste_form_forf = document.getElementById("forfait_form_valid"),
+    liste_attente_form = document.getElementById("formation-attente"),
+    liste_attente_forf = document.getElementById("forfait");
 
   if (attente == true) {
     buttonAtt.style.pointerEvents = "none";
@@ -131,8 +134,15 @@ function verifButton() {
 
     liste_attente.style.display = "block";
     liste_attente.style.userSelect = "auto";
+    liste_attente_forf.style.display = "block";
+    liste_attente_forf.style.userSelect = "auto";
+    liste_attente_form.style.display = "block";
+    liste_attente_form.style.userSelect = "auto";
+
     liste_licence.style.display = "none";
     liste_licence.style.userSelect = "none";
+    liste_form_forf.style.display = "none";
+    liste_form_forf.style.userSelect = "none";
   }
   if (valid == true) {
     buttonValid.style.pointerEvents = "none";
@@ -146,8 +156,15 @@ function verifButton() {
 
     liste_attente.style.display = "none";
     liste_attente.style.userSelect = "none";
+    liste_attente_forf.style.display = "none";
+    liste_attente_forf.style.userSelect = "none";
+    liste_attente_form.style.display = "none";
+    liste_attente_form.style.userSelect = "none";
+
     liste_licence.style.display = "block";
     liste_licence.style.userSelect = "auto";
+    liste_form_forf.style.display = "block";
+    liste_form_forf.style.userSelect = "auto";
   }
 }
 
