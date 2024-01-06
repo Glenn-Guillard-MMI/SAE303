@@ -731,11 +731,11 @@ session_start();
     <img class="w-100" src="img/SVG/nuage2fin.svg" alt="">
   </section>
   <section class="bg-white pb-5 pt-2 z-2 position-relative">
-    <h2 class="text-center color-blue-bapteme">LAISSER UN AVIS</h2>
-    <form class="w-50 d-flex align-content-center justify-content-around flex-column mx-auto">
+    <h2 id="avis" class="text-center color-blue-bapteme">LAISSER UN AVIS</h2>
+    <form method="post" action="_avis.php"  class="w-50 d-flex align-content-center justify-content-around flex-column mx-auto">
       <label class="mt-4 size-2-5">Note</label>
       <div class="rating">
-        <input type="radio" id="star-1" name="star-radio" value="star-1">
+        <input type="radio" id="star-1" name="star-1" value="star-1">
         <label for="star-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path pathLength="360"
@@ -743,7 +743,7 @@ session_start();
             </path>
           </svg>
         </label>
-        <input type="radio" id="star-2" name="star-radio" value="star-1">
+        <input type="radio" id="star-2" name="star-2" value="star-1">
         <label for="star-2">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path pathLength="360"
@@ -751,7 +751,7 @@ session_start();
             </path>
           </svg>
         </label>
-        <input type="radio" id="star-3" name="star-radio" value="star-1">
+        <input type="radio" id="star-3" name="star-3" value="star-1">
         <label for="star-3">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path pathLength="360"
@@ -759,7 +759,7 @@ session_start();
             </path>
           </svg>
         </label>
-        <input type="radio" id="star-4" name="star-radio" value="star-1">
+        <input type="radio" id="star-4" name="star-4" value="star-1">
         <label for="star-4">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path pathLength="360"
@@ -767,7 +767,7 @@ session_start();
             </path>
           </svg>
         </label>
-        <input type="radio" id="star-5" name="star-radio" value="star-1">
+        <input type="radio" id="star-5" name="star-5" value="star-1">
         <label for="star-5">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path pathLength="360"
@@ -778,19 +778,17 @@ session_start();
       </div>
       <label class="mt-4 size-2-5">Offre choisi</label>
       <?php
-      // METTRE DU PHP POUR LES TYPES D'OFFRES
       ?>
-      <select class="w-50 select-custom rounded-2">
-        <option value="----" disabled selected>----</option>
-        <option value="1">1</option>
-        <option value="1">2</option>
-        <option value="1">3</option>
-        <option value="1">4</option>
+      <select name="type" class="w-50 select-custom rounded-2">
+        <option value="" disabled selected>----</option>
+        <option value="Bapteme">Bapteme</option>
+        <option value="Formation">Formation</option>
+        <option value="Forfait">Forfait</option>
       </select>
       <label class="mt-4 size-2-5">Commentaire</label>
-      <textarea class="textarea_avis rounded-3 mt-2"></textarea>
+      <input type="textarea" name="commentaire" class="textarea_avis rounded-3 mt-2"></textarea>
       <input class="button_avis d-inline-flex justify-content-center align-items-center text-white p-2 size-2-5 mt-4"
-        type="button" value="Envoyer">
+        type="submit" value="Envoyer">
     </form>
   </section>
 
