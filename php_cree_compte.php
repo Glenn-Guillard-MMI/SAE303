@@ -29,7 +29,7 @@
 <?php
  session_start();
 
- //Vérification si quelq'un est connecter
+ //Vérification si quelqu'un est connecter
  if (isset($_SESSION['mail'])) {
 
     header("Location:php_login.php");
