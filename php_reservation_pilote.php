@@ -53,8 +53,8 @@
                             if ($sauvegarde == 3) {
             ?>
                                 <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                                    <a class="exclu" href="index.php">
-                                        <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                                    <a href="index.php" class="w-50 exclu mt-3">
+                                        <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
                                     </a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
@@ -73,8 +73,8 @@
                             if ($sauvegarde == 2) {
                             ?>
                                 <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                                    <a class="exclu" href="index.php">
-                                        <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                                    <a href="index.php" class="w-50 exclu mt-3">
+                                        <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
                                     </a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
@@ -88,8 +88,8 @@
                             if ($sauvegarde == 1) {
                             ?>
                                 <nav class="text-center bg-custom text-white d-flex flex-column align-items-center font-avion">
-                                    <a class="exclu" href="index.php">
-                                        <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                                    <a href="index.php" class="w-50 exclu mt-3">
+                                        <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
                                     </a>
                                     <div class="d-flex flex-column h-25 justify-content-around my-auto">
                                         <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
@@ -107,8 +107,8 @@
                             if ($sauvegarde == 0) {
                             ?>
                                 <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                                    <a class="exclu" href="index.php">
-                                        <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                                    <a href="index.php" class="w-50 exclu mt-3">
+                                        <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
                                     </a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
                                     <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="">Réservations</a>
@@ -186,7 +186,11 @@
                                             $resultat8 = $exemple6->requete($sql8);
 
                                             foreach ($resultat8 as $ligne) { {
-                                                    echo  $ligne["SUM(temps_presta)"] . " min";
+                                                    if ($ligne["SUM(temps_presta)"] == 0) {
+                                                        echo "0 min";
+                                                    } else {
+                                                        echo  $ligne["SUM(temps_presta)"] . " min";
+                                                    }
                                                 }
                                             }
                                         } catch (PDOException $e) {
