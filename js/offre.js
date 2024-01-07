@@ -146,9 +146,17 @@ function annAjoutForm() {
   }
 }
 
-function modifForfait() {
+function modifForfait(arg) {
   document.getElementById("overlay").style.display = "block";
   document.getElementById("modif-forfait").style.display = "block";
+
+  const nom = document.getElementById("nom_" + arg).innerText;
+  const id = document.getElementById("id_" + arg).value;
+  const prix = document.getElementById("prix_" + arg).value;
+
+  document.getElementById("newnom3").value = nom;
+  document.getElementById("newid3").value = id;
+  document.getElementById("newprix3").value = prix;
 }
 
 function annModForfait() {
@@ -174,7 +182,7 @@ function supprForfait(arg) {
   document.getElementById("confirmForfait").style.display = "block";
 }
 
-function ajoutForfait() {
+function ajoutForfait(arg) {
   document.getElementById("ajout-forfait").style.display = "block";
   document.getElementById("overlay").style.display = "block";
 }

@@ -284,10 +284,11 @@
                         $result2 = $ex2->requete($sql2);
                         foreach ($result2 as $lign2) {
                             $nom2 = $lign2["nom"];
-                            $id = $lign2["id"];
+                            $id2 = $lign2["id"];
                             ?>
                     <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">
+                    <input type="hidden" id="id_<?= $nom2 ?>" value="<?= $lign2["id"] ?>">
+                        <p id="nom_<?= $nom2 ?>" class="fs-3 fw-medium">
                             <?= $nom2 ?>
                         </p>
                         <ul>
@@ -299,11 +300,12 @@
                                     }
                                     ?>
                         </ul>
+                        <input type="hidden" id="prix_<?= $nom2 ?>" value="<?= $lign2["prix"] ?>">
                         <p class="text-center">
                             <?= $lign2["prix"] ?>€
                         </p>
                         <div class="d-flex flex-row justify-content-around">
-                            <i onclick="modifForfait()" class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
+                            <i onclick="modifForfait('<?= $nom2 ?>')" class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
                             <i onclick="supprForfait(<?=$id ?>)"
                                 class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
                         </div>
@@ -404,7 +406,8 @@
         <form method="post" action="" id="form-modif-forfait" class="text-blue w-75 mx-auto mt-5">
             <span class="d-flex flex-row mt-3">
                 <label for="titre">Titre : </label>
-                <input type="text" name="titre" class="ms-4 mb-0">
+                <input id="newnom3" type="text" name="titre" class="ms-4 mb-0">
+                <input type="hidden" id="newid3" name="id">
             </span>
             <div>
                 <div class="d-flex flex-row mt-3">
@@ -420,7 +423,7 @@
             </div>
             <span class="d-flex flex-row mt-3">
                 <label for="prix">Prix :</label>
-                <input type="number" name="prix" class="ms-4 mb-0">
+                <input id="newprix3" type="number" name="prix" class="ms-4 mb-0">
             </span>
             <span class="d-flex flex-row mt-3">
                 <label for="prix">Prix :</label>
