@@ -1,3 +1,16 @@
+@media only screen and (max-width: 1300px){
+    .carte_avion2 {
+        background-image: none !important;
+        background: linear-gradient(180deg, #FFF 0%, #CBD5E1 100%) !important;
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 10px !important;
+    }
+
+    .button-cookie-css{
+        font-size: 1vw !important;
+    }
+}
+
 @media only screen and (max-width: 1175px) {
     #nav-ordi {
         display: none;
@@ -65,12 +78,22 @@
         border-radius: 10px !important;
     }
 
-    .carte_avion2 {
-        background-image: none !important;
-        background: linear-gradient(180deg, #FFF 0%, #CBD5E1 100%) !important;
-        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25) !important;
-        border-radius: 10px !important;
+    .button-form{
+        margin-top: 0 !important;
     }
+
+    .button_bapteme {
+        margin-top: 0 !important;
+    }
+
+    .carte3 h4 {
+        font-size: 2.7vw !important;
+    }
+
+    .button_reserver_bapteme {
+        font-size: 2vw !important;
+    }
+    
 }
 
 @media only screen and (max-width: 800px) {
@@ -79,6 +102,10 @@
     .carte_avion2,
     .carte3 {
         width: 40% !important;
+    }
+
+    .carte3{
+        flex: none;
     }
 
     .button-form{
