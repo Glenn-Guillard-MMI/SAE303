@@ -1,5 +1,7 @@
 function annulSupp() {
-  document.getElementById("button_suppr").value = "";
+  document.getElementById("button_supprBapt").value = "";
+  document.getElementById("button_supprForm").value = "";
+  document.getElementById("button_supprForfait").value = "";
   document.getElementById("confirmBapt").style.display = "none";
   document.getElementById("confirmForm").style.display = "none";
   document.getElementById("confirmForfait").style.display = "none";
@@ -8,7 +10,7 @@ function annulSupp() {
 
 function confirmSuppBapt(arg) {
   //Suppression via Ajax
-  document.getElementById("button_suppr").value = "";
+  document.getElementById("button_supprBapt").value = "";
   document.getElementById("confirmBapt").style.display = "none";
   document.getElementById("confirmForm").style.display = "none";
   document.getElementById("confirmForfait").style.display = "none";
@@ -17,7 +19,7 @@ function confirmSuppBapt(arg) {
 
 function confirmSuppForm(arg) {
   //Suppression via Ajax
-  document.getElementById("button_suppr").value = "";
+  document.getElementById("button_supprForm").value = "";
   document.getElementById("confirmBapt").style.display = "none";
   document.getElementById("confirmForm").style.display = "none";
   document.getElementById("confirmForfait").style.display = "none";
@@ -26,7 +28,7 @@ function confirmSuppForm(arg) {
 
 function confirmSuppForfait(arg) {
   //Suppression via Ajax
-  document.getElementById("button_suppr").value = "";
+  document.getElementById("button_supprForfait").value = "";
   document.getElementById("confirmBapt").style.display = "none";
   document.getElementById("confirmForm").style.display = "none";
   document.getElementById("confirmForfait").style.display = "none";
@@ -64,7 +66,7 @@ function annModBapt() {
 function supprBapt(arg) {
   console.log(arg);
   document.getElementById("overlay").style.display = "block";
-  document.getElementById("button_suppr").value = arg;
+  document.getElementById("button_supprBapt").value = arg;
   document.getElementById("confirmBapt").style.display = "block";
 }
 
@@ -121,7 +123,7 @@ function annModForm() {
 function supprForm(arg) {
   console.log(arg);
   document.getElementById("overlay").style.display = "block";
-  document.getElementById("button_suppr").value = arg;
+  document.getElementById("button_supprForm").value = arg;
   document.getElementById("confirmForm").style.display = "block";
 }
 
@@ -187,7 +189,7 @@ function annModForfait() {
 function supprForfait(arg) {
   console.log(arg);
   document.getElementById("overlay").style.display = "block";
-  document.getElementById("button_suppr").value = arg;
+  document.getElementById("button_supprForfait").value = arg;
   document.getElementById("confirmForfait").style.display = "block";
 }
 
@@ -249,7 +251,7 @@ function supprInfo(containerId) {
   }
 }
 
-function supprBapt(arg) {
+function confirmSuppBapt(arg) {
   const argument = arg;
   jQuery.ajax({
     url: "_suprresionoffreBapteme.php",
@@ -263,7 +265,8 @@ function supprBapt(arg) {
   });
 }
 
-function supprForm(arg) {
+function confirmSuppForm(arg) {
+  console.log(arg);
   const argument = arg;
   jQuery.ajax({
     url: "_suprresionoffreFormation.php",
@@ -277,7 +280,7 @@ function supprForm(arg) {
   });
 }
 
-function supprForfait(arg) {
+function confirmSuppForfait(arg) {
   const argument = arg;
   jQuery.ajax({
     url: "_suprresionoffreForfait.php",

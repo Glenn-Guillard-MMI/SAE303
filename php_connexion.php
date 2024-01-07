@@ -31,11 +31,11 @@
 <body class="bg-body">
     <nav class="container-fluid p-3 w-100 text-white">
         <section class="row">
-            <div class="col">
+        <div class="col">
                 <a href="index.php"><img class="w-100" src="img/SVG/logo.svg" alt="logo Aéro club de Frotey-les-Lure"></a>
             </div>
             <div class="col text-center mt-2">
-                <a class="lien_nav text-decoration-none text-white size-2-5" href="index.php#bapteme">BAPTÈME DE L'AIR</a>
+                <a class="lien_nav text-decoration-none text-white" href="index.php#bapteme">BAPTÈME DE L'AIR</a>
             </div>
             <div class="col text-center mt-2">
                 <a class="lien_nav text-decoration-none text-white" href="index.php#container_formation">FORMATIONS</a>
