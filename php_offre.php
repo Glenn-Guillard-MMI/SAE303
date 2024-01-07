@@ -393,7 +393,7 @@
                         onclick="supprInfo('modif-info-form','input-modif-formation')">Supprimer Info</p>
                 </div>
                 <span id='modif-info-form' class="d-flex flex-column mt-3">
-                    <input type="text" name="titre_0" class="ms-4 w-75 mb-0 input-modif-formation">
+                    <input type="text" name="titre_0" class="ms-4 w-75 mb-0 input-modif-formation" required>
                 </span>
             </div>
             <span class="d-flex flex-row mt-3">
@@ -426,7 +426,7 @@
                         onclick="supprInfo('modif-info-forfait','input-modif-forfait')">Supprimer Info</p>
                 </div>
                 <span id='modif-info-forfait' class="d-flex flex-column mt-3">
-                    <input type="text" name="titre_0" class="ms-4 w-75 mb-0 input-modif-forfait">
+                    <input type="text" name="titre_0" class="ms-4 w-75 mb-0 input-modif-forfait" required>
                 </span>
             </div>
             <span class="d-flex flex-row mt-3">
@@ -457,11 +457,11 @@
         <form method="post" action="_creerBapteme.php" id="form-ajout-bapteme" class="text-blue w-50 mx-auto mt-5"
             enctype='multipart/form-data'>
             <span class="d-flex flex-row">
-                <input type="file" name="image" accept="image/png, image/jpeg" id="img" onchange="VerifImage()">
+                <input type="file" name="image" accept="image/png, image/jpeg" id="img" onchange="VerifImage()" required>
             </span>
             <span class="d-flex flex-row mt-3">
                 <label for="titre">Nom : </label>
-                <input type="text" name="nom" class="ms-4 mb-0">
+                <input type="text" name="nom" class="ms-4 mb-0" required>
             </span>
             <span class="d-flex flex-row justify-content-start mt-3">
                 <label for="formule">Formule : </label>
@@ -481,7 +481,7 @@
             </span>
             <span class="d-flex flex-row mt-3">
                 <label for="prix">Prix :</label>
-                <input type="number" name="prix" class="ms-4 mb-0">
+                <input type="number" name="prix" class="ms-4 mb-0" required>
             </span>
             <span class="d-flex flex-row justify-content-around mt-5">
                 <p onclick="annAjoutBapt()" class="annul_buton bg-white rounded-3 py-1 px-2 mb-0 text-blue fs-5">Annuler
@@ -496,7 +496,7 @@
         <form method="post" action="_creerFormation.php" id="form-ajout-formation" class="text-blue w-75 mx-auto mt-5">
             <span class="d-flex flex-row mt-3">
                 <label for="titre">Nom : </label>
-                <input type="text" name="nom" class="ms-4 mb-0">
+                <input type="text" name="nom" class="ms-4 mb-0" required>
             </span>
             <div>
                 <div class="d-flex flex-row mt-3">
@@ -507,12 +507,12 @@
                         onclick="supprInfo('ajout-info-formation','input-ajout-formation')">Supprimer Info</p>
                 </div>
                 <span id='ajout-info-formation' class="d-flex flex-column mt-3">
-                    <input type="text" name="titre_0" class="ms-4 w-75 mb-0 input-ajout-formation">
+                    <input type="text" name="titre_0" class="ms-4 w-75 mb-0 input-ajout-formation" required>
                 </span>
             </div>
             <span class="d-flex flex-row mt-3">
                 <label for="prix">Prix :</label>
-                <input type="number" name="prix" class="ms-4 mb-0">
+                <input type="number" name="prix" class="ms-4 mb-0" required>
             </span>
             <span class="d-flex flex-row justify-content-around mt-5">
                 <p onclick="annAjoutForm()" class="annul_buton bg-white rounded-3 py-1 px-2 mb-0 text-blue fs-5">Annuler
@@ -527,7 +527,7 @@
         <form method="post" action="_creerForfait.php" id="form-ajout-forfait" class="text-blue w-75 mx-auto mt-5">
             <span class="d-flex flex-row mt-3">
                 <label for="titre">Nom : </label>
-                <input type="text" name="nom" class="ms-4 mb-0">
+                <input type="text" name="nom" class="ms-4 mb-0" required>
             </span>
             <div>
                 <div class="d-flex flex-row mt-3">
@@ -538,12 +538,12 @@
                         onclick="supprInfo('ajout-info-forfait','input-ajout-forfait')">Supprimer Info</p>
                 </div>
                 <span id='ajout-info-forfait' class="d-flex flex-column mt-3">
-                    <input type="text" name="titre_0" class="ms-4 w-75 mb-0 input-ajout-forfait">
+                    <input type="text" name="titre_0" class="ms-4 w-75 mb-0 input-ajout-forfait" required>
                 </span>
             </div>
             <span class="d-flex flex-row mt-3">
                 <label for="prix">Prix :</label>
-                <input type="number" name="prix" class="ms-4 mb-0">
+                <input type="number" name="prix" class="ms-4 mb-0" required>
             </span>
             <span class="d-flex flex-row mt-3">
                 <label for="prix">Prix :</label>

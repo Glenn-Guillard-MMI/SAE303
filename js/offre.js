@@ -230,6 +230,7 @@ function ajouterInfo(containerId) {
     var nouvelInput = document.createElement("input");
     nouvelInput.type = "text";
     nouvelInput.name = "titre_" + compte;
+    nouvelInput.required = true;
     nouvelInput.classList.add("ms-4", "mb-0", "mt-3");
 
     // Ajouter le nouvel input au conteneur
