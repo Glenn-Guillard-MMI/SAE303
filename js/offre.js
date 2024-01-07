@@ -153,10 +153,19 @@ function modifForfait(arg) {
   const nom = document.getElementById("nom_" + arg).innerText;
   const id = document.getElementById("id_" + arg).value;
   const prix = document.getElementById("prix_" + arg).value;
+  const par_h = document.getElementById("parh_" + arg).value;
+
 
   document.getElementById("newnom3").value = nom;
   document.getElementById("newid3").value = id;
   document.getElementById("newprix3").value = prix;
+  if (par_h == 1) {
+    document.getElementById("newparh_1").checked = true;
+    document.getElementById("newparh_0").checked = false;
+  } else if (par_h == 0) {
+    document.getElementById("newparh_0").checked = true;
+    document.getElementById("newparh_1").checked = false;
+  }
 }
 
 function annModForfait() {
