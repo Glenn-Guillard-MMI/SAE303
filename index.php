@@ -112,8 +112,8 @@ session_start();
         négatif sur certaines caractéristiques et fonctions.
       </article>
       <form class="d-flex justify-content-around pb-2" action="_cookie.php">
-        <p onclick="retirer()" class="button_cookie_refus px-2 rounded-5 d-inline-flex justify-content-center align-items-center" type="button">Tout refuser</p>
-        <p onclick="accepter()" class="button_reserver_bapteme px-2 text-white rounded-5" type="button">Tout
+        <p onclick="retirer()" class="button-cookie-css text-center button_cookie_refus px-2 rounded-5 d-inline-flex justify-content-center align-items-center" type="button">Tout refuser</p>
+        <p onclick="accepter()" class="button-cookie-css button-cookie text-center px-2 text-white rounded-5" type="button">Tout
           accepter</p>
       </form>
     </section>
@@ -410,13 +410,14 @@ session_start();
         $resultat4 = $exemple4->requete($sql4);
         foreach ($resultat4 as $ligne4) {
       ?>
-          <form method="post" action="_reservFormation.php" class="carte_avion2 d-flex justify-content-between align-items-center flex-column color-blue-bapteme mt-3">
+
+          <form method="post" action="_reservFormation.php" class="carte_avion2 w-25 d-flex justify-content-between align-items-center flex-column color-blue-bapteme mt-3">
             <h3 class="mt-4 size-3">
               <?= $ligne4["nom"] ?>
             </h3>
             <input type="hidden" name="id" value="<?= $ligne4["id"] ?>">
             <div class="w-75 rounded-5 barre-horizontale"></div>
-            <ul class="mt-3 size-2">
+            <ul class="mt-3 w-75 size-2">
               <?php
               $des = $ligne4["description"];
               $description = explode(";", $des);

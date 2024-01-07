@@ -68,7 +68,7 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-#backToTop:hover #fleche_haut{
+#backToTop:hover #fleche_haut {
     width: 3.5em;
 }
 
@@ -116,7 +116,7 @@
     background: linear-gradient(180deg, rgba(0, 41, 98, 0.90) 11.85%, rgba(0, 54, 129, 0.45) 56.64%, rgba(0, 78, 137, 0.20) 76.95%, rgba(0, 78, 137, 0.00) 100%, rgba(0, 78, 137, 0.00) 100%);
 }
 
-#nav-responsive{
+#nav-responsive {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -124,11 +124,11 @@
     background: linear-gradient(180deg, rgba(0, 41, 98, 0.90) 11.85%, rgba(0, 54, 129, 0.45) 56.64%, rgba(0, 78, 137, 0.20) 76.95%, rgba(0, 78, 137, 0.00) 100%, rgba(0, 78, 137, 0.00) 100%);
 }
 
-#lien_menu{
+#lien_menu {
     display: none;
 }
 
-.text-lien{
+.text-lien {
     font-size: 2.5vw !important;
 }
 
@@ -190,7 +190,7 @@ h2 {
     background-color: #407BA7 !important;
 }
 
-.mt-custom{
+.mt-custom {
     margin-top: 15%;
 }
 
@@ -212,7 +212,7 @@ h2 {
     animation-timing-function: cubic-bezier(.21, .91, .46, .99);
 }
 
-.container_avion_bas{
+.container_avion_bas {
     width: 35%;
     margin: 0 auto;
     perspective: 100px;
@@ -235,6 +235,7 @@ h2 {
         top: -200em;
         opacity: 0;
     }
+
     to {
         transform: translateZ(0px);
         top: 2em;
@@ -351,7 +352,7 @@ h2 {
     width: 90%;
 }
 
-.barre-container{
+.barre-container {
     width: 5%;
 }
 
@@ -365,7 +366,7 @@ h2 {
     filter: drop-shadow(1px 1px 1px);
 }
 
-.avion-container-img{
+.avion-container-img {
     width: 10%;
 }
 
@@ -382,7 +383,7 @@ h2 {
 /*carte avion*/
 
 .img_card_bapteme {
-    filter : drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
 }
 
 .carte_avion {
@@ -503,11 +504,14 @@ input[type="text"] {
 .carte3 {
     background: linear-gradient(180deg, #FFF 0%, #CBD5E1 100%);
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+    flex: 0 0 25%;
 }
 
 /*formation*/
 
 /*service*/
+
+.button_reserver_cookie {}
 
 .bg-circl {
     width: 10%;
@@ -913,6 +917,23 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
     resize: none;
 }
 
+.button-cookie {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: rgba(0, 41, 98, 0.80);
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.25s linear;
+}
+
+.button-cookie:hover {
+    border: 2px solid #D4D4D4;
+    background: #002962;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.25);
+}
+
 .button-contact-custom {
     box-shadow: 0px 4px 30.3px 0px rgba(0, 0, 0, 0.25);
     border: 1px solid transparent;
@@ -1013,7 +1034,7 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
 
 /*footer*/
 
-#depart_avion{
+#depart_avion {
     width: 100vw;
     height: 100vh;
     position: absolute;
