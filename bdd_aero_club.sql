@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 07 jan. 2024 à 20:58
+-- Généré le : dim. 07 jan. 2024 à 21:19
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -173,6 +173,13 @@ CREATE TABLE `evenement` (
   `date_fin` date NOT NULL,
   `lien` char(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `evenement`
+--
+
+INSERT INTO `evenement` (`id`, `nom`, `image`, `lieu`, `date_debut`, `date_fin`, `lien`) VALUES
+(5, 'Journée Sécurité des vols - Grand Est', '52gFwqR0wJssgiUFR82qKb91J5hWckDSlvE6ZpC1VP8toz0ijS', 'Serrouville, France', '2024-01-11', '2024-01-28', 'https://ffplum.fr/agenda/653-journee-securite-des-vols-2023');
 
 -- --------------------------------------------------------
 
@@ -427,7 +434,7 @@ ALTER TABLE `equipe`
 -- AUTO_INCREMENT pour la table `evenement`
 --
 ALTER TABLE `evenement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `forfait`
