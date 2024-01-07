@@ -6,7 +6,7 @@
 -->
 
 <!DOCTYPE html>
-<html lang=fr">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -220,109 +220,48 @@
             <p class="mt-5 fs-4">Liste des formations disponibles</p>
             <article class="w-100 d-flex flex-row mt-3">
                 <div class="d-flex flex-row card-container formation-container">
+                    <?php
+                    try {
 
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">ULM multiaxiale</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <p class="text-center">999€</p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i onclick="modifForm()" class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i onclick="supprForm(/*METTRE ID DE LA LIGNE*/)"
-                                class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
+                        $model1 = new Model("formation");
+                        $ex1 = new Repository($model1->getTable());
+                        $sql1 = "Select * from " . $model1->getTable();
+                        $result1 = $ex1->requete($sql1);
+                        foreach ($result1 as $lign1) {
+                            $nom1 = $lign1["nom"];
+                            ?>
+                            <input type="hidden" id="id_<?= $nom1 ?>" value="<?= $lign1["id"] ?>">
 
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">ULM multiaxiale</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <p class="text-center">999€</p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">ULM multiaxiale</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <p class="text-center">999€</p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">ULM multiaxiale</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <p class="text-center">999€</p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">ULM multiaxiale</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <p class="text-center">999€</p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">ULM multiaxiale</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <p class="text-center">999€</p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
+                            <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
+                                <p id="nom_<?= $nom1 ?>" class="fs-3 fw-medium">
+                                    <?= $nom1 ?>
+                                </p>
+                                <ul>
+                                    <?php
+                                    $des = $lign1["description"];
+                                    $description = explode(";", $des);
+                                    foreach ($description as $des) {
+                                        echo "<li>" . $des . "</li>";
+                                    }
+                                    ?>
+                                </ul>
+                                <input type="hidden" id="prix_<?= $nom1 ?>" value="<?= $lign1["prix"] ?>">
+                                <p class="text-center">
+                                    <?= $lign1["prix"] ?>€
+                                </p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <i onclick="modifForm('<?= $nom1 ?>', '<?= $n ?>')"
+                                        class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
+                                    <i onclick="supprForm(/*METTRE ID DE LA LIGNE*/)"
+                                        class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    } catch (PDOException $e) {
+                        die($e->getMessage());
+                    }
+                    ?>
 
                 </div>
                 <div class="d-flex text-center align-items-center">
@@ -334,110 +273,44 @@
             <p class="mt-5 fs-4">Liste des forfaits disponibles</p>
             <article class="w-100 d-flex flex-row mt-3">
                 <div class="d-flex flex-row card-container forfait-container">
+                    <?php
+                    try {
 
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">ULM multiaxiale</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <p class="text-center">999€</p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i onclick="modifForfait()" class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i onclick="supprForfait(/*METTRE ID DE LA LIGNE*/)"
-                                class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">ULM multiaxiale</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <p class="text-center">999€</p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">ULM multiaxiale</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <p class="text-center">999€</p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">ULM multiaxiale</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <p class="text-center">999€</p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">ULM multiaxiale</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <p class="text-center">999€</p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p class="fs-3 fw-medium">ULM multiaxiale</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <p class="text-center">999€</p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-
+                        $model2 = new Model("forfait");
+                        $ex2 = new Repository($model2->getTable());
+                        $sql2 = "Select * from " . $model2->getTable();
+                        $result2 = $ex2->requete($sql2);
+                        foreach ($result2 as $lign2) {
+                            $nom2 = $lign2["nom"];
+                            ?>
+                            <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
+                                <p class="fs-3 fw-medium">
+                                    <?= $nom2 ?>
+                                </p>
+                                <ul>
+                                    <?php
+                                    $des = $lign2["description"];
+                                    $description = explode(";", $des);
+                                    foreach ($description as $des) {
+                                        echo "<li>" . $des . "</li>";
+                                    }
+                                    ?>
+                                </ul>
+                                <p class="text-center">
+                                    <?= $lign2["prix"] ?>€
+                                </p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <i onclick="modifForfait()" class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
+                                    <i onclick="supprForfait(/*METTRE ID DE LA LIGNE*/)"
+                                        class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    } catch (PDOException $e) {
+                        die($e->getMessage());
+                    }
+                    ?>
                 </div>
                 <div class="d-flex text-center align-items-center">
                     <p onclick="ajoutForfait()" class="fs-1 px-3 py-1 icon-event ms-5 rounded-4 plus-icon">+</p>
@@ -453,11 +326,12 @@
 
     <section id="modif-bapteme" class="position-fixed bg-white py-4 w-50 rounded-4">
         <h1 class="font-avion text-center">Modifier un baptême de l'air</h1>
-        <form method="post" action="_modificationbapteme.php" id="form-modif-bapteme" class="text-blue w-50 mx-auto mt-5">
+        <form method="post" action="_modificationbapteme.php" id="form-modif-bapteme"
+            class="text-blue w-50 mx-auto mt-5">
             <span class="d-flex flex-row mt-3">
                 <label for="titre">Nom : </label>
                 <input id="newnom" type="text" class="ms-4 mb-0" disabled>
-                <input id="newnom2" type="hidden" name="nom" class="ms-4 mb-0">
+                <input id="newnom1" type="hidden" name="nom" class="ms-4 mb-0">
             </span>
             <span class="d-flex flex-row justify-content-start mt-3">
                 <label for="formule">Formule :</label>
@@ -491,10 +365,12 @@
 
     <section id="modif-formation" class="position-fixed bg-white py-4 w-50 rounded-4">
         <h1 class="font-avion text-center">Modifier une formation</h1>
-        <form method="post" action="" id="form-modif-formation" class="text-blue w-75 mt-5 mx-auto">
+        <form method="post" action="_modificationformation.php" id="form-modif-formation"
+            class="text-blue w-75 mt-5 mx-auto">
             <span class="d-flex flex-row mt-3">
                 <label for="titre">Titre : </label>
-                <input type="text" name="titre" class="ms-4 mb-0 w-50">
+                <input id="newnom2" type="text" name="nom" class="ms-4 mb-0 w-50">
+                <input type="hidden" id="newid2" name="id">
             </span>
             <div>
                 <div class="d-flex flex-row mt-3">
@@ -510,7 +386,7 @@
             </div>
             <span class="d-flex flex-row mt-3">
                 <label for="prix">Prix :</label>
-                <input type="number" name="prix" class="ms-4 mb-0">
+                <input id="newprix2" type="number" name="prix" class="ms-4 mb-0">
             </span>
             <span class="d-flex flex-row justify-content-around mt-5">
                 <p onclick="annModForm()" class="annul_buton bg-white rounded-3 py-1 px-2 mb-0 text-blue fs-5">Annuler
