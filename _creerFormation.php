@@ -1,11 +1,11 @@
 <?php
 require_once "poo_repository.php";
 require_once "poo_models.php";
+var_dump($_POST["nom"]);
 
 if (!empty($_POST["prix"]) and !empty($_POST["nom"]) and !empty($_POST["titre_0"])) {
     $nom = "'" . $_POST["nom"] . "'";
     $prix = $_POST["prix"];
-    $id = $_POST["id"];
     
     $n = 0;
     $a = 1;
@@ -25,7 +25,7 @@ if (!empty($_POST["prix"]) and !empty($_POST["nom"]) and !empty($_POST["titre_0"
     try {
         $modele = new Model("formation");
         $Repository = new Repository($modele->getTable());
-        $sql = "UPDATE " . $modele->getTable() . " SET nom = $nom, description = $des, prix = $prix where id = $id";
+        $sql = "INSERT INTO " . $modele->getTable() . " (nom, prix, description) VALUES ($nom, $prix, $des)";
         $Repository->requete($sql);
         header('location: php_offre.php');
 
@@ -35,6 +35,9 @@ if (!empty($_POST["prix"]) and !empty($_POST["nom"]) and !empty($_POST["titre_0"
 
 
 } else
+    echo $_POST['titre_0'];
+    echo $_POST['nom'];
+    echo $_POST['prix'];
     echo "Error";
 
 ?>
