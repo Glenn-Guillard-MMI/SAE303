@@ -54,59 +54,59 @@
                             $sauvegarde = $ligne["autorisation"];
                             if ($sauvegarde == 3) {
                                 ?>
-            <nav
-                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                <a class="exclu" href="index.php">
-                    <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                </a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                    href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Demande de licence</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
-                <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
-                    href="php_offre.php">Offres</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_evenement.php">Événement</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_galerie.php">Galerie</a>
-            </nav>
-            <?php
+                                <nav
+                                    class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+                                    <a class="exclu" href="index.php">
+                                        <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                                    </a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                                        href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Gestion des réservations</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Demande de licence</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
+                                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                                        href="php_offre.php">Offres</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_evenement.php">Événement</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_galerie.php">Galerie</a>
+                                </nav>
+                                <?php
 
                             }
                             if ($sauvegarde == 2) {
                                 ?>
-            <nav
-                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                <a class="exclu" href="index.php">
-                    <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                </a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
-                <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
-                    href="php_Gestion_avions.php">Avions</a>
-            </nav>
-            <?php
+                                <nav
+                                    class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+                                    <a class="exclu" href="index.php">
+                                        <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                                    </a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
+                                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                                        href="php_Gestion_avions.php">Avions</a>
+                                </nav>
+                                <?php
 
                             }
 
 
                             if ($sauvegarde == 1) {
                                 ?>
-            <nav class="text-center bg-custom text-white d-flex flex-column align-items-center font-avion">
-                <a class="exclu" href="index.php">
-                    <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                </a>
-                <div class="d-flex flex-column h-25 justify-content-around my-auto">
-                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
-                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
-                        href="">Réservations</a>
-                    <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                        href="php_Gestion_avions.php">Avions</a>
-                </div>
-            </nav>
-            <?php
+                                <nav class="text-center bg-custom text-white d-flex flex-column align-items-center font-avion">
+                                    <a class="exclu" href="index.php">
+                                        <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                                    </a>
+                                    <div class="d-flex flex-column h-25 justify-content-around my-auto">
+                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
+                                        <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                                            href="">Réservations</a>
+                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                                            href="php_Gestion_avions.php">Avions</a>
+                                    </div>
+                                </nav>
+                                <?php
 
                             }
 
@@ -115,15 +115,15 @@
 
                             if ($sauvegarde == 0) {
                                 ?>
-            <nav
-                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                <a class="exclu" href="index.php">
-                    <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                </a>
-                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
-                <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="">Réservations</a>
-            </nav>
-            <?php
+                                <nav
+                                    class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+                                    <a class="exclu" href="index.php">
+                                        <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                                    </a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
+                                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="">Réservations</a>
+                                </nav>
+                                <?php
 
                             }
                         }
@@ -148,19 +148,19 @@
 
                         $model = new Model("bapteme");
                         $ex = new Repository($model->getTable());
-                        $sql = "Select * from " . $model->getTable(). " WHERE active = 0";
+                        $sql = "Select * from " . $model->getTable() . " WHERE active = 0";
                         $result = $ex->requete($sql);
                         foreach ($result as $lign) {
                             $nom = $lign["nom"];
                             ?>
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <img class="img-bapteme rounded-3 mx-auto h-25 object-fit-cover"
-                            src="ImageBapteme/<?= $lign["image"] ?>.png" alt="<?= $nom ?>">
-                        <p id="nom_<?= $nom ?>" class="fs-4 fw-medium">
-                            <?= $nom ?>
-                        </p>
-                        <p>
-                            <?php
+                            <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
+                                <img class="img-bapteme rounded-3 mx-auto h-25 object-fit-cover"
+                                    src="ImageBapteme/<?= $lign["image"] ?>.png" alt="<?= $nom ?>">
+                                <p id="nom_<?= $nom ?>" class="fs-4 fw-medium">
+                                    <?= $nom ?>
+                                </p>
+                                <p>
+                                    <?php
                                     $n = 0;
                                     $f = $lign["formule"];
                                     $formule = explode(";", $f);
@@ -174,12 +174,12 @@
                                         $n++;
                                     }
                                     ?>
-                        </p>
-                        <p>
-                            <?php
+                                </p>
+                                <p>
+                                    <?php
                                     $a = 0;
                                     $min = $lign["temps"];
-                                    $imagePourSuprr= "'".$lign["image"]."'";
+                                    $imagePourSuprr = "'" . $lign["image"] . "'";
                                     $temps = explode(";", $min);
                                     foreach ($temps as $min) {
                                         if ($a == 0) {
@@ -191,21 +191,21 @@
                                         $a++;
                                     }
                                     ?>
-                            minutes de prestations
-                        </p>
-                        <input type="hidden" id="prix_<?= $nom ?>" value="<?= $lign["prix"] ?>">
-                        <p>
-                            <?= $lign["prix"] ?>€
-                        </p>
+                                    minutes de prestations
+                                </p>
+                                <input type="hidden" id="prix_<?= $nom ?>" value="<?= $lign["prix"] ?>">
+                                <p>
+                                    <?= $lign["prix"] ?>€
+                                </p>
 
-                        <div class="d-flex flex-row justify-content-around">
+                                <div class="d-flex flex-row justify-content-around">
 
-                            <i onclick="modifBapt('<?= $nom ?>')" class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i onclick="supprBapt(<?=$imagePourSuprr?>)"
-                                class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-                    <?php
+                                    <i onclick="modifBapt('<?= $nom ?>')" class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
+                                    <i onclick="supprBapt(<?= $imagePourSuprr ?>)"
+                                        class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
+                                </div>
+                            </div>
+                            <?php
                         }
                     } catch (PDOException $e) {
                         die($e->getMessage());
@@ -226,39 +226,39 @@
 
                         $model1 = new Model("formation");
                         $ex1 = new Repository($model1->getTable());
-                        $sql1 = "Select * from " . $model1->getTable(). " WHERE active = 0";
+                        $sql1 = "Select * from " . $model1->getTable() . " WHERE active = 0";
                         $result1 = $ex1->requete($sql1);
                         foreach ($result1 as $lign1) {
                             $nom1 = $lign1["nom"];
                             $id = $lign1["id"];
                             ?>
-                    <input type="hidden" id="id_<?= $nom1 ?>" value="<?= $lign1["id"] ?>">
+                            <input type="hidden" id="id_<?= $nom1 ?>" value="<?= $lign1["id"] ?>">
 
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                        <p id="nom_<?= $nom1 ?>" class="fs-3 fw-medium">
-                            <?= $nom1 ?>
-                        </p>
-                        <ul>
-                            <?php
+                            <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
+                                <p id="nom_<?= $nom1 ?>" class="fs-3 fw-medium">
+                                    <?= $nom1 ?>
+                                </p>
+                                <ul>
+                                    <?php
                                     $des = $lign1["description"];
                                     $description = explode(";", $des);
                                     foreach ($description as $des) {
                                         echo "<li>" . $des . "</li>";
                                     }
                                     ?>
-                        </ul>
-                        <input type="hidden" id="prix_<?= $nom1 ?>" value="<?= $lign1["prix"] ?>">
-                        <p class="text-center">
-                            <?= $lign1["prix"] ?>€
-                        </p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i onclick="modifForm('<?= $nom1 ?>', '<?= $n ?>')"
-                                class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i onclick="supprForm(<?= $id ?>)"
-                                class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-                    <?php
+                                </ul>
+                                <input type="hidden" id="prix_<?= $nom1 ?>" value="<?= $lign1["prix"] ?>">
+                                <p class="text-center">
+                                    <?= $lign1["prix"] ?>€
+                                </p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <i onclick="modifForm('<?= $nom1 ?>', '<?= $n ?>')"
+                                        class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
+                                    <i onclick="supprForm(<?= $id ?>)"
+                                        class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
+                                </div>
+                            </div>
+                            <?php
                         }
                     } catch (PDOException $e) {
                         die($e->getMessage());
@@ -280,37 +280,44 @@
 
                         $model2 = new Model("forfait");
                         $ex2 = new Repository($model2->getTable());
-                        $sql2 = "Select * from " . $model2->getTable(). " WHERE active = 0";
+                        $sql2 = "Select * from " . $model2->getTable() . " WHERE active = 0";
                         $result2 = $ex2->requete($sql2);
                         foreach ($result2 as $lign2) {
                             $nom2 = $lign2["nom"];
                             $id2 = $lign2["id"];
                             ?>
-                    <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
-                    <input type="hidden" id="id_<?= $nom2 ?>" value="<?= $lign2["id"] ?>">
-                        <p id="nom_<?= $nom2 ?>" class="fs-3 fw-medium">
-                            <?= $nom2 ?>
-                        </p>
-                        <ul>
-                            <?php
+                            <div class="carte text-center px-2 py-3 rounded-3 d-flex flex-column justify-content-around">
+                                <input type="hidden" id="id_<?= $nom2 ?>" value="<?= $lign2["id"] ?>">
+                                <p id="nom_<?= $nom2 ?>" class="fs-3 fw-medium">
+                                    <?= $nom2 ?>
+                                </p>
+                                <ul>
+                                    <?php
                                     $des = $lign2["description"];
                                     $description = explode(";", $des);
                                     foreach ($description as $des) {
                                         echo "<li>" . $des . "</li>";
                                     }
                                     ?>
-                        </ul>
-                        <input type="hidden" id="prix_<?= $nom2 ?>" value="<?= $lign2["prix"] ?>">
-                        <p class="text-center">
-                            <?= $lign2["prix"] ?>€
-                        </p>
-                        <div class="d-flex flex-row justify-content-around">
-                            <i onclick="modifForfait('<?= $nom2 ?>')" class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                            <i onclick="supprForfait(<?=$id ?>)"
-                                class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
-                        </div>
-                    </div>
-                    <?php
+                                </ul>
+                                <input type="hidden" id="prix_<?= $nom2 ?>" value="<?= $lign2["prix"] ?>">
+                                <p class="text-center">
+                                    <?= $lign2["prix"] ?>€
+                                    <?php
+                                    if ($lign2["par_h"] == 1) {
+                                        echo "/h";
+                                    }
+                                    ?>
+                                </p>
+                                <input type='hidden' id='parh_<?= $nom2 ?>' value='<?= $lign2["par_h"] ?>'>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <i onclick="modifForfait('<?= $nom2 ?>')"
+                                        class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
+                                    <i onclick="supprForfait(<?= $id ?>)"
+                                        class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
+                                </div>
+                            </div>
+                            <?php
                         }
                     } catch (PDOException $e) {
                         die($e->getMessage());
@@ -403,10 +410,10 @@
 
     <section id="modif-forfait" class="position-fixed bg-white py-4 w-50 rounded-4">
         <h1 class="font-avion text-center">Modifier un forfait</h1>
-        <form method="post" action="" id="form-modif-forfait" class="text-blue w-75 mx-auto mt-5">
+        <form method="post" action="_modificationforfait.php" id="form-modif-forfait" class="text-blue w-75 mx-auto mt-5">
             <span class="d-flex flex-row mt-3">
-                <label for="titre">Titre : </label>
-                <input id="newnom3" type="text" name="titre" class="ms-4 mb-0">
+                <label for="titre">Nom : </label>
+                <input id="newnom3" type="text" name="nom" class="ms-4 mb-0">
                 <input type="hidden" id="newid3" name="id">
             </span>
             <div>
@@ -418,7 +425,7 @@
                         onclick="supprInfo('modif-info-forfait','input-modif-forfait')">Supprimer Info</p>
                 </div>
                 <span id='modif-info-forfait' class="d-flex flex-column mt-3">
-                    <input type="text" name="titre" class="ms-4 w-75 mb-0 input-modif-forfait">
+                    <input type="text" name="titre_0" class="ms-4 w-75 mb-0 input-modif-forfait">
                 </span>
             </div>
             <span class="d-flex flex-row mt-3">
@@ -429,9 +436,9 @@
                 <label for="prix">Prix :</label>
                 <div>
                     <label for="prix_h" class="ms-4 mb-0">Fixe :</label>
-                    <input type="radio" name="prix_h">
+                    <input id="newparh_0" type="radio" name="prix_h0" value="0">
                     <label for="prix_h" class="ms-3 mb-0">Par heure :</label>
-                    <input type="radio" name="prix_h">
+                    <input id="newparh_1" type="radio" name="prix_h0" value="1">
                 </div>
             </span>
             <span class="d-flex flex-row justify-content-around mt-5">
