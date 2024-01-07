@@ -218,7 +218,7 @@ session_start();
 
           $modele = new Model("bapteme");
           $exemple = new Repository($modele->getTable());
-          $sql = "Select * from " . $modele->getTable();
+          $sql = "Select * from " . $modele->getTable()  . " WHERE active = 0";
           $resultat = $exemple->requete($sql);
           foreach ($resultat as $ligne) {
             ?>
@@ -370,7 +370,7 @@ session_start();
 
         $modele4 = new Model("formation");
         $exemple4 = new Repository($modele4->getTable());
-        $sql4 = "Select * from " . $modele4->getTable();
+        $sql4 = "Select * from " . $modele4->getTable() . " WHERE active = 0";
         $resultat4 = $exemple4->requete($sql4);
         foreach ($resultat4 as $ligne4) {
           ?>
@@ -485,7 +485,7 @@ session_start();
 
         $modele5 = new Model("forfait");
         $exemple5 = new Repository($modele5->getTable());
-        $sql5 = "Select * from " . $modele5->getTable();
+        $sql5 = "Select * from " . $modele5->getTable() . " WHERE active = 0";
         $resultat5 = $exemple5->requete($sql5);
         foreach ($resultat5 as $ligne5) {
           ?>
