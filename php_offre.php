@@ -313,7 +313,7 @@
                                 <div class="d-flex flex-row justify-content-around">
                                     <i onclick="modifForfait('<?= $nom2 ?>')"
                                         class="fas fa-pen p-2 fs-5 icon-event rounded-3"></i>
-                                    <i onclick="supprForfait(<?= $id ?>)"
+                                    <i onclick="supprForfait(<?= $id2 ?>)"
                                         class="fas fa-trash text-danger p-2 fs-5 icon-event rounded-3"></i>
                                 </div>
                             </div>
@@ -454,7 +454,8 @@
 
     <section id="ajout-bapteme" class="position-fixed bg-white py-4 w-50 rounded-4">
         <h1 class="font-avion text-center">Ajouter un baptême de l'air</h1>
-        <form method="post" action="_creerBapteme.php" id="form-ajout-bapteme" class="text-blue w-50 mx-auto mt-5" enctype='multipart/form-data'>
+        <form method="post" action="_creerBapteme.php" id="form-ajout-bapteme" class="text-blue w-50 mx-auto mt-5"
+            enctype='multipart/form-data'>
             <span class="d-flex flex-row">
                 <input type="file" name="image" accept="image/png, image/jpeg" id="img" onchange="VerifImage()">
             </span>
@@ -506,7 +507,7 @@
                         onclick="supprInfo('ajout-info-formation','input-ajout-formation')">Supprimer Info</p>
                 </div>
                 <span id='ajout-info-formation' class="d-flex flex-column mt-3">
-                    <input type="text" name="titre" class="ms-4 w-75 mb-0 input-ajout-formation">
+                    <input type="text" name="titre_0" class="ms-4 w-75 mb-0 input-ajout-formation">
                 </span>
             </div>
             <span class="d-flex flex-row mt-3">
@@ -523,7 +524,7 @@
 
     <section id="ajout-forfait" class="position-fixed  bg-white py-4 w-50 rounded-4">
         <h1 class="font-avion text-center">Ajouter un forfait</h1>
-        <form method="post" action="" id="form-ajout-forfait" class="text-blue w-75 mx-auto mt-5">
+        <form method="post" action="_creerForfait.php" id="form-ajout-forfait" class="text-blue w-75 mx-auto mt-5">
             <span class="d-flex flex-row mt-3">
                 <label for="titre">Nom : </label>
                 <input type="text" name="nom" class="ms-4 mb-0">
@@ -537,12 +538,21 @@
                         onclick="supprInfo('ajout-info-forfait','input-ajout-forfait')">Supprimer Info</p>
                 </div>
                 <span id='ajout-info-forfait' class="d-flex flex-column mt-3">
-                    <input type="text" name="titre" class="ms-4 w-75 mb-0 input-ajout-forfait">
+                    <input type="text" name="titre_0" class="ms-4 w-75 mb-0 input-ajout-forfait">
                 </span>
             </div>
             <span class="d-flex flex-row mt-3">
                 <label for="prix">Prix :</label>
                 <input type="number" name="prix" class="ms-4 mb-0">
+            </span>
+            <span class="d-flex flex-row mt-3">
+                <label for="prix">Prix :</label>
+                <div>
+                    <label for="prix_h" class="ms-4 mb-0">Fixe :</label>
+                    <input type="radio" name="prix_h0" value="0">
+                    <label for="prix_h" class="ms-3 mb-0">Par heure :</label>
+                    <input type="radio" name="prix_h0" value="1">
+                </div>
             </span>
             <span class="d-flex flex-row justify-content-around mt-5">
                 <p onclick="annAjoutForfait()" class="annul_buton bg-white rounded-3 py-1 px-2 mb-0 text-blue fs-5">
