@@ -493,10 +493,10 @@
 
     <section id="ajout-formation" class="position-fixed  bg-white py-4 w-50 rounded-4">
         <h1 class="font-avion text-center">Ajouter une formation</h1>
-        <form method="post" action="" id="form-ajout-formation" class="text-blue w-75 mx-auto mt-5">
+        <form method="post" action="_creerFormation.php" id="form-ajout-formation" class="text-blue w-75 mx-auto mt-5">
             <span class="d-flex flex-row mt-3">
                 <label for="titre">Nom : </label>
-                <input type="text" name="Nom" class="ms-4 mb-0">
+                <input type="text" name="nom" class="ms-4 mb-0">
             </span>
             <div>
                 <div class="d-flex flex-row mt-3">
