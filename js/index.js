@@ -7,13 +7,6 @@ window.addEventListener('load', function () {
 var backToTop = document.getElementById('backToTop'),
   fleche = document.getElementById('fleche_haut');
 
-backToTop.addEventListener('mouseover', function () {
-  fleche.style.width = '3.5em';
-});
-backToTop.addEventListener('mouseout', function () {
-  fleche.style.width = '4em';
-});
-
 function retirer() {
   document.getElementById("cookie").style.display = 'none';
   document.getElementById("cookie").style.userSelect = 'none';
@@ -59,6 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 } );
 
-var maDiv = document.getElementById('comptebatard');
+var maDiv = document.getElementById('compte');
 var nombreEnfants = maDiv.childElementCount;
 maDiv.style.width = "calc(25vw*" + nombreEnfants + ")";

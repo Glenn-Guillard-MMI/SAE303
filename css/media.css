@@ -1,0 +1,567 @@
+@media only screen and (max-width: 1175px) {
+    #nav-ordi {
+        display: none;
+        user-select: none;
+        opacity: 0;
+    }
+
+    #nav-responsive {
+        display: block !important;
+    }
+
+    #width_meteo_lien {
+        font-size: 1.8vw !important;
+    }
+
+    #bienvenue {
+        margin-top: 15% !important;
+    }
+
+    #container_formation,
+    #forfait,
+    #propos {
+        font-size: 3.5vw !important;
+    }
+
+    #titre-note,
+    #titre-select-avis,
+    #titre-commentaire-avis,
+    .button_avis {
+        font-size: 3vw !important;
+    }
+
+    #contact-dev {
+        font-size: 2vw !important;
+    }
+
+    .slide {
+        height: 35vh !important;
+        width: 35vw !important;
+    }
+
+    .card_equipe {
+        border-radius: 10px !important;
+    }
+
+    .content {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .content div p:first-child {
+        font-size: 2vw !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #bapteme {
+        font-size: 3.5vw !important;
+    }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+    #container-meteo {
+        flex-direction: column !important;
+        padding: 1em;
+    }
+
+    #jour1,
+    #jour2,
+    #jour3,
+    #jour4,
+    #jour5,
+    #jour6,
+    #jour7 {
+        flex-direction: row !important;
+        height: 10% !important;
+        width: 95% !important;
+        padding: 0 !important;
+        align-items: center;
+    }
+
+    #jour1 p,
+    #jour2 p,
+    #jour3 p,
+    #jour4 p,
+    #jour5 p,
+    #jour6 p,
+    #jour7 p {
+        width: 25%;
+        margin-bottom: 0 !important;
+    }
+
+    #jour1 p:first-child,
+    #jour2 p:first-child,
+    #jour3 p:first-child,
+    #jour4 p:first-child,
+    #jour5 p:first-child,
+    #jour6 p:first-child,
+    #jour7 p:first-child {
+        text-align: start !important;
+        width: 30% !important;
+    }
+
+    #jour1 div img,
+    #jour2 div img,
+    #jour3 div img,
+    #jour4 div img,
+    #jour5 div img,
+    #jour6 div img,
+    #jour7 div img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    #jour1 div,
+    #jour2 div,
+    #jour3 div,
+    #jour4 div,
+    #jour5 div,
+    #jour6 div,
+    #jour7 div {
+        width: 20%;
+        height: 100%;
+    }
+
+    #temp0,
+    #temperature0,
+    #temp1,
+    #temperature1,
+    #temp2,
+    #temperature2,
+    #temp3,
+    #temperature3,
+    #temp4,
+    #temperature4,
+    #temp5,
+    #temperature5,
+    #temp6,
+    #temperature6 {
+        margin: 0 !important;
+    }
+
+    #meteo-titre {
+        font-size: 3vw !important;
+    }
+
+    .info-commentaire p {
+        font-size: 2vw !important;
+    }
+
+    .commentaire {
+        font-size: 1.5vw !important;
+    }
+
+    .star-commentaire {
+        font-size: 2vw !important;
+    }
+
+    .slide_container_img {
+        height: 12em !important;
+        text-align: center;
+    }
+
+    #img-slide-infra {
+        margin-top: 10vw !important;
+    }
+
+    .slide_container_img img {
+        margin: 0 auto !important;
+    }
+
+    #text-infra {
+        font-size: 2vw !important;
+    }
+
+    #liste_infra {
+        padding-left: 0 !important;
+    }
+
+    #container-infra {
+        flex-direction: column !important;
+    }
+
+    #container-infra>div {
+        margin: 0 auto;
+        width: 75% !important;
+    }
+
+    #container-infra div div {
+        margin: 0 auto !important;
+    }
+
+    .slide {
+        height: 25vh !important;
+        width: 25vw !important;
+    }
+
+    .card_equipe {
+        border-radius: 10px !important;
+    }
+
+    .content {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .content div p:first-child {
+        font-size: 2vw !important;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    .carte_avion,
+    .carte_avion2,
+    .carte3 {
+        width: 33% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #jour1 p:not(:last-child),
+    #jour2 p:not(:last-child),
+    #jour3 p:not(:last-child),
+    #jour4 p:not(:last-child),
+    #jour5 p:not(:last-child),
+    #jour6 p:not(:last-child),
+    #jour7 p:not(:last-child) {
+        font-size: 2.2vw !important;
+    }
+
+    #jour1 p:last-child,
+    #jour2 p:last-child,
+    #jour3 p:last-child,
+    #jour4 p:last-child,
+    #jour5 p:last-child,
+    #jour6 p:last-child,
+    #jour7 p:last-child {
+        font-size: 5vw !important;
+    }
+
+    #backToTop {
+        top: 93%;
+        left: 90%;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    #fleche_haut {
+        width: 3.5em;
+    }
+
+    #backToTop:hover #fleche_haut {
+        width: 3em;
+    }
+
+    .avis_clients {
+        border-radius: 10px !important;
+    }
+
+    #type-appareil-titre {
+        font-size: 3.75vw !important;
+    }
+
+    #offres-bapteme-titre,
+    #type-ulm,
+    #titre-service,
+    #titre-infras,
+    #titre-equipe {
+        font-size: 3vw !important;
+    }
+
+    #container_formation,
+    #forfait,
+    #propos,
+    #bapteme,
+    #event,
+    #galerie {
+        font-size: 4.2vw !important;
+    }
+
+    #pres-asso {
+        font-size: 2vw !important;
+        width: 75% !important;
+    }
+
+    .slide_container_img {
+        height: 12em !important;
+    }
+
+    #text-infra {
+        font-size: 2vw !important;
+    }
+
+    #liste_infra {
+        padding-left: 0 !important;
+    }
+
+    #container-infra {
+        flex-direction: column !important;
+    }
+
+    #container-infra>div {
+        margin: 0 auto;
+        width: 75% !important;
+    }
+
+    #container-infra div div {
+        margin: 0 auto !important;
+    }
+
+    .slide {
+        height: 25vh !important;
+        width: 25vw !important;
+    }
+
+    .card_equipe {
+        border-radius: 10px !important;
+    }
+
+    .content {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .content div p:first-child {
+        font-size: 2vw !important;
+    }
+
+    .info-event {
+        width: 55% !important;
+    }
+
+    .info-event a {
+        font-size: 2.7vw !important;
+        padding: 1vw 2vw !important;
+    }
+
+    .info-event h3 {
+        font-size: 3.5vw !important;
+    }
+
+    .info-event p {
+        font-size: 2.7vw !important;
+    }
+
+    .barre-custom-event {
+        height: 0.5vh !important;
+    }
+
+    .img-event {
+        width: 40% !important;
+    }
+
+    #form-avis {
+        width: 75% !important;
+    }
+
+    #reseau {
+        width: 100% !important;
+    }
+
+    #reseau a svg {
+        width: 10vw !important;
+    }
+
+    #container-contact {
+        flex-direction: column !important;
+    }
+
+    #container-info-contact,
+    #contact-form-container {
+        width: 85% !important;
+        margin: 0 auto !important;
+    }
+
+    #container-contact div p {
+        font-size: 2.5vw !important;
+        margin-left: 2vw !important;
+    }
+
+    #container-info-contact h2,
+    #container-info-contact p {
+        text-align: center;
+    }
+
+    #contact-form-container {
+        margin-top: 20vw !important;
+    }
+
+    #contact-form-container h2 {
+        text-align: center;
+    }
+
+    .button-contact-custom {
+        font-size: 4vw !important;
+    }
+
+    .slide-track3 {
+        width: calc(40vw*18) !important;
+    }
+
+    .slide3 {
+        width: 40vw !important;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+    #fleche_haut {
+        width: 3em;
+    }
+
+    #backToTop:hover #fleche_haut {
+        width: 2.5em;
+    }
+
+    #type-appareil-titre {
+        font-size: 3.75vw !important;
+    }
+
+    #offres-bapteme-titre,
+    #type-ulm,
+    #titre-service,
+    #titre-infras,
+    #titre-equipe {
+        font-size: 3vw !important;
+    }
+
+    #container_formation,
+    #forfait,
+    #propos,
+    #bapteme,
+    #event,
+    #galerie {
+        font-size: 4.2vw !important;
+    }
+
+    #pres-asso {
+        font-size: 2vw !important;
+        width: 75% !important;
+    }
+
+    .slide_container_img {
+        height: 12em !important;
+    }
+
+    #text-infra {
+        font-size: 2vw !important;
+    }
+
+    #liste_infra {
+        padding-left: 0 !important;
+    }
+
+    #container-infra {
+        flex-direction: column !important;
+    }
+
+    #container-infra>div {
+        margin: 0 auto;
+        width: 75% !important;
+    }
+
+    #container-infra div div {
+        margin: 0 auto !important;
+    }
+
+    .slide {
+        height: 25vh !important;
+        width: 25vw !important;
+    }
+
+    .card_equipe {
+        border-radius: 10px !important;
+    }
+
+    .content {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .content div p:first-child {
+        font-size: 2vw !important;
+    }
+
+    .info-event {
+        width: 55% !important;
+    }
+
+    .info-event a {
+        font-size: 2.7vw !important;
+        padding: 1vw 2vw !important;
+    }
+
+    .info-event h3 {
+        font-size: 3.5vw !important;
+    }
+
+    .info-event p {
+        font-size: 2.7vw !important;
+    }
+
+    .barre-custom-event {
+        height: 0.5vh !important;
+    }
+
+    .img-event {
+        width: 40% !important;
+    }
+
+    #form-avis {
+        width: 75% !important;
+    }
+
+    #reseau {
+        width: 100% !important;
+    }
+
+    #reseau a svg {
+        width: 10vw !important;
+    }
+
+    #container-contact {
+        flex-direction: column !important;
+    }
+
+    #container-info-contact,
+    #contact-form-container {
+        width: 85% !important;
+        margin: 0 auto !important;
+    }
+
+    #container-contact div p {
+        font-size: 2.5vw !important;
+        margin-left: 2vw !important;
+    }
+
+    #container-info-contact h2,
+    #container-info-contact p {
+        text-align: center;
+    }
+
+    #contact-form-container {
+        margin-top: 20vw !important;
+    }
+
+    #contact-form-container h2 {
+        text-align: center;
+    }
+
+    .button-contact-custom {
+        font-size: 4vw !important;
+    }
+
+    .slide-track3 {
+        width: calc(40vw*18) !important;
+    }
+
+    .slide3 {
+        width: 40vw !important;
+    }
+}
