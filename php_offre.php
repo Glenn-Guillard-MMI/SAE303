@@ -410,7 +410,8 @@
 
     <section id="modif-forfait" class="position-fixed bg-white py-4 w-50 rounded-4">
         <h1 class="font-avion text-center">Modifier un forfait</h1>
-        <form method="post" action="_modificationforfait.php" id="form-modif-forfait" class="text-blue w-75 mx-auto mt-5">
+        <form method="post" action="_modificationforfait.php" id="form-modif-forfait"
+            class="text-blue w-75 mx-auto mt-5">
             <span class="d-flex flex-row mt-3">
                 <label for="titre">Nom : </label>
                 <input id="newnom3" type="text" name="nom" class="ms-4 mb-0">
@@ -453,26 +454,29 @@
 
     <section id="ajout-bapteme" class="position-fixed bg-white py-4 w-50 rounded-4">
         <h1 class="font-avion text-center">Ajouter un baptême de l'air</h1>
-        <form method="post" action="" id="form-ajout-bapteme" class="text-blue w-50 mx-auto mt-5">
+        <form method="post" action="_creerBapteme.php" id="form-ajout-bapteme" class="text-blue w-50 mx-auto mt-5" enctype='multipart/form-data'>
             <span class="d-flex flex-row">
-                <input type="file" name="image" class="ms-4 mb-0">
+                <input type="file" name="image" accept="image/png, image/jpeg" id="img" onchange="VerifImage()">
             </span>
             <span class="d-flex flex-row mt-3">
-                <label for="titre">Titre : </label>
-                <input type="text" name="titre" class="ms-4 mb-0">
+                <label for="titre">Nom : </label>
+                <input type="text" name="nom" class="ms-4 mb-0">
             </span>
             <span class="d-flex flex-row justify-content-start mt-3">
-                <label for="formule">Formule :</label>
+                <label for="formule">Formule : </label>
                 <div class="ms-3 mb-0">
                     <label for="solo">Solo</label>
-                    <input type="radio" name="formule" id="solo" checked>
+                    <input type="checkbox" name="formule" id="solo" value="solo" checked>
                     <label for="duo" class="ms-2 mb-0">Duo</label>
-                    <input type="radio" name="formule" id="duo">
+                    <input type="checkbox" name="formule1" id="duo" value="duo">
                 </div>
             </span>
             <span class="d-flex flex-row mt-3">
-                <label for="temps">Temps :</label>
-                <input type="number" name="temps" class="ms-4 mb-0">
+                <label for="temps">Temps : </label>
+                <label for="solo">20 min</label>
+                <input type="checkbox" name="temps" id="solo" value="20" checked>
+                <label for="duo" class="ms-2 mb-0">30 min</label>
+                <input type="checkbox" name="temps1" id="duo" value="30">
             </span>
             <span class="d-flex flex-row mt-3">
                 <label for="prix">Prix :</label>
@@ -481,7 +485,7 @@
             <span class="d-flex flex-row justify-content-around mt-5">
                 <p onclick="annAjoutBapt()" class="annul_buton bg-white rounded-3 py-1 px-2 mb-0 text-blue fs-5">Annuler
                 </p>
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom text-white rounded-3 py-1 px-2 fs-5">
+                <input type="submit" value="Ajouter" class="suppr_buton bg-custom text-white rounded-3 py-1 px-2 fs-5">
             </span>
         </form>
     </section>
@@ -490,8 +494,8 @@
         <h1 class="font-avion text-center">Ajouter une formation</h1>
         <form method="post" action="" id="form-ajout-formation" class="text-blue w-75 mx-auto mt-5">
             <span class="d-flex flex-row mt-3">
-                <label for="titre">Titre : </label>
-                <input type="text" name="titre" class="ms-4 mb-0">
+                <label for="titre">Nom : </label>
+                <input type="text" name="Nom" class="ms-4 mb-0">
             </span>
             <div>
                 <div class="d-flex flex-row mt-3">
@@ -512,7 +516,7 @@
             <span class="d-flex flex-row justify-content-around mt-5">
                 <p onclick="annAjoutForm()" class="annul_buton bg-white rounded-3 py-1 px-2 mb-0 text-blue fs-5">Annuler
                 </p>
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom text-white rounded-3 py-1 px-2 fs-5">
+                <input type="submit" value="Ajouter" class="suppr_buton bg-custom text-white rounded-3 py-1 px-2 fs-5">
             </span>
         </form>
     </section>
@@ -521,8 +525,8 @@
         <h1 class="font-avion text-center">Ajouter un forfait</h1>
         <form method="post" action="" id="form-ajout-forfait" class="text-blue w-75 mx-auto mt-5">
             <span class="d-flex flex-row mt-3">
-                <label for="titre">Titre : </label>
-                <input type="text" name="titre" class="ms-4 mb-0">
+                <label for="titre">Nom : </label>
+                <input type="text" name="nom" class="ms-4 mb-0">
             </span>
             <div>
                 <div class="d-flex flex-row mt-3">
@@ -543,7 +547,7 @@
             <span class="d-flex flex-row justify-content-around mt-5">
                 <p onclick="annAjoutForfait()" class="annul_buton bg-white rounded-3 py-1 px-2 mb-0 text-blue fs-5">
                     Annuler</p>
-                <input type="submit" value="Modifier" class="suppr_buton bg-custom text-white rounded-3 py-1 px-2 fs-5">
+                <input type="submit" value="Ajouter" class="suppr_buton bg-custom text-white rounded-3 py-1 px-2 fs-5">
             </span>
         </form>
     </section>
