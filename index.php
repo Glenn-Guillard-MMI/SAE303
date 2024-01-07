@@ -865,7 +865,7 @@ session_start();
       <img id="avion_helice_bas" src="img/avion.gif" alt="gif de l'animation de l'avion">
     </div>
 
-    <article class="mt-custom">
+    <article id="contact" class="mt-custom">
       <div id="container-contact" class="d-flex flex-row justify-content-around">
         <div id="container-info-contact" class="text-white container_contact container-fluid margin-custom-contact">
           <h2 class="text-white">INFORMATION</h2>
