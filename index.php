@@ -256,7 +256,7 @@ session_start();
           $resultat = $exemple->requete($sql);
           foreach ($resultat as $ligne) {
         ?>
-            <div class='carte_avion w-25 color-blue-bapteme d-flex justify-content-around align-items-center flex-column'>
+            <div class='carte_avion w-25 color-blue-bapteme d-flex justify-content-around align-items-center flex-column mt-3'>
               <form action="_reservBapteme.php" method="POST" class='h-100 w-75 d-flex justify-content-around align-items-center flex-column mt-2'>
                 <img class='img_card_bapteme rounded-3 w-100 h-25 object-fit-cover' src='ImageBapteme/<?= $ligne["image"] ?>.png' alt=<?= $ligne["nom"] ?>>
                 <h5 class='fw-medium text-center size-3'>
@@ -295,7 +295,7 @@ session_start();
                     <input class='test-time w-100 mt-1' name="heure" type='text' placeholder='Choisir une heure ..' readonly='readonly'>
                   </div>
                 </div>
-                <div class='d-flex flex-row align-items-center justify-content-around color-red-bapteme mt-5'>
+                <div class='button_bapteme d-flex flex-row align-items-center justify-content-around color-red-bapteme mt-5'>
                   <div>
                     <p class='m-0'><span class='non-strong-text'>à partir de</span><strong class='strong-text fst-italic'>
                         <?= $ligne["prix"] ?> €
@@ -400,7 +400,7 @@ session_start();
 
   <section id="formation" class="w-100">
     <h2 id="container_formation" class="text-white text-center size-4">FORMATIONS</h2>
-    <div class="w-100 d-flex justify-content-around align-items-stretch flex-wrap mt-5">
+    <div class="w-100 d-flex justify-content-around flex-wrap mt-5">
       <?php
       try {
 
@@ -410,7 +410,7 @@ session_start();
         $resultat4 = $exemple4->requete($sql4);
         foreach ($resultat4 as $ligne4) {
       ?>
-          <form method="post" action="_reservFormation.php" class="carte_avion2 w-25 d-flex justify-content-between align-items-center flex-column color-blue-bapteme" style="flex: 0 0 25%;">
+          <form method="post" action="_reservFormation.php" class="carte_avion2 d-flex justify-content-between align-items-center flex-column color-blue-bapteme mt-3">
             <h3 class="mt-4 size-3">
               <?= $ligne4["nom"] ?>
             </h3>
@@ -425,7 +425,7 @@ session_start();
               }
               ?>
             </ul>
-            <div class="d-flex flex-row justify-content-around align-items-center w-100 mt-5 mb-3">
+            <div class="d-flex flex-row justify-content-around align-items-center w-100 mt-5 mb-3 button-form">
               <p class="color-red-bapteme fst-italic size-3 my-auto">
                 <?= $ligne4["prix"] ?>€
               </p>
@@ -529,7 +529,7 @@ session_start();
         $resultat5 = $exemple5->requete($sql5);
         foreach ($resultat5 as $ligne5) {
       ?>
-          <form method="post" action="_reserveForfait.php" class="carte3 w-25 p-3 rounded-4">
+          <form method="post" action="_reserveForfait.php" class="carte3 w-25 p-3 rounded-4 mt-3">
             <h2 class="font text-center mt-3 size-5">
               <?= $ligne5["prix"] ?> €
               <?php
@@ -552,7 +552,7 @@ session_start();
               }
               ?>
             </ul>
-            <div class="d-flex justify-content-center my-auto mt-4">
+            <div id="container-button-forf" class="d-flex justify-content-center my-auto mt-4">
               <input type="submit" value="S'incrire" class="button_reserver_bapteme px-2 text-white w-50 fs-4 mt-4">
             </div>
           </form>
