@@ -549,7 +549,7 @@
                 <label for="prix">Prix :</label>
                 <div>
                     <label for="prix_h" class="ms-4 mb-0">Fixe :</label>
-                    <input type="radio" name="prix_h0" value="0">
+                    <input type="radio" name="prix_h0" value="0" checked>
                     <label for="prix_h" class="ms-3 mb-0">Par heure :</label>
                     <input type="radio" name="prix_h0" value="1">
                 </div>
