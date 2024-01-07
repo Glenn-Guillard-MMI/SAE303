@@ -18,6 +18,9 @@
 
 }
 
+.text-yellow {
+    color: #ffc73a;
+}
 
 .size-2 {
     /*text général*/
@@ -52,9 +55,10 @@
 /*backToTop*/
 #backToTop {
     z-index: 100;
-    position: sticky;
-    top: 85%;
+    position: fixed;
+    top: 90%;
     left: 92%;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     background-color: #407BA7;
     border-color: #FFF;
@@ -62,6 +66,10 @@
     border-style: solid;
     width: fit-content;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#backToTop:hover #fleche_haut{
+    width: 3.5em;
 }
 
 #fleche_haut {
@@ -100,12 +108,28 @@
 /*Cookie*/
 
 /*HEADER*/
-nav {
+#nav-ordi {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     font-family: aeronaves;
     background: linear-gradient(180deg, rgba(0, 41, 98, 0.90) 11.85%, rgba(0, 54, 129, 0.45) 56.64%, rgba(0, 78, 137, 0.20) 76.95%, rgba(0, 78, 137, 0.00) 100%, rgba(0, 78, 137, 0.00) 100%);
+}
+
+#nav-responsive{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: aeronaves;
+    background: linear-gradient(180deg, rgba(0, 41, 98, 0.90) 11.85%, rgba(0, 54, 129, 0.45) 56.64%, rgba(0, 78, 137, 0.20) 76.95%, rgba(0, 78, 137, 0.00) 100%, rgba(0, 78, 137, 0.00) 100%);
+}
+
+#lien_menu{
+    display: none;
+}
+
+.text-lien{
+    font-size: 2.5vw !important;
 }
 
 .lien_nav {
@@ -323,8 +347,12 @@ h2 {
 
 /*barre*/
 
-.width_avion_section {
-    width: 85%;
+.width-custom-avion {
+    width: 90%;
+}
+
+.barre-container{
+    width: 5%;
 }
 
 .barre {
@@ -335,6 +363,10 @@ h2 {
 
 .drop_shodow_img {
     filter: drop-shadow(1px 1px 1px);
+}
+
+.avion-container-img{
+    width: 10%;
 }
 
 /*barre*/
@@ -689,7 +721,6 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
 
 .barre-custom-event {
     height: 0.75vh;
-    width: calc();
 }
 
 .button_event {
@@ -956,14 +987,6 @@ J'ai mit des valeurs fixes car tout ce qui est en dessous va bouger
 
 /*footer*/
 
-footer {
-    background-image: url('../img/footer.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    height: 70vh;
-}
-
 .bg-custom-footer {
     background-color: #636363;
 }
@@ -979,13 +1002,13 @@ footer {
 
 .lien_compte {
     left: 33%;
-    top: 45%;
+    top: 40%;
     font-family: aeronaves;
 }
 
 .lien_mention {
     left: 29.5%;
-    top: 61%;
+    top: 55%;
     font-family: aeronaves;
 }
 
