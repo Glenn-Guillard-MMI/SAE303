@@ -14,7 +14,7 @@ $date = "'".date("Y-m")."'";
 require_once "poo_repository.php";
 require_once "poo_models.php";
 try {
-    $modele = new Model("VU");
+    $modele = new Model("vu");
     $exemple1 = new Repository($modele->getTable());
     $sql = "Select sum(compteur) from " . $modele->getTable() . " where date = $date  ";
     $resultat = $exemple1->requete($sql);
@@ -22,7 +22,7 @@ try {
     foreach ($resultat as $ligne) { 
           if ($ligne["sum(compteur)"] == ""){
             try {
-                $modele2 = new Model("VU");
+                $modele2 = new Model("vu");
                 $exemple2 = new Repository($modele2->getTable());
                 $sql2 = "INSERT INTO " . $modele2->getTable() . " VALUE ($date, 1)  ";
                 $exemple2->requete($sql2);}
@@ -33,7 +33,7 @@ try {
           else{
             try {
                 $newCompteur = $ligne["sum(compteur)"] + 1;
-                $modele3 = new Model("VU");
+                $modele3 = new Model("vu");
                 $exemple3 = new Repository($modele3->getTable());
                 $sql3 = "UPDATE " . $modele3->getTable() . " SET compteur = $newCompteur where date = $date";
                 $exemple3->requete($sql3);}
