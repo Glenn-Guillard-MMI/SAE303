@@ -41,7 +41,7 @@ function modifBapt(arg) {
     const prix = document.getElementById("prix_" + arg).value;
 
     document.getElementById("newnom").value = nom;
-    document.getElementById("newnom2").value = nom;
+    document.getElementById("newnom1").value = nom;
     document.getElementById("newprix").value = prix;
 }
 
@@ -81,11 +81,17 @@ function annAjoutBapt(){
     }
 }
 
-
-
-function modifForm() {
+function modifForm(arg, n) {
     document.getElementById('overlay').style.display = 'block';
     document.getElementById('modif-formation').style.display = 'block';
+
+    const nom = document.getElementById("nom_" + arg).innerText;
+    const id = document.getElementById("id_" + arg).value;
+    const prix = document.getElementById("prix_" + arg).value;
+
+    document.getElementById("newnom2").value = nom;
+    document.getElementById("newid2").value = id;
+    document.getElementById("newprix2").value = prix;
 }
 
 function annModForm() {
