@@ -12,14 +12,13 @@ if (isset($_SESSION["mail"])) {
         $date_h = $_POST["heure"];
         $temps_presta = $_POST["temps"];
         $formule = $_POST["formule"];
-        $nom = $_POST["nom"];
-        $nom = "'" . $nom . "'";
+        $id = $_POST["id"];
         $formule = "'" . $formule . "'";
         $date_j = "'" . $date_j . "'";
         $date_h = "'" . $date_h . "'";
         $modele = new Model("reservation");
         $Repository = new Repository($modele->getTable()); 
-        $sql = "INSERT INTO " . $modele->getTable() . " (mail, matricule, nom, date_j, date_h, temps_presta, formule) VALUES ($mail, '', $nom, $date_j , $date_h , $temps_presta, $formule);";
+        $sql = "INSERT INTO " . $modele->getTable() . " (mail, matricule, id, date_j, date_h, temps_presta, formule) VALUES ($mail, '', $id, $date_j , $date_h , $temps_presta, $formule);";
         $Repository->requete($sql);
         $_SESSION["message_cor"] = "Reservation valider";
         header("Location:index.php#margin_top_bapteme");

@@ -262,7 +262,7 @@ session_start();
                 <h5 class='fw-medium text-center size-3'>
                   <?= $ligne["nom"] ?>
                 </h5>
-                <input type='hidden' name='nom' value='<?= $ligne["nom"] ?>'>
+                <input type='hidden' name='id' value='<?= $ligne["id"] ?>'>
                 <div class='d-flex flex-column w-100'>
                   <div class='custom-select mx-auto w-100'>
                     <select class='w-100' name="formule">
