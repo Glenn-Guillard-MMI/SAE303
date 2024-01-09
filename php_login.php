@@ -584,7 +584,7 @@
 
                             ?>
                     </p>
-                    <p class="fs-5">Ce mois ci</p>
+                    <p class="fs-5">Ce mois-ci</p>
                 </div>
                 <div
                     class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat mb-4 h-25">
@@ -664,7 +664,7 @@
 
 
                     </p>
-                    <p class="fs-5">Ce mois ci</p>
+                    <p class="fs-5">Ce mois-ci</p>
                 </div>
                 <div
                     class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat mb-4 h-25">
@@ -712,7 +712,7 @@
 
 
                     </p>
-                    <p class="fs-5">Ce mois ci</p>
+                    <p class="fs-5">Ce mois-ci</p>
                 </div>
 
 
@@ -751,7 +751,7 @@
                 </div>
                 <div
                     class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat mb-4 h-25">
-                    <p class="fs-5">Nombre d'heure de vol</p>
+                    <p class="fs-5">Temps de vol</p>
                     <p class="fs-1">
                         <?php
                                         try {
@@ -762,9 +762,9 @@
 
                                             foreach ($resultat8 as $ligne) { {
                                                     if ($ligne["SUM(temps_presta)"] == '') {
-                                                        echo '0';
+                                                        echo '0 min';
                                                     } else {
-                                                        echo $ligne["SUM(temps_presta)"];
+                                                        echo $ligne["SUM(temps_presta)"]. " min";
                                                     }
                                                 }
                                             }
@@ -775,7 +775,6 @@
 
 
                     </p>
-                    <p class="fs-5">Ce mois ci</p>
                 </div>
 
                 <?php
@@ -810,7 +809,7 @@
                 </div>
                 <div
                     class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 p-2 shadow-box-stat mb-4 h-25">
-                    <p class="fs-5">Nombre d'heure de vol</p>
+                    <p class="fs-5">Temps de vol</p>
                     <p class="fs-1">
                         <?php
                                         try {
@@ -821,9 +820,9 @@
 
                                             foreach ($resultat8 as $ligne) { {
                                                     if ($ligne["SUM(temps_presta)"] == '') {
-                                                        echo '0';
+                                                        echo '0 min';
                                                     } else {
-                                                        echo $ligne["SUM(temps_presta)"];
+                                                        echo $ligne["SUM(temps_presta)"]. " min";
                                                     }
                                                 }
                                             }
