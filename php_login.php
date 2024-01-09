@@ -312,23 +312,23 @@
 
                                     echo "<div class='w-50 d-flex flex-column align-items-end fs-5'>";
                                     if ($ligne["autorisation"] == 1) {
-                                        echo "<p class='titre-info'>  Statut : Pilote</p>";
+                                        echo "<p class='titre-info'>  Status : Pilote</p>";
                                     } elseif ($ligne["autorisation"] == 2) {
-                                        echo "<p class='titre-info'>  Statut : Staff</p>";
+                                        echo "<p class='titre-info'>  Status : Staff</p>";
                                     } elseif ($ligne["autorisation"] == 3) {
-                                        echo "<p class='titre-info'>  Statut : Admin</p>";
+                                        echo "<p class='titre-info'>  Status : Admin</p>";
                                     } elseif ($ligne["autorisation"] == 0) {
-                                        echo "<p class='titre-info'>  Statut : adhérant</p>";
+                                        echo "<p class='titre-info'>  Status : adhérant</p>";
                                     }
 
                                     if ($ligne["licence_valid"] == 0) {
                                         echo "<p class='titre-info'>  Licence : Non remise</p>";
                                     } elseif ($ligne["licence_valid"] == 1) {
-                                        echo "<p class='titre-info'> License : Reçu</p>";
+                                        echo "<p class='titre-info'> Licence : Reçu</p>";
                                     } elseif ($ligne["licence_valid"] == 2) {
-                                        echo "<p class='titre-info'> License : Accepté</p>";
+                                        echo "<p class='titre-info'> Licence : Accepté</p>";
                                     } elseif ($ligne["licence_valid"] == 3) {
-                                        echo "<p class='titre-info'> License : Refusée</p>";
+                                        echo "<p class='titre-info'> Licence : Refusée</p>";
                                     }
                                     $sauvegarde = $ligne["autorisation"];
                                     echo "</div></div>";
@@ -466,11 +466,11 @@
                 <p>Créez un mot de passe sécurisé avec des lettres, des chiffres et des symboles.</p>
                 <div>
                     <label for="password">Nouveau mot de passe :</label>
-                    <input type="password" name="password" class="input_modif rounded-3">
+                    <input type="password" name="password" class="input_modif rounded-3" required>
                 </div>
                 <div class="mt-3">
                     <label for="confirmation">Confirmation mot de passe :</label>
-                    <input type="password" name="confirmation" class="input_modif rounded-3">
+                    <input type="password" name="confirmation" class="input_modif rounded-3" required>
                 </div>
                 <article class="mt-5">
                     <p>Après la modification de vos informations, vous serez automatiquement déconnecté.</p>
