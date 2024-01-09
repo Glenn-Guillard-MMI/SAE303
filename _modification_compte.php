@@ -30,7 +30,7 @@ try{
     $sql ="UPDATE ". $modele->getTable() . " SET nom = $nom, prenom = $prenom, mail = $mail, code_postale = $code, ville = $ville, adresse = $addresse, num_tel = $num, date_update = $now WHERE mail = $mail_secu";
     $Repository->requete($sql);
     session_destroy();
-    header("Location: php_modifier_compte.php");
+    header("Location: php_connexion.php");
     exit();
 
 }
