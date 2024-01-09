@@ -2,6 +2,7 @@ function meteoAPI(data) {
   //console.log(data);
   for (var i = 0; i < 7; i++) {
     temperature = data.list[i].main.temp;
+    temperature = temperature.toFixed(1);
     $("#temperature" + [i]).text(temperature + "°");
     switch (data.list[i].weather[0].main) {
       case "Clear":

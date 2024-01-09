@@ -244,14 +244,14 @@ session_start();
       </div>
       <div class="avion-container-img d-flex flex-column justify-content-between align-content-center">
         <img class="w-100 drop_shodow_img" src="img/icon_avion/helicopter.png" alt="">
-        <p class="text-shadow size-2-5 mt-2 text-white text-center">L'élicoptère ultraléger</p>
+        <p class="text-shadow size-2-5 mt-2 text-white text-center">L'hélicoptère ultraléger</p>
       </div>
     </article>
   </section>
 
   <section id="margin_top_bapteme">
     <h3 id="offres-bapteme-titre" class="font text-white text-center size-3">Nos offres pour un baptème de l'air</h3>
-    <h6 id="type-appareil-titre" class="font text-white text-center mt-3">Notre association possède que <strong>3 types
+    <h6 id="type-appareil-titre" class="font text-white text-center mt-3">Notre association possède <strong>3 types
         d’appareil </strong>
     </h6>
     <article class="container-fluid font mt-5">
@@ -297,7 +297,7 @@ session_start();
                       $min = $ligne["temps"];
                       $temps = explode(";", $min);
                       foreach ($temps as $min) {
-                        echo "<option value=" . $min . ">" . $min . "</option>";
+                        echo "<option value=" . $min . ">" . $min . " min </option>";
                       }
                       ?>
                     </select>
@@ -324,7 +324,7 @@ session_start();
             </div>
             <?php
             if (isset($_SESSION["message_err"])) {
-              echo "<div id='popup' class='bg-white position-fixed popup_bapteme fw_bold text-danger'>" . $_SESSION["message_err"] . "</div>";
+              echo "<div id='popup' class='bg-white position-fixed popup_bapteme fw_bold text-danger fs-5 p-3 rounded-4'>" . $_SESSION["message_err"] . "</div>";
               unset($_SESSION["message_err"]);
             }
             if (isset($_SESSION["message_cor"])) {
@@ -448,7 +448,7 @@ session_start();
               <p class="color-red-bapteme fst-italic size-3 my-auto">
                 <?= $ligne4["prix"] ?>€
               </p>
-              <input type="submit" value="S'incrire" class="button_reserver_bapteme px-2 text-white fs-5">
+              <input type="submit" value="S'inscrire" class="button_reserver_bapteme px-2 text-white fs-5">
             </div>
           </form>
           <?php
@@ -572,7 +572,7 @@ session_start();
               ?>
             </ul>
             <div id="container-button-forf" class="d-flex justify-content-center my-auto mt-4">
-              <input type="submit" value="S'incrire" class="button_reserver_bapteme px-2 text-white w-50 fs-4 mt-4">
+              <input type="submit" value="S'inscrire" class="button_reserver_bapteme px-2 text-white w-50 fs-4 mt-4">
             </div>
           </form>
           <?php
