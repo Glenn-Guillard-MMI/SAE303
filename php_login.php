@@ -312,13 +312,13 @@
 
                                     echo "<div class='w-50 d-flex flex-column align-items-end fs-5'>";
                                     if ($ligne["autorisation"] == 1) {
-                                        echo "<p class='titre-info'>  Status : Pilote</p>";
+                                        echo "<p class='titre-info'>  Statut : Pilote</p>";
                                     } elseif ($ligne["autorisation"] == 2) {
-                                        echo "<p class='titre-info'>  Status : Staff</p>";
+                                        echo "<p class='titre-info'>  Statut : Staff</p>";
                                     } elseif ($ligne["autorisation"] == 3) {
-                                        echo "<p class='titre-info'>  Status : Admin</p>";
+                                        echo "<p class='titre-info'>  Statut : Admin</p>";
                                     } elseif ($ligne["autorisation"] == 0) {
-                                        echo "<p class='titre-info'>  Status : adhérant</p>";
+                                        echo "<p class='titre-info'>  Statut : adhérant</p>";
                                     }
 
                                     if ($ligne["licence_valid"] == 0) {
@@ -430,13 +430,13 @@
                     <div class='w-50 d-flex flex-column align-items-end fs-5'>
                         <?php
                                     if ($ligne["autorisation"] == 1) {
-                                        echo "<p>  Status : Pilote</p>";
+                                        echo "<p>  Statut : Pilote</p>";
                                     } elseif ($ligne["autorisation"] == 2) {
-                                        echo "<p>  Status : Staff</p>";
+                                        echo "<p>  Statut : Staff</p>";
                                     } elseif ($ligne["autorisation"] == 3) {
-                                        echo "<p>  Status : Admin</p>";
+                                        echo "<p>  Statut : Admin</p>";
                                     } elseif ($ligne["autorisation"] == 0) {
-                                        echo "<p>  Status : adhérant</p>";
+                                        echo "<p>  Statut : adhérant</p>";
                                     }
 
                                     if ($ligne["licence_valid"] == 0) {
