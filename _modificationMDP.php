@@ -21,7 +21,7 @@ try{
     $sql ="UPDATE ". $modele->getTable() . " SET mdp = $newPassword WHERE mail = $mail_secu";
     $Repository->requete($sql);
     session_destroy();
-    header("Location: php_modifier_compte.php");
+    header("Location: php_connexion.php");
     exit();
 
 }
