@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 07 jan. 2024 à 21:19
+-- Généré le : mar. 09 jan. 2024 à 16:09
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -52,8 +52,8 @@ CREATE TABLE `adherant` (
 
 INSERT INTO `adherant` (`autorisation`, `nom`, `prenom`, `civilite`, `mail`, `mdp`, `code_postale`, `ville`, `adresse`, `num_tel`, `licence`, `licence_valid`, `date_naissance`, `date_crea`, `date_update`, `compte_actif`) VALUES
 (3, 'Guillard', 'Glenn', 'Homme', 'glenn.guillard@gmail.com', '$2y$10$4vN8gXfVJ8r49V08aKD.U.lvuspyiExA3X5KUx..AAr8J10hXBZwu', '77138', 'Luzancy', '3 rue des jardinets', '06 43 50 67 04', 'CyQ84YQqUvrefLJcYXcJ30ORf345budKskPexEkYwEbS6Kyt9s', 2, '2004-02-01', '2023-12-28 02:34:36', '2024-01-04 15:57:32', 1),
-(1, 'Guillard', 'Glenn', 'Homme', 'glenn.guillard@outlook.com', '$2y$10$UKlX9I1liUez73mZZKUiseTTHQ0a4Q/NO/UtLR42hp47vm8Fb.l5.', '77138', 'Luzancy', '3 rue des jardinets', '06 43 50 67 04', '', 0, '2004-01-30', '2024-01-05 10:56:29', '2024-01-05 10:56:29', 1),
-(1, 'Fabre', 'Jérôme', 'Homme', 'jerome.fabre77@gmail.com', '$2y$10$9TDp.NMbX7PJbSV2tCqBNec7ok7XEjPtoXaLIPW0lSScgwneKr/bG', '77181', 'Courtry', '2 rue désiré lefevre', '06 37 84 22 34', '5KGMB9a9jjq39XV56ZXt6kK9U2Q5K1T67K5wi9btHE5Hzi4FRQ', 2, '2004-11-07', '2023-12-28 02:33:11', '2023-12-28 02:33:11', 1),
+(0, 'Guillard', 'Glenn', 'Homme', 'glenn.guillard@outlook.com', '$2y$10$UKlX9I1liUez73mZZKUiseTTHQ0a4Q/NO/UtLR42hp47vm8Fb.l5.', '77138', 'Luzancy', '3 rue des jardinets', '06 43 50 67 04', '0Tah0zXWLZNKe42Fq6WcW23DUEZr7LmYq4F7sP27fgfbnitWMU', 1, '2004-01-30', '2024-01-05 10:56:29', '2024-01-05 10:56:29', 1),
+(3, 'Fabre', 'Jérôme', 'Homme', 'jerome.fabre77@gmail.com', '$2y$10$9TDp.NMbX7PJbSV2tCqBNec7ok7XEjPtoXaLIPW0lSScgwneKr/bG', '77181', 'Courtry', '2 rue désiré lefevre', '06 37 84 22 34', '5KGMB9a9jjq39XV56ZXt6kK9U2Q5K1T67K5wi9btHE5Hzi4FRQ', 2, '2004-11-07', '2023-12-28 02:33:11', '2023-12-28 02:33:11', 1),
 (1, 'Henry', 'Thomas', 'Femme', 'thomas.henry@gmail.com', '$2y$10$EoVaKqnCSx2rHJsc9/qzXOax9/ehqmIgMCAGkP0JMU6Sg2IxR856S', '31000', 'Toulouse', '13 place de ta mere', '06 23 71 91 08', '', 0, '2004-01-01', '2023-12-28 02:36:12', '2023-12-28 02:36:12', 1),
 (3, 'Lamour', 'Valentin', 'Autre', 'valentinlamour@gmail.com', '$2y$10$Ea8mbEGNibXmKvSG1jSHCu.lrRpiF2gqH6Vr5xQWRmPD7/EgOy99W', '93100', 'sdf', 'sdf', '01 23 45 67 89', '', 0, '2022-01-01', '2023-12-28 02:38:21', '2023-12-28 02:38:21', 1);
 
@@ -77,7 +77,7 @@ CREATE TABLE `avion` (
 --
 
 INSERT INTO `avion` (`nom`, `matricule`, `type`, `date_crea`, `date_update`, `Active`) VALUES
-('CAMION', 'F-XXXX', 'Multiexiale', '0000-00-00 00:00:00', '2023-12-22 13:54:35', 1),
+('CAMION', 'F-XXXX', 'Multiexiale', '0000-00-00 00:00:00', '2023-12-22 13:54:35', 0),
 ('Tese', 'Wazo', 'F-8HEL', '2024-01-02 09:06:16', '2024-01-02 09:06:16', 1);
 
 -- --------------------------------------------------------
@@ -104,7 +104,8 @@ INSERT INTO `avis` (`id`, `type`, `prenom`, `nom`, `note`, `commentaire`, `date`
 (1, '', 'Glenn', 'Henry', 2, 'pas fou', '2023-12-28 02:12:29'),
 (2, 'Formation', 'Glenn', 'Guillard', 4, 'Yes &#039;&quot;&#039;&quot;', '2024-01-07 08:31:20'),
 (3, 'Bapteme', 'Glenn', 'Guillard', 5, 'je n&#039;aime pas les nems', '2024-01-07 18:13:02'),
-(4, 'Forfait', 'Glenn', 'Guillard', 5, 'Trop bien', '2024-01-07 19:57:44');
+(4, 'Forfait', 'Glenn', 'Guillard', 5, 'Trop bien', '2024-01-07 19:57:44'),
+(5, 'Forfait', 'Glenn', 'Guillard', 4, 'BOnjour', '2024-01-08 15:38:59');
 
 -- --------------------------------------------------------
 
@@ -127,7 +128,7 @@ CREATE TABLE `bapteme` (
 --
 
 INSERT INTO `bapteme` (`id`, `nom`, `formule`, `temps`, `prix`, `image`, `active`) VALUES
-(7, 'ULM Pendulaire', 'solo;duo', '20;30', 95, 'KYzy5Vrg0r0D1oS607fCf3S804eFm897WE6d9TTNa066LpElKR', 0),
+(7, 'ULM Pendulaire', 'duo', '30', 100.95, 'KYzy5Vrg0r0D1oS607fCf3S804eFm897WE6d9TTNa066LpElKR', 0),
 (8, 'ULM Multiaxiale', 'solo', '20', 95, 'nrNv3UJ3c65A1w64450c0tAKrcP7H0DJ8P2F9n3LGx63L7m96u', 0),
 (9, 'ULM Autogire', 'solo', '20;30', 125, '9gE9Ts66E9o2NhGTBt096D21U860eBKH8BoQj2q1169EDYZf2l', 0);
 
@@ -171,15 +172,16 @@ CREATE TABLE `evenement` (
   `lieu` char(255) NOT NULL,
   `date_debut` date NOT NULL,
   `date_fin` date NOT NULL,
-  `lien` char(255) NOT NULL
+  `lien` char(255) NOT NULL,
+  `active` tinyint(4) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `evenement`
 --
 
-INSERT INTO `evenement` (`id`, `nom`, `image`, `lieu`, `date_debut`, `date_fin`, `lien`) VALUES
-(5, 'Journée Sécurité des vols - Grand Est', '52gFwqR0wJssgiUFR82qKb91J5hWckDSlvE6ZpC1VP8toz0ijS', 'Serrouville, France', '2024-01-11', '2024-01-28', 'https://ffplum.fr/agenda/653-journee-securite-des-vols-2023');
+INSERT INTO `evenement` (`id`, `nom`, `image`, `lieu`, `date_debut`, `date_fin`, `lien`, `active`) VALUES
+(8, 'Journée Sécurité des vols - Grand Est', '6VuN6B928wOmS016ur4Q8BNx9h5ywmwB9s9mF62G2Zc34cK0WP', 'Serrouville, France', '2024-01-10', '2024-01-26', 'https://ffplum.fr/agenda/653-journee-securite-des-vols-2023', 0);
 
 -- --------------------------------------------------------
 
@@ -226,7 +228,8 @@ CREATE TABLE `formation` (
 INSERT INTO `formation` (`id`, `nom`, `description`, `prix`, `active`) VALUES
 (9, 'Brevet de pilote', 'Validité 1 an;Cours illimités;Formation à pied ou en chariot ;Prêt du matériel;10 vols minimum;Cours théorique ;1 cours de perfectionnement offert;Brevet d’Initiation Aéronautique (BIA)', 1200, 0),
 (10, 'Emport de passager', 'Durée de 6h à 8h;Évaluation préalable du pilote ;Formation biplace à pied ou en chariot ;Avec le matériel du stagiaire ;4 vols minimum ;Sensibilisation aux facteurs humains', 450, 0),
-(11, 'Stage d\'initiation', 'Durée de 3h;Présentation de l’aéronef et notion de mécanique du vol;Gonflage et pilotage d’un parapente au sol;Vol de 20 min en biplace;Initiation au pilotage', 180, 0);
+(11, 'Stage d\'initiation', 'Durée de 3h;Présentation de l’aéronef et notion de mécanique du vol;Gonflage et pilotage d’un parapente au sol;Vol de 20 min en biplace;Initiation au pilotage', 180, 1),
+(12, 'Formation', 'bonjour;bonsoir', 125, 0);
 
 -- --------------------------------------------------------
 
@@ -272,6 +275,14 @@ CREATE TABLE `reservation` (
   `formule` char(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Déchargement des données de la table `reservation`
+--
+
+INSERT INTO `reservation` (`num_res`, `mail`, `matricule`, `pilote`, `id`, `date_j`, `date_h`, `validation`, `date_crea`, `date_update`, `temps_presta`, `formule`) VALUES
+(1, 'glenn.guillard@gmail.com', 'Wazo', 'thomas.henry@gmail.com', 7, '2024-01-29', '15:00:00', 1, NULL, '2024-01-08 15:43:26', 30, 'solo'),
+(2, 'glenn.guillard@gmail.com', '', NULL, 7, '2024-01-17', '15:00:00', NULL, NULL, '2024-01-08 15:38:24', 20, 'solo');
+
 -- --------------------------------------------------------
 
 --
@@ -286,6 +297,14 @@ CREATE TABLE `r_forfait` (
   `date_crea` datetime DEFAULT NULL,
   `date_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `r_forfait`
+--
+
+INSERT INTO `r_forfait` (`num_res`, `mail`, `id`, `validation`, `date_crea`, `date_update`) VALUES
+(4, 'glenn.guillard@gmail.com', 10, 0, NULL, '2024-01-07 22:34:55'),
+(5, 'glenn.guillard@gmail.com', 10, 0, NULL, '2024-01-08 15:38:37');
 
 -- --------------------------------------------------------
 
@@ -318,7 +337,7 @@ CREATE TABLE `vu` (
 --
 
 INSERT INTO `vu` (`date`, `compteur`) VALUES
-('2024-01', 4);
+('2024-01', 6);
 
 --
 -- Index pour les tables déchargées
@@ -416,7 +435,7 @@ ALTER TABLE `vu`
 -- AUTO_INCREMENT pour la table `avis`
 --
 ALTER TABLE `avis`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `bapteme`
@@ -434,7 +453,7 @@ ALTER TABLE `equipe`
 -- AUTO_INCREMENT pour la table `evenement`
 --
 ALTER TABLE `evenement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `forfait`
@@ -446,7 +465,7 @@ ALTER TABLE `forfait`
 -- AUTO_INCREMENT pour la table `formation`
 --
 ALTER TABLE `formation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT pour la table `galerie`
@@ -458,13 +477,13 @@ ALTER TABLE `galerie`
 -- AUTO_INCREMENT pour la table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `num_res` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `num_res` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `r_forfait`
 --
 ALTER TABLE `r_forfait`
-  MODIFY `num_res` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `num_res` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `r_formation`
