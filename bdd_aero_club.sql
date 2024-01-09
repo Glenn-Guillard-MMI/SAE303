@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 09 jan. 2024 à 16:09
+-- Généré le : mar. 09 jan. 2024 à 17:03
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -101,7 +101,6 @@ CREATE TABLE `avis` (
 --
 
 INSERT INTO `avis` (`id`, `type`, `prenom`, `nom`, `note`, `commentaire`, `date`) VALUES
-(1, '', 'Glenn', 'Henry', 2, 'pas fou', '2023-12-28 02:12:29'),
 (2, 'Formation', 'Glenn', 'Guillard', 4, 'Yes &#039;&quot;&#039;&quot;', '2024-01-07 08:31:20'),
 (3, 'Bapteme', 'Glenn', 'Guillard', 5, 'je n&#039;aime pas les nems', '2024-01-07 18:13:02'),
 (4, 'Forfait', 'Glenn', 'Guillard', 5, 'Trop bien', '2024-01-07 19:57:44'),
@@ -268,7 +267,7 @@ CREATE TABLE `reservation` (
   `id` int(11) NOT NULL,
   `date_j` date DEFAULT NULL,
   `date_h` time DEFAULT NULL,
-  `validation` tinyint(1) DEFAULT NULL,
+  `validation` tinyint(1) DEFAULT 0,
   `date_crea` datetime DEFAULT NULL,
   `date_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `temps_presta` int(2) DEFAULT NULL,
@@ -280,8 +279,7 @@ CREATE TABLE `reservation` (
 --
 
 INSERT INTO `reservation` (`num_res`, `mail`, `matricule`, `pilote`, `id`, `date_j`, `date_h`, `validation`, `date_crea`, `date_update`, `temps_presta`, `formule`) VALUES
-(1, 'glenn.guillard@gmail.com', 'Wazo', 'thomas.henry@gmail.com', 7, '2024-01-29', '15:00:00', 1, NULL, '2024-01-08 15:43:26', 30, 'solo'),
-(2, 'glenn.guillard@gmail.com', '', NULL, 7, '2024-01-17', '15:00:00', NULL, NULL, '2024-01-08 15:38:24', 20, 'solo');
+(6, 'glenn.guillard@gmail.com', '', NULL, 8, '2024-01-29', '14:00:00', 0, '2024-01-09 16:47:39', '2024-01-09 16:03:02', 20, 'solo');
 
 -- --------------------------------------------------------
 
@@ -303,8 +301,7 @@ CREATE TABLE `r_forfait` (
 --
 
 INSERT INTO `r_forfait` (`num_res`, `mail`, `id`, `validation`, `date_crea`, `date_update`) VALUES
-(4, 'glenn.guillard@gmail.com', 10, 0, NULL, '2024-01-07 22:34:55'),
-(5, 'glenn.guillard@gmail.com', 10, 0, NULL, '2024-01-08 15:38:37');
+(6, 'glenn.guillard@gmail.com', 9, 0, '2024-01-09 16:49:06', '2024-01-09 15:49:06');
 
 -- --------------------------------------------------------
 
@@ -320,6 +317,13 @@ CREATE TABLE `r_formation` (
   `date_crea` datetime DEFAULT NULL,
   `date_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `r_formation`
+--
+
+INSERT INTO `r_formation` (`num_res`, `mail`, `id`, `validation`, `date_crea`, `date_update`) VALUES
+(6, 'glenn.guillard@gmail.com', 9, 0, '2024-01-09 16:49:03', '2024-01-09 15:49:03');
 
 -- --------------------------------------------------------
 
@@ -477,19 +481,19 @@ ALTER TABLE `galerie`
 -- AUTO_INCREMENT pour la table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `num_res` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `num_res` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `r_forfait`
 --
 ALTER TABLE `r_forfait`
-  MODIFY `num_res` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `num_res` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `r_formation`
 --
 ALTER TABLE `r_formation`
-  MODIFY `num_res` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `num_res` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Contraintes pour les tables déchargées
