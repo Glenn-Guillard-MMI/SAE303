@@ -58,13 +58,13 @@
                                     <a href="index.php" class="w-50 exclu mt-3">
                                         <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
                                     </a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                                        href="php_login.php">Accueil</a>
+                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3"
                                         href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_gestionReservation.php">Gestion
                                         des réservations</a>
-                                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_analytique.php">Analytiques</a>
+                                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                                        href="php_analytique.php">Analytiques</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_DemandeLicence.php">Demande de
                                         licence</a>
                                     <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
@@ -84,8 +84,7 @@
                                         <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
                                     </a>
                                     <div class="d-flex flex-column h-25 justify-content-around my-auto">
-                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                                            href="php_login.php">Accueil</a>
+                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
                                         <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
                                             href="php_analytique.php">Analytiques</a>
                                         <a class="text-white text-decoration-none py-1 px-2 rounded-3"
@@ -209,7 +208,7 @@
                                             $resultat5 = $exemple3->requete($sql5);
 
                                             foreach ($resultat5 as $ligne) { {
-                                                    echo round($ligne["AVG(note)"], 1);
+                                                    echo round($ligne["AVG(note)"], 3);
                                                 }
                                             }
                                         } catch (PDOException $e) {
