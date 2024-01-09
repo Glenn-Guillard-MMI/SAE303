@@ -16,9 +16,10 @@ if (isset($_SESSION["mail"])) {
         $formule = "'" . $formule . "'";
         $date_j = "'" . $date_j . "'";
         $date_h = "'" . $date_h . "'";
+        $date_crea = "'" . date("Y-m-d H:i:s") . "'";   
         $modele = new Model("reservation");
         $Repository = new Repository($modele->getTable()); 
-        $sql = "INSERT INTO " . $modele->getTable() . " (mail, matricule, id, date_j, date_h, temps_presta, formule) VALUES ($mail, '', $id, $date_j , $date_h , $temps_presta, $formule);";
+        $sql = "INSERT INTO " . $modele->getTable() . " (mail, matricule, id, date_j, date_h, date_crea, temps_presta, formule) VALUES ($mail, '', $id, $date_j, $date_h, $date_crea, $temps_presta, $formule);";
         $Repository->requete($sql);
         $_SESSION["message_cor"] = "Reservation valider";
         header("Location:index.php#margin_top_bapteme");

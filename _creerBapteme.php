@@ -52,7 +52,7 @@ if ((!empty($_POST["formule"]) || !empty($_POST["formule1"])) && (!empty($_POST[
     //Modele
     $modele = new Model("bapteme");
     $Repository = new Repository($modele->getTable());
-    $sql = "INSERT INTO " . $modele->getTable() . " (nom, formule, temps, prix,image) VALUES ($nom, $formulaire, $formulaire_horaire, $prix, $uniqueFileName)";
+    $sql = "INSERT INTO " . $modele->getTable() . " (nom, formule, temps, prix, image) VALUES ($nom, $formulaire, $formulaire_horaire, $prix, $uniqueFileName)";
     $Repository->requete($sql);
     header("Location: php_offre.php");
     exit();

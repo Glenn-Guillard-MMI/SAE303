@@ -9,9 +9,10 @@ if (isset($_SESSION["mail"])) {
         require_once "poo_repository.php";
         require_once "poo_models.php";
         $id = $_POST["id"];
+        $date_crea = "'" . date("Y-m-d H:i:s") . "'";   
         $modele = new Model("r_forfait");
         $Repository = new Repository($modele->getTable());
-        $sql = "INSERT INTO " . $modele->getTable() . " (mail, id) VALUES ($mail, $id);";
+        $sql = "INSERT INTO " . $modele->getTable() . " (mail, id, date_crea) VALUES ($mail, $id, $date_crea);";
         $Repository->requete($sql);
         $_SESSION["message_cor"] = "Inscription valider";
         header("Location:index.php#formation2");
