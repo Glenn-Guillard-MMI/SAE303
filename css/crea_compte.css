@@ -8,6 +8,53 @@
     #nav-responsive {
         display: block !important;
     }
+
+    body>section {
+        margin-top: 10% !important;
+    }
+    form{
+        width: 40% !important;
+    }
+
+    span a, span p{
+        font-size: 1.1vw !important;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    form {
+        width: 55% !important;
+    }
+    span a, span p{
+        font-size: 1.7vw !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    form {
+        width: 65% !important;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    form {
+        width: 75% !important;
+    }
+
+    #genre-form{
+        flex-direction: column !important;
+        margin-top: 1em !important;
+    }
+
+    span a, span p{
+        font-size: 2.5vw !important;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    form {
+        width: 90% !important;
+    }
 }
 
 * {
@@ -127,7 +174,7 @@ nav {
 }
 
 form {
-    width: 33% !important;
+    width: 33%;
 }
 
 .background {
@@ -179,7 +226,7 @@ form {
     transition: all 0.5s ease;
 }
 
-.button_inscri:hover{
+.button_inscri:hover {
     border-color: #fff;
     background-color: #002962 !important;
 }

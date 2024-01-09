@@ -36,7 +36,7 @@ if (isset($_SESSION['mail'])) {
 ?>
 
 <body class="bg-body overflow-x-hidden mb-5">
-    <nav id="nav-ordi" class="container-fluid p-3 w-100 text-white position-fixed">
+    <nav id="nav-ordi" class="container-fluid p-3 w-100 text-white">
         <section class="row">
             <div class="col">
                 <a href="index.php"><img class="w-100" src="img/SVG/logo.svg" alt="logo Aéro club de Frotey-les-Lure"></a>
@@ -74,7 +74,7 @@ if (isset($_SESSION['mail'])) {
             </div>
         </section>
     </nav>
-    <div id="nav-responsive" class="d-none position-fixed w-100">
+    <div id="nav-responsive" class="d-none w-100">
         <nav id="nav-responsive-balise" class="p-3 w-100 text-white overflow-hidden">
             <i onclick="derouleNav()" class="fas fa-bars text-white"></i>
             <section id="lien_menu" class="flex-column justify-content-around">
@@ -105,7 +105,7 @@ if (isset($_SESSION['mail'])) {
         </nav>
     </div>
 
-    <h1 class="text-white text-center mt-3">S'INSCRIRE</h1>
+    <h1 class="text-white text-center mt-5">S'INSCRIRE</h1>
 
     <form action="_set_up_compt.php" method="post" class="mx-auto text-blue">
 
@@ -114,7 +114,7 @@ if (isset($_SESSION['mail'])) {
                 <img src="img/SVG/logo.svg" alt="logo aero club" class="w-75 shadow-img mx-auto">
                 <h3 class="text-center mt-3">Informations Personnelles</h3>
                 <label for="genre" class="mt-3 fs-5">Civilité</label>
-                <div class="d-flex justify-content-between w-75">
+                <div id="genre-form" class="d-flex justify-content-between w-75">
                     <div>
                         <input type="radio" id="Homme" name="genre" value="Homme" checked />
                         <label for="Homme">Homme</label>
