@@ -53,65 +53,65 @@
                             $sauvegarde = $ligne["autorisation"];
                             if ($sauvegarde == 3) {
                                 ?>
-                                <nav
-                                    class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                                    <a href="index.php" class="w-50 exclu mt-3">
-                                        <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                                    </a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                                        href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_gestionReservation.php">Gestion
-                                        des réservations</a>
-                                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
-                                        href="php_analytique.php">Analytiques</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_DemandeLicence.php">Demande de
-                                        licence</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_offre.php">Offres</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_equipe.php">Liste équipe</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_evenement.php">Événement</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_galerie.php">Galerie</a>
-                                </nav>
-                                <?php
+            <nav
+                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+                <a href="index.php" class="w-50 exclu mt-3">
+                    <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                </a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                    href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_gestionReservation.php">Gestion
+                    des réservations</a>
+                <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                    href="php_analytique.php">Analytiques</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_DemandeLicence.php">Demande de
+                    licence</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_offre.php">Offres</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_equipe.php">Liste équipe</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_evenement.php">Événement</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_galerie.php">Galerie</a>
+            </nav>
+            <?php
 
                             }
                             if ($sauvegarde == 2) {
                                 ?>
-                                <nav
-                                    class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                                    <a href="index.php" class="w-50 exclu mt-3">
-                                        <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                                    </a>
-                                    <div class="d-flex flex-column h-25 justify-content-around my-auto">
-                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
-                                        <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
-                                            href="php_analytique.php">Analytiques</a>
-                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                                            href="php_Gestion_avions.php">Avions</a>
-                                    </div>
-                                </nav>
-                                <?php
+            <nav
+                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+                <a href="index.php" class="w-50 exclu mt-3">
+                    <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                </a>
+                <div class="d-flex flex-column h-25 justify-content-around my-auto">
+                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
+                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                        href="php_analytique.php">Analytiques</a>
+                    <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                        href="php_Gestion_avions.php">Avions</a>
+                </div>
+            </nav>
+            <?php
 
                             }
 
 
                             if ($sauvegarde == 1) {
                                 ?>
-                                <nav class="text-center bg-custom text-white d-flex flex-column align-items-center font-avion">
-                                    <a href="index.php" class="w-50 exclu mt-3">
-                                        <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                                    </a>
-                                    <div class="d-flex flex-column h-25 justify-content-around my-auto">
-                                        <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
-                                            href="php_login.php">Accueil</a>
-                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                                            href="php_reservation_pilote.php">Réservations</a>
-                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                                            href="php_Gestion_avions.php">Avions</a>
-                                    </div>
-                                </nav>
-                                <?php
+            <nav class="text-center bg-custom text-white d-flex flex-column align-items-center font-avion">
+                <a href="index.php" class="w-50 exclu mt-3">
+                    <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                </a>
+                <div class="d-flex flex-column h-25 justify-content-around my-auto">
+                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                        href="php_login.php">Accueil</a>
+                    <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                        href="php_reservation_pilote.php">Réservations</a>
+                    <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                        href="php_Gestion_avions.php">Avions</a>
+                </div>
+            </nav>
+            <?php
 
                             }
 
@@ -120,19 +120,19 @@
 
                             if ($sauvegarde == 0) {
                                 ?>
-                                <nav
-                                    class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                                    <a href="index.php" class="w-50 exclu mt-3">
-                                        <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                                    </a>
-                                    <div class="d-flex flex-column h-25 justify-content-around my-auto">
-                                        <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
-                                            href="php_login.php">Accueil</a>
-                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3"
-                                            href="php_reservationadhrant.php">Réservations</a>
-                                    </div>
-                                </nav>
-                                <?php
+            <nav
+                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+                <a href="index.php" class="w-50 exclu mt-3">
+                    <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                </a>
+                <div class="d-flex flex-column h-25 justify-content-around my-auto">
+                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                        href="php_login.php">Accueil</a>
+                    <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                        href="php_reservationadhrant.php">Réservations</a>
+                </div>
+            </nav>
+            <?php
 
                             }
                         }
@@ -172,35 +172,61 @@
                                 ?>
 
 
-                                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
-                                    <p class="mt-3">Nombre de réservation</p>
-                                    <p class="fs-1">
-                                        <?php
-
+                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
+                    <p class="mt-3">Nombre de réservation</p>
+                    <p class="fs-1">
+                        <?php
+                                        $nombre = 0;
                                         $date = "'" . date("Y-m") . "%'";
                                         try {
                                             $modele2 = new Model("reservation");
                                             $exemple2 = new Repository($modele2->getTable());
-                                            $sql4 = "Select COUNT(*) from " . $modele2->getTable() . " WHERE date_crea like $date";
+                                            $sql4 = "Select COUNT(*) from " . $modele2->getTable() . " WHERE date_crea like $date and validation = 0" ;
                                             $resultat4 = $exemple2->requete($sql4);
 
                                             foreach ($resultat4 as $ligne) { {
-                                                    echo $ligne["COUNT(*)"];
+                                                    $nombre+=$ligne["COUNT(*)"];
                                                 }
                                             }
                                         } catch (PDOException $e) {
                                             die($e->getMessage());
                                         }
+                                        try {
+                                            $modele2 = new Model("r_forfait");
+                                            $exemple2 = new Repository($modele2->getTable());
+                                            $sql4 = "Select COUNT(*) from " . $modele2->getTable() . " WHERE date_crea like $date and validation = 0";
+                                            $resultat4 = $exemple2->requete($sql4);
 
+                                            foreach ($resultat4 as $ligne) { {
+                                                    $nombre+=$ligne["COUNT(*)"];
 
+                                                }
+                                            }
+                                        } catch (PDOException $e) {
+                                            die($e->getMessage());
+                                        } try {
+                                            $modele2 = new Model("r_forfait");
+                                            $exemple2 = new Repository($modele2->getTable());
+                                            $sql4 = "Select COUNT(*) from " . $modele2->getTable() . " WHERE date_crea like $date and validation = 0";
+                                            $resultat4 = $exemple2->requete($sql4);
+
+                                            foreach ($resultat4 as $ligne) { {
+                                                    $nombre+=$ligne["COUNT(*)"];
+
+                                                }
+                                            }
+                                        } catch (PDOException $e) {
+                                            die($e->getMessage());
+                                        }
+                                        echo $nombre;
                                         ?>
-                                    </p>
-                                    <p>ce mois ci</p>
-                                </div>
-                                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
-                                    <p class="mt-3">Moyenne avis</p>
-                                    <p class="fs-1">
-                                        <?php
+                    </p>
+                    <p>ce mois ci</p>
+                </div>
+                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
+                    <p class="mt-3">Moyenne avis</p>
+                    <p class="fs-1">
+                        <?php
                                         try {
                                             $modele3 = new Model("avis");
                                             $exemple3 = new Repository($modele3->getTable());
@@ -218,12 +244,12 @@
                                         ?>
 
 
-                                    </p>
-                                </div>
-                                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
-                                    <p class="mt-3">Nombre d'adhérant</p>
-                                    <p class="fs-1">
-                                        <?php
+                    </p>
+                </div>
+                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
+                    <p class="mt-3">Nombre d'adhérant</p>
+                    <p class="fs-1">
+                        <?php
 
                                         try {
 
@@ -240,12 +266,12 @@
                                         ?>
 
 
-                                    </p>
-                                </div>
-                                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
-                                    <p class="mt-3">Nombre de vue du site</p>
-                                    <p class="fs-1">
-                                        <?php
+                    </p>
+                </div>
+                <div class="bg-custom-2 rounded-3 text-white shadow-2 box-size-analysis text-center">
+                    <p class="mt-3">Nombre de vue du site</p>
+                    <p class="fs-1">
+                        <?php
                                         $date = "'" . date('Y-m') . "'";
                                         try {
                                             $modele4 = new Model("vu");
@@ -263,23 +289,24 @@
                                         ?>
 
 
-                                    </p>
-                                    <p>ce mois ci</p>
-                                </div>
-                            </article>
-                            <div class="shadow mt-5 rounded-3 p-3 w-75 mx-auto">
-                                <canvas id="myChart"></canvas>
-                            </div>
+                    </p>
+                    <p>ce mois ci</p>
+                </div>
+            </article>
+            <div class="shadow mt-5 rounded-3 p-3 w-75 mx-auto">
+                <canvas id="myChart"></canvas>
+            </div>
 
-                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
-                            <?php
+            <?php
                             $date = date('Y');
-
                             $mountExist = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
                             $result = [];
                             for ($i = 0; $i < count($mountExist); $i++) {
+                            $calcule = 0;
+
                                 $creationReservation = "'" . $date . "-" . $mountExist[$i] . "%'";
                                 try {
 
@@ -288,52 +315,84 @@
                                     $sql10 = "Select COUNT(*) from " . $modele10->getTable() . " where date_crea like $creationReservation";
                                     $resultat10 = $exemple10->requete($sql10);
                                     foreach ($resultat10 as $ligne) { {
-                                            array_push($result, $ligne["COUNT(*)"]);
+                                        $calcule+= $ligne["COUNT(*)"];
                                         }
                                     }
                                 } catch (PDOException $e) {
                                     die($e->getMessage());
                                 }
+
+                                try {
+
+                                    $modele10 = new Model("r_forfait");
+                                    $exemple10 = new Repository($modele10->getTable());
+                                    $sql10 = "Select COUNT(*) from " . $modele10->getTable() . " where date_crea like $creationReservation";
+                                    $resultat10 = $exemple10->requete($sql10);
+                                    foreach ($resultat10 as $ligne) { {
+                                        $calcule+= $ligne["COUNT(*)"];
+
+                                        }
+                                    }
+                                } catch (PDOException $e) {
+                                    die($e->getMessage());
+                                }try {
+
+                                    $modele10 = new Model("r_formation");
+                                    $exemple10 = new Repository($modele10->getTable());
+                                    $sql10 = "Select COUNT(*) from " . $modele10->getTable() . " where date_crea like $creationReservation";
+                                    $resultat10 = $exemple10->requete($sql10);
+                                    foreach ($resultat10 as $ligne) { {
+                                        $calcule+= $ligne["COUNT(*)"];
+
+                                        }
+                                    }
+                                } catch (PDOException $e) {
+                                    die($e->getMessage());
+                                }
+                                array_push($result, $calcule);
+
+
+
                             }
                             ?>
 
 
 
-                            <script>
-                                const ctx = document.getElementById('myChart');
+            <script>
+            const ctx = document.getElementById('myChart');
 
-                                new Chart(ctx, {
-                                    type: 'bar',
+            new Chart(ctx, {
+                type: 'bar',
 
-                                    data: {
-                                        labels: <?php echo json_encode($mountExist) ?>,
-                                        datasets: [{
-                                            label: 'NOMBRE DE RÉSERVATION',
-                                            data: <?php echo json_encode($result) ?>,
-                                            backgroundColor: '#6AB04E',
-                                            borderWidth: 1
-                                        }]
-                                    },
-                                    options: {
-                                        scales: {
-                                            y: {
-                                                beginAtZero: true
-                                            }
-                                        }
-                                    }
-                                });
-                            </script>
-
-
-
-                            <div class="shadow mt-5 rounded-3 p-3 w-75 mx-auto">
-                                <canvas id="nbrvue"></canvas>
-                            </div>
+                data: {
+                    labels: <?php echo json_encode($mountExist) ?>,
+                    datasets: [{
+                        label: 'NOMBRE DE RÉSERVATION',
+                        data: <?php echo json_encode($result) ?>,
+                        backgroundColor: '#6AB04E',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            </script>
 
 
 
+            <div class="shadow mt-5 rounded-3 p-3 w-75 mx-auto">
+                <canvas id="nbrvue"></canvas>
+            </div>
 
-                            <?php
+
+
+
+            <?php
                             $date = date('Y');
 
                             $mountExistVu = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
@@ -359,40 +418,40 @@
 
 
 
-                            <script>
-                                const nbrvue = document.getElementById('nbrvue');
+            <script>
+            const nbrvue = document.getElementById('nbrvue');
 
-                                new Chart(nbrvue, {
-                                    type: 'bar',
+            new Chart(nbrvue, {
+                type: 'bar',
 
-                                    data: {
-                                        labels: <?php echo json_encode($mountExistVu) ?>,
-                                        datasets: [{
-                                            label: 'NOMBRE DE VUE',
-                                            data: <?php echo json_encode($resultVu) ?>,
-                                            backgroundColor: '#6AB04E',
-                                            borderWidth: 1
-                                        }]
-                                    },
-                                    options: {
-                                        scales: {
-                                            y: {
-                                                beginAtZero: true
-                                            }
-                                        }
-                                    }
-                                });
-                            </script>
-
-
-                            <div class="shadow mt-5 rounded-3 p-3 w-75 mx-auto">
-                                <canvas id="MoyennAvis"></canvas>
-                            </div>
+                data: {
+                    labels: <?php echo json_encode($mountExistVu) ?>,
+                    datasets: [{
+                        label: 'NOMBRE DE VUE',
+                        data: <?php echo json_encode($resultVu) ?>,
+                        backgroundColor: '#6AB04E',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            </script>
 
 
+            <div class="shadow mt-5 rounded-3 p-3 w-75 mx-auto">
+                <canvas id="MoyennAvis"></canvas>
+            </div>
 
 
-                            <?php
+
+
+            <?php
                             $date = date('Y');
 
                             $mountExistAvis = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
@@ -418,33 +477,33 @@
 
 
 
-                            <script>
-                                const MoyennAvis = document.getElementById('MoyennAvis');
+            <script>
+            const MoyennAvis = document.getElementById('MoyennAvis');
 
-                                new Chart(MoyennAvis, {
-                                    type: 'line',
+            new Chart(MoyennAvis, {
+                type: 'line',
 
-                                    data: {
-                                        labels: <?php echo json_encode($mountExistAvis) ?>,
-                                        datasets: [{
-                                            label: 'MOYENNE AVIS',
-                                            data: <?php echo json_encode($resultAvis) ?>,
-                                            backgroundColor: '#CE2A96',
-                                            borderColor: '#CE2A96',
-                                            borderWidth: 2
-                                        }]
-                                    },
-                                    options: {
-                                        scales: {
-                                            y: {
-                                                beginAtZero: true,
-                                            }
-                                        }
-                                    }
-                                });
-                            </script>
+                data: {
+                    labels: <?php echo json_encode($mountExistAvis) ?>,
+                    datasets: [{
+                        label: 'MOYENNE AVIS',
+                        data: <?php echo json_encode($resultAvis) ?>,
+                        backgroundColor: '#CE2A96',
+                        borderColor: '#CE2A96',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        }
+                    }
+                }
+            });
+            </script>
 
-                            <?php
+            <?php
                             } else {
                                 header("Location: php_connexion.php");
                             }
