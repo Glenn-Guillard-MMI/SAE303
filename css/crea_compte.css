@@ -1,3 +1,15 @@
+@media only screen and (max-width: 1175px) {
+    #nav-ordi {
+        display: none;
+        user-select: none;
+        opacity: 0;
+    }
+
+    #nav-responsive {
+        display: block !important;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -56,6 +68,22 @@ nav {
     z-index: 100;
     font-family: aeronaves;
     background: linear-gradient(180deg, rgba(0, 41, 98, 0.90) 11.85%, rgba(0, 54, 129, 0.45) 56.64%, rgba(0, 78, 137, 0.20) 76.95%, rgba(0, 78, 137, 0.00) 100%, rgba(0, 78, 137, 0.00) 100%);
+}
+
+#nav-responsive {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: aeronaves;
+    background: linear-gradient(180deg, rgba(0, 41, 98, 0.90) 11.85%, rgba(0, 54, 129, 0.45) 56.64%, rgba(0, 78, 137, 0.20) 76.95%, rgba(0, 78, 137, 0.00) 100%, rgba(0, 78, 137, 0.00) 100%);
+}
+
+#lien_menu {
+    display: none;
+}
+
+.text-lien {
+    font-size: 2.5vw !important;
 }
 
 .lien_nav {

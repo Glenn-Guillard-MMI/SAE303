@@ -36,7 +36,7 @@ if (isset($_SESSION['mail'])) {
 ?>
 
 <body class="bg-body overflow-x-hidden mb-5">
-    <nav class="container-fluid p-3 w-100 text-white">
+    <nav id="nav-ordi" class="container-fluid p-3 w-100 text-white position-fixed">
         <section class="row">
             <div class="col">
                 <a href="index.php"><img class="w-100" src="img/SVG/logo.svg" alt="logo Aéro club de Frotey-les-Lure"></a>
@@ -63,15 +63,47 @@ if (isset($_SESSION['mail'])) {
                 <a class="lien_nav text-decoration-none text-white" href="index.php#contact">CONTACT</a>
             </div>
             <div class="col text-center">
-                <svg id="account" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
-                    <g fill="none" fill-rule="evenodd">
-                        <path d="M24 0v24H0V0h24ZM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018Zm.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01l-.184-.092Z" />
-                        <path fill="white" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2ZM8.5 9.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0Zm9.758 7.484A7.985 7.985 0 0 1 12 20a7.985 7.985 0 0 1-6.258-3.016C7.363 15.821 9.575 15 12 15s4.637.821 6.258 1.984Z" />
-                    </g>
-                </svg>
+                <a href="php_login.php">
+                    <svg id="account" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M24 0v24H0V0h24ZM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018Zm.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                            <path fill="white" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2ZM8.5 9.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0Zm9.758 7.484A7.985 7.985 0 0 1 12 20a7.985 7.985 0 0 1-6.258-3.016C7.363 15.821 9.575 15 12 15s4.637.821 6.258 1.984Z" />
+                        </g>
+                    </svg>
+                </a>
             </div>
         </section>
     </nav>
+    <div id="nav-responsive" class="d-none position-fixed w-100">
+        <nav id="nav-responsive-balise" class="p-3 w-100 text-white overflow-hidden">
+            <i onclick="derouleNav()" class="fas fa-bars text-white"></i>
+            <section id="lien_menu" class="flex-column justify-content-around">
+                <div class="text-center mt-2">
+                    <a class="lien_nav text-decoration-none text-white text-lien px-4 py-2" href="index.php">Accueil</a>
+                </div>
+                <div class="text-center mt-2">
+                    <a class="lien_nav text-decoration-none text-white text-lien px-4 py-2" href="index.php#bapteme">BAPTÈME DE L'AIR</a>
+                </div>
+                <div class="text-center mt-2">
+                    <a class="lien_nav text-decoration-none text-white text-lien px-4 py-2" href="index.php#container_formation">FORMATIONS</a>
+                </div>
+                <div class="text-center mt-2">
+                    <a class="lien_nav text-decoration-none text-white text-lien px-4 py-2" href="index.php#forfait">FORFAITS</a>
+                </div>
+                <div class="text-center mt-2">
+                    <a class="lien_nav text-decoration-none text-white text-lien px-4 py-2" href="index.php#propos">À PROPOS</a>
+                </div>
+                <div class="text-center mt-2">
+                    <a class="lien_nav text-decoration-none text-white text-lien px-4 py-2" href="index.php#event">ÉVÉNEMENTS</a>
+                </div>
+                <div class="text-center mt-2">
+                    <a class="lien_nav text-decoration-none text-white text-lien px-4 py-2" href="index.php#galerie">GALERIE</a>
+                </div>
+                <div class="text-center mt-2">
+                    <a class="lien_nav text-decoration-none text-white text-lien px-4 py-2" href="index.php#contact">CONTACT</a>
+                </div>
+        </nav>
+    </div>
 
     <h1 class="text-white text-center mt-3">S'INSCRIRE</h1>
 
@@ -107,7 +139,7 @@ if (isset($_SESSION['mail'])) {
                 <input type="date" name="birthday" required id="birthday" onchange="Vbirthday()" class="rounded-3 input-custom p-1">
                 <span class="d-flex flex-row justify-content-around mt-4">
                     <p>Vous avez déjà un compte ?</p>
-                    <a href="php_connexion.php" class="text-decoration-none fw-bold text-blue">Connecter vous</a>
+                    <a href="php_connexion.php" class="text-decoration-none fw-bold text-blue">Connectez-vous</a>
                 </span>
                 <div class="d-grid justify-content-end">
                     <p onclick="card2()" class="button_suivant mt-3 text-white px-2 py-1 rounded-2">Suivant</p>
@@ -122,7 +154,7 @@ if (isset($_SESSION['mail'])) {
                 <label for="physique_addresse" class="mt-3 fs-5">Adresse</label>
                 <input placeholder="ex : 13 place de la mairie" class="rounded-3 input-custom p-1" type="text" name="physique_addresse" require id="physique_addresse" onkeyup="verif_physique()">
 
-                <label for="code_addresse" class="mt-3 fs-5">Code postale</label>
+                <label for="code_addresse" class="mt-3 fs-5">Code postal</label>
                 <input placeholder="ex : 70200" class="rounded-3 input-custom p-1" type="number" name="code_addresse" require id="code_addresse" onkeyup="verif_code()">
 
                 <label for="ville" class="mt-3 fs-5">Ville</label>
@@ -158,9 +190,9 @@ if (isset($_SESSION['mail'])) {
             </section>
         </div>
     </form>
-
-    <script src="js/script_cree_compte.js?time=<?php require 'UID.php';
-                                                echo UID(200) ?>"></script>
+    <script src="js/nav.js?time=<?php require 'UID.php';
+                                echo UID(200) ?>"></script>
+    <script src="js/script_cree_compte.js?time=<?php echo UID(200) ?>"></script>
 </body>
 
 </html>
