@@ -11,9 +11,10 @@ if(isset($_POST['supp'])){
 
     //Lancement de la requete
 try{
-    $modele = new Model("equipe");
+    $modele = new Model("evenement");
 	$Repository = new Repository($modele->getTable());
-    $sql ="DELETE FROM ". $modele->getTable() . " where image = $Suprresion";
+    $sql ="UPDATE ". $modele->getTable() . " SET active = 1 where image = $Suprresion";
+    echo $sql;
     $Repository->requete($sql);
     exit();
 

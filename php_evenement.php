@@ -129,7 +129,7 @@
 
                 $modele = new Model("evenement");
                 $Repository = new Repository($modele->getTable());
-                $sql = "SELECT * FROM " . $modele->getTable();
+                $sql = "SELECT * FROM " . $modele->getTable() . " where active = 0";
                 $resultat = $Repository->requete($sql);
                 foreach ($resultat as $ligne) {
 
