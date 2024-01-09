@@ -71,6 +71,22 @@ nav {
     background: linear-gradient(180deg, rgba(0, 41, 98, 0.90) 11.85%, rgba(0, 54, 129, 0.45) 56.64%, rgba(0, 78, 137, 0.20) 76.95%, rgba(0, 78, 137, 0.00) 100%, rgba(0, 78, 137, 0.00) 100%);
 }
 
+#nav-responsive {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: aeronaves;
+    background: linear-gradient(180deg, rgba(0, 41, 98, 0.90) 11.85%, rgba(0, 54, 129, 0.45) 56.64%, rgba(0, 78, 137, 0.20) 76.95%, rgba(0, 78, 137, 0.00) 100%, rgba(0, 78, 137, 0.00) 100%);
+}
+
+#lien_menu {
+    display: none;
+}
+
+.text-lien {
+    font-size: 2.5vw !important;
+}
+
 .lien_nav {
     font-size: 1vw;
     padding: 0.5vw 0.7vw 0.5vw 0.65vw;
@@ -110,8 +126,8 @@ nav {
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
 }
 
-.shadow-img{
-    filter : drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+.shadow-img {
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
 }
 
 .input_connexion {
@@ -130,32 +146,103 @@ nav {
     background-color: #002962;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1175px) {
+    #nav-ordi {
+        display: none;
+        user-select: none;
+        opacity: 0;
+    }
+
+    #nav-responsive {
+        display: block !important;
+    }
+
+    body>section {
+        margin-top: 10% !important;
+    }
     #background{
-        width: 40% !important;
-    }
-    label, input[type="password"], input[type="mail"]{
-        font-size: 2vw !important;
-    }
-    span{
-        font-size: 1.2vw !important;
-    }
-    input[type="submit"]{
-        font-size: 1.5vw !important;
+        width: 33% !important;
     }
 }
 
-@media only screen and (max-width: 500px){
-    #background{
+@media only screen and (max-width: 850px) {
+
+    span p, span a{
+        font-size: 1.5vw !important;
+    }
+
+    h1 {
+        font-size: 5vw !important;
+    }
+
+    h2 {
+        font-size: 3.5vw !important;
+    }
+
+    #background {
         width: 50% !important;
     }
-    form{
+
+    label,
+    input[type="password"],
+    input[type="mail"] {
+        font-size: 2vw !important;
+    }
+
+    span {
+        font-size: 1.2vw !important;
+    }
+
+    input[type="submit"] {
+        font-size: 1.5vw !important;
+    }
+
+    form {
         width: 75% !important;
     }
-    span{
+}
+
+@media only screen and (max-width: 500px) {
+
+    span p, span a{
+        font-size: 1.8vw !important;
+    }
+
+    form {
+        width: 75% !important;
+    }
+
+    span {
         font-size: 1.6vw !important;
     }
-    h2{
+
+    h2 {
         font-size: 2.5vw !important;
+    }
+
+    body>section {
+        margin-top: 17.5% !important;
+    }
+
+    label,
+    input[type="password"],
+    input[type="mail"] {
+        font-size: 2.7vw !important;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #background {
+        width: 70% !important;
+    }
+
+    span p, span a{
+        font-size: 2vw !important;
+    }
+
+    label,
+    input[type="password"],
+    input[type="mail"] {
+        font-size: 3vw !important;
     }
 }

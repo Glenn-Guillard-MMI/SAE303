@@ -312,23 +312,23 @@
 
                                     echo "<div class='w-50 d-flex flex-column align-items-end fs-5'>";
                                     if ($ligne["autorisation"] == 1) {
-                                        echo "<p class='titre-info'>  Status : Pilote</p>";
+                                        echo "<p class='titre-info'>  Statut : Pilote</p>";
                                     } elseif ($ligne["autorisation"] == 2) {
-                                        echo "<p class='titre-info'>  Status : Staff</p>";
+                                        echo "<p class='titre-info'>  Statut : Staff</p>";
                                     } elseif ($ligne["autorisation"] == 3) {
-                                        echo "<p class='titre-info'>  Status : Admin</p>";
+                                        echo "<p class='titre-info'>  Statut : Admin</p>";
                                     } elseif ($ligne["autorisation"] == 0) {
-                                        echo "<p class='titre-info'>  Status : adhérant</p>";
+                                        echo "<p class='titre-info'>  Statut : adhérant</p>";
                                     }
 
                                     if ($ligne["licence_valid"] == 0) {
                                         echo "<p class='titre-info'>  Licence : Non remise</p>";
                                     } elseif ($ligne["licence_valid"] == 1) {
-                                        echo "<p class='titre-info'> Licence : Reçu</p>";
+                                        echo "<p class='titre-info'> License : Reçu</p>";
                                     } elseif ($ligne["licence_valid"] == 2) {
-                                        echo "<p class='titre-info'> Licence : Accepté</p>";
+                                        echo "<p class='titre-info'> License : Accepté</p>";
                                     } elseif ($ligne["licence_valid"] == 3) {
-                                        echo "<p class='titre-info'> Licence : Refusée</p>";
+                                        echo "<p class='titre-info'> License : Refusée</p>";
                                     }
                                     $sauvegarde = $ligne["autorisation"];
                                     echo "</div></div>";
@@ -386,7 +386,7 @@
                                         value="<?php echo $ligne["prenom"]; ?>">
                                 </span>
                                 <span class="d-flex flex-row mt-2">
-                                    <p class="mb-0 me-4">Nom : </p>
+                                    <p class="mb-0 me-4">Date de naissance : </p>
                                     <p>
                                         <?php echo $ligne["date_naissance"]; ?>
                                     <p>

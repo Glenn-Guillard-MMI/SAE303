@@ -474,7 +474,7 @@
                                                     echo "<i class='fas fa-circle me-2 mb-0'></i>";
                                                     echo "<p class='m-0'>Refusée</p>";
                                                 } ?><?php if ($ligne2["validation"] == 0) {
-                                                        echo "<span class='d-flex flex-row justify-content-start align-items-center ms-3 mb-0 text-danger w-custom px-3 py-1 rounded-4 statu-shadow'>";
+                                                        echo "<span class='d-flex flex-row justify-content-start align-items-center ms-3 mb-0 text-orange w-custom px-3 py-1 rounded-4 statu-shadow'>";
                                                         echo "<i class='fas fa-circle me-2 mb-0'></i>";
                                                         echo "<p class='m-0'>En attente</p>";
                                                     } ?>
