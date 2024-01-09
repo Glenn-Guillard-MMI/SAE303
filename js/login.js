@@ -47,7 +47,7 @@ function verif_adresse() {
 function verif_code() {
     const code = document.getElementById("modif_code_post").value;
     const liste_cara = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  
+
     for (let i = 0; i < code.length; i++) {
         if (!liste_cara.includes(parseInt(code[i]))) {
             document.getElementById("modif_code_post").value =
@@ -58,7 +58,7 @@ function verif_code() {
         document.getElementById("modif_code_post").value = code.substring(0, 5);
         verif_code();
     }
-    
+
     if (code.length == 5) {
         modif_code_postale = true;
     } else {
@@ -92,16 +92,16 @@ function verif_mail() {
 function verif_tel() {
     let num = document.getElementById("modif_tel").value;
     const liste_cara = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  
+
     for (let i = 0; i < num.length; i++) {
-      if (!liste_cara.includes(parseInt(num[i]))) {
-        document.getElementById("modif_tel").value =
-          num.substring(0, i) + num.substring(i + 1);
-      }
+        if (!liste_cara.includes(parseInt(num[i]))) {
+            document.getElementById("modif_tel").value =
+                num.substring(0, i) + num.substring(i + 1);
+        }
     }
     if (num.length > 10) {
-      document.getElementById("modif_tel").value = num.substring(0, 10);
-      verif_tel();
+        document.getElementById("modif_tel").value = num.substring(0, 10);
+        verif_tel();
     }
     if (num.length != 10) {
         modif_tel = false;
@@ -142,3 +142,36 @@ function pushlicence() {
     $("#disparition").hide();
     location.reload();
 }
+
+
+var menu = false;
+function derouleNav() {
+    var nav = document.getElementById("nav-responsive"),
+        lien = document.getElementById("lien_menu");
+    lien.style.width = "100%";
+    if (menu == true) {
+        nav.style.width = "auto";
+        document.body.style.overflow = "auto";
+        document.getElementById("modif-mdp").style.display = "block";
+        lien.style.display = "none";
+        menu = false;
+    } else {
+        nav.style.width = "100vw";
+        document.body.style.overflow = "hidden";
+        document.getElementById("modif-mdp").style.display = "none";
+        lien.style.display = "flex";
+        lien.style.height = "90%";
+        menu = true;
+    }
+}
+
+function checkScreenSize() {
+    let navResponsive = document.getElementById("nav-responsive").offsetWidth;
+    const ml = document.getElementById("ml-custom");
+    if (window.innerWidth <= 1200) {
+        ml.style.marginLeft = `calc(${navResponsive}px + 2em)`;
+    }
+}
+
+window.onload = checkScreenSize;
+window.onresize = checkScreenSize;
