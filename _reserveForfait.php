@@ -14,7 +14,7 @@ if (isset($_SESSION["mail"])) {
         $Repository = new Repository($modele->getTable());
         $sql = "INSERT INTO " . $modele->getTable() . " (mail, id, date_crea) VALUES ($mail, $id, $date_crea);";
         $Repository->requete($sql);
-        $_SESSION["message_cor"] = "Inscription valider";
+        $_SESSION["message_cor"] = "Inscription validée";
         header("Location:index.php#formation2");
         exit();
     }

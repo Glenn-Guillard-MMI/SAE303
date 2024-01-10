@@ -21,7 +21,7 @@ if (isset($_SESSION["mail"])) {
         $Repository = new Repository($modele->getTable()); 
         $sql = "INSERT INTO " . $modele->getTable() . " (mail, matricule, id, date_j, date_h, date_crea, temps_presta, formule) VALUES ($mail, '', $id, $date_j, $date_h, $date_crea, $temps_presta, $formule);";
         $Repository->requete($sql);
-        $_SESSION["message_cor"] = "Reservation valider";
+        $_SESSION["message_cor"] = "Reservation validée";
         header("Location:index.php#margin_top_bapteme");
         exit();
     }
