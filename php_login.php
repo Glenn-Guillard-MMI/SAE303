@@ -466,19 +466,19 @@
                 <p>Créez un mot de passe sécurisé avec des lettres, des chiffres et des symboles.</p>
                 <div>
                     <label for="password">Nouveau mot de passe :</label>
-                    <input type="password" name="password" class="input_modif rounded-3" required>
+                    <input onkeyup="verifMdp1()" type="password" id="mdp1" name="password" class="input_modif rounded-3" required>
                 </div>
                 <div class="mt-3">
                     <label for="confirmation">Confirmation mot de passe :</label>
-                    <input type="password" name="confirmation" class="input_modif rounded-3" required>
+                    <input onkeyup="verifMdp2()" type="password" id="mdp2" name="confirmation" class="input_modif rounded-3" required>
                 </div>
                 <article class="mt-5">
                     <p>Après la modification de vos informations, vous serez automatiquement déconnecté.</p>
                     <div class="d-flex flex-row align-items-center justify-content-around">
                         <p onclick="annulMdp()" class="mb-0 buton_annul text-blue bg-white px-2 py-1 fs-5 rounded-3">
                             Annuler</p>
-                        <input type="submit" value="Enregistrer"
-                            class="buton_enregistre text-white bg-custom fs-5 rounded-3">
+                        <input id="buton-mdp" type="submit" value="Enregistrer"
+                            class="buton_enregistre text-white bg-custom fs-5 rounded-3" disabled>
                     </div>
                 </article>
             </form>
