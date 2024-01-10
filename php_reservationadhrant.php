@@ -21,7 +21,9 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="img/SVG/logo.svg">
     <title>ACF2L</title>
 </head>
@@ -51,49 +53,60 @@
                             $sauvegarde = $ligne["autorisation"];
                             if ($sauvegarde == 3) {
             ?>
-                                <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                                    <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_login.php">Accueil</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_gestionReservation.php">Gestion des réservations</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_DemandeLicence.php">Demande de
-                                        licence</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_offre.php">Offres</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_evenement.php">Événement</a>
-                                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_galerie.php">Galerie</a>
-                                </nav>
-                            <?php
+            <nav
+                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+                <img class="w-50 logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                    href="php_login.php">Accueil</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                    href="php_gestionnaireUtilisateur.php">Gestion des utilisateurs</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_gestionReservation.php">Gestion
+                    des réservations</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_DemandeLicence.php">Demande de
+                    licence</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_offre.php">Offres</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="">Liste équipe</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_evenement.php">Événement</a>
+                <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_galerie.php">Galerie</a>
+            </nav>
+            <?php
 
                             }
                             if ($sauvegarde == 2) {
                             ?>
-                                <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                                    <img class="w-50 logo-shadow mt-3" src="img/SVG/logo.svg" alt="logo aero club">
-                                    <div class="d-flex flex-column h-25 justify-content-around my-auto">
-                                        <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_login.php">Accueil</a>
-                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_analytique.php">Analytiques</a>
-                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
-                                    </div>
-                                </nav>
-                            <?php
+            <nav
+                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+                <img class="w-50 logo-shadow mt-3" src="img/SVG/logo.svg" alt="logo aero club">
+                <div class="d-flex flex-column h-25 justify-content-around my-auto">
+                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                        href="php_login.php">Accueil</a>
+                    <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                        href="php_analytique.php">Analytiques</a>
+                    <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                        href="php_Gestion_avions.php">Avions</a>
+                </div>
+            </nav>
+            <?php
 
                             }
 
 
                             if ($sauvegarde == 1) {
                             ?>
-                                <nav class="text-center bg-custom text-white d-flex flex-column align-items-center font-avion">
-                                    <img class="w-50 logo-shadow mt-3" src="img/SVG/logo.svg" alt="logo aero club">
-                                    <div class="d-flex flex-column h-25 justify-content-around my-auto">
-                                        <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_login.php">Accueil</a>
-                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_reservation_pilote.php">Réservations</a>
-                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_Gestion_avions.php">Avions</a>
-                                    </div>
-                                </nav>
-                            <?php
+            <nav class="text-center bg-custom text-white d-flex flex-column align-items-center font-avion">
+                <img class="w-50 logo-shadow mt-3" src="img/SVG/logo.svg" alt="logo aero club">
+                <div class="d-flex flex-column h-25 justify-content-around my-auto">
+                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                        href="php_login.php">Accueil</a>
+                    <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                        href="php_reservation_pilote.php">Réservations</a>
+                    <a class="text-white text-decoration-none py-1 px-2 rounded-3"
+                        href="php_Gestion_avions.php">Avions</a>
+                </div>
+            </nav>
+            <?php
 
                             }
 
@@ -102,15 +115,17 @@
 
                             if ($sauvegarde == 0) {
                             ?>
-                                <nav class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
-                                    <a href="index.php" class="w-50 exclu mt-3">
-                                        <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
-                                    </a>
-                                    <div class="d-flex flex-column h-25 justify-content-around my-auto">
-                                        <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
-                                        <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu" href="php_reservationadhrant.php">Réservations</a>
-                                    </div>
-                                </nav>
+            <nav
+                class="text-center bg-custom text-white d-flex justify-content-around flex-column align-items-center font-avion">
+                <a href="index.php" class="w-50 exclu mt-3">
+                    <img class="logo-shadow" src="img/SVG/logo.svg" alt="logo aero club">
+                </a>
+                <div class="d-flex flex-column h-25 justify-content-around my-auto">
+                    <a class="text-white text-decoration-none py-1 px-2 rounded-3" href="php_login.php">Accueil</a>
+                    <a class="text-blue bg-white text-decoration-none py-1 px-2 rounded-3 exclu"
+                        href="php_reservationadhrant.php">Réservations</a>
+                </div>
+            </nav>
             <?php
 
                             }
@@ -164,7 +179,8 @@
                     ?>
 
 
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 py-2 px-4 shadow-box-stat mb-4 me-4">
+                    <div
+                        class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 py-2 px-4 shadow-box-stat mb-4 me-4">
                         <p class="fs-5">Nombre de vol</p>
                         <p class="fs-1">
                             <?php
@@ -186,7 +202,8 @@
 
                         </p>
                     </div>
-                    <div class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 py-2 px-3 shadow-box-stat mb-4">
+                    <div
+                        class="bg-custom-3 d-flex flex-column justify-content-center align-items-center rounded-3 py-2 px-3 shadow-box-stat mb-4">
                         <p class="fs-5">Nombre d'heure de vol</p>
                         <p class="fs-1">
                             <?php
@@ -224,6 +241,7 @@
                             <th>Date</th>
                             <th>Temps de prestation</th>
                             <th>État</th>
+                            <th>Plus d'action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -240,11 +258,11 @@
                             foreach ($resultat2 as $ligne2) {
                         ?>
 
-                                <tr>
-                                    <th><?= $ligne2["num_res"] ?></th>
-                                    <th>
+                        <tr>
+                            <th><?= $ligne2["num_res"] ?></th>
+                            <th>
 
-                                        <?php
+                                <?php
                                         try {
                                             $mailadherant = "'" . $ligne2["mail"] . "'";
                                             $modele3 = new Model("adherant");
@@ -259,14 +277,14 @@
                                             die($e->getMessage());
                                         }
                                         ?>
-                                    </th>
-                                    <th>
-                                        <?= $ligne2["matricule"] ?>
+                            </th>
+                            <th>
+                                <?= $ligne2["matricule"] ?>
 
-                                    </th>
-                                    <th>
+                            </th>
+                            <th>
 
-                                        <?php
+                                <?php
 
                                         $mailPilote = "'" . $ligne2["pilote"] . "'";
 
@@ -284,16 +302,16 @@
                                         }
                                         ?>
 
-                                    </th>
-                                    <th>
-                                        <?= $ligne2["date_j"] . " à " . $ligne2["date_h"] ?>
-                                    </th>
-                                    <th>
-                                        <?= $ligne2["temps_presta"] ?>
-                                    </th>
+                            </th>
+                            <th>
+                                <?= $ligne2["date_j"] . " à " . $ligne2["date_h"] ?>
+                            </th>
+                            <th>
+                                <?= $ligne2["temps_presta"] ?>
+                            </th>
 
-                                    <th>
-                                        <?php if ($ligne2["validation"] == 1) {
+                            <th>
+                                <?php if ($ligne2["validation"] == 1) {
                                             echo "<span class='d-flex flex-row justify-content-start align-items-center ms-3 mb-0 text-success w-custom px-3 py-1 rounded-4 statu-shadow'>";
                                             echo "<i class='fas fa-circle me-2 mb-0'></i>";
                                             echo "<p class='m-0'> Acceptée </p>";
@@ -305,13 +323,16 @@
                                                     echo "<span class='d-flex flex-row justify-content-start align-items-center ms-3 mb-0 text-orange w-custom px-3 py-1 rounded-4 statu-shadow'>";
                                                     echo "<i class='fas fa-circle me-2 mb-0'></i>";
                                                     echo "<p class='m-0'>En attente</p>";
-                                                } ?>
-                                        </span>
-                                    </th>
-                                </tr>
+                                                } 
+                                                $id = $ligne2["num_res"];
+                                                ?>
+                                </span>
+                            </th>
+                            <th><button onclick="SuppressionBatptemeAdherant(<?=$id ?>)">dksf</button></th>
+                        </tr>
 
 
-                            <?php
+                        <?php
 
 
                             }
@@ -327,6 +348,7 @@
                             <th>Nom et Prénom</th>
                             <th>Type</th>
                             <th>Etat</th>
+                            <th>Plus d'action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -343,11 +365,11 @@
                                 foreach ($resultat2 as $ligne2) {
                         ?>
 
-                                <tr>
-                                    <th><?= $ligne2["num_res"] ?></th>
-                                    <th>
+                        <tr>
+                            <th><?= $ligne2["num_res"] ?></th>
+                            <th>
 
-                                        <?php
+                                <?php
                                         try {
                                             $mailadherant = "'" . $ligne2["mail"] . "'";
                                             $modele3 = new Model("adherant");
@@ -362,11 +384,11 @@
                                             die($e->getMessage());
                                         }
                                         ?>
-                                    </th>
-                                    <th>
+                            </th>
+                            <th>
 
 
-                                        <?php try {
+                                <?php try {
                                             $type = $ligne2["id"];
                                             $modele3 = new Model("forfait");
                                             $exemple3 = new Repository($modele3->getTable());
@@ -381,12 +403,12 @@
                                         }
                                         ?>
 
-                                    </th>
+                            </th>
 
 
-                                    <th>
+                            <th>
 
-                                        <?php if ($ligne2["validation"] == 1) {
+                                <?php if ($ligne2["validation"] == 1) {
                                             echo "<span class='d-flex flex-row justify-content-start align-items-center ms-3 mb-0 text-success w-custom px-3 py-1 rounded-4 statu-shadow'>";
                                             echo "<i class='fas fa-circle me-2 mb-0'></i>";
                                             echo "<p class='m-0'> Acceptée </p>";
@@ -398,19 +420,22 @@
                                                     echo "<span class='d-flex flex-row justify-content-start align-items-center ms-3 mb-0 text-orange w-custom px-3 py-1 rounded-4 statu-shadow'>";
                                                     echo "<i class='fas fa-circle me-2 mb-0'></i>";
                                                     echo "<p class='m-0'>En attente</p>";
-                                                } ?>
-                                        </span>
-                                        </span>
-                                    </th>
-                                </tr>
+                                                } 
+                                                $id = $ligne2["num_res"];
+                                                ?>
+                                </span>
+                                </span>
+                            </th>
+                            <th><button onclick="SuppressionForfaitAdherant(<?=$id ?>)">dksf</button></th>
+                        </tr>
 
 
-                            <?php
+                        <?php
 
 
                                 }
                             ?>
-                            <?php
+                        <?php
 
                                 try {
 
@@ -422,11 +447,11 @@
                                     foreach ($resultat2 as $ligne2) {
                             ?>
 
-                                    <tr>
-                                        <th><?= $ligne2["num_res"] ?></th>
-                                        <th>
+                        <tr>
+                            <th><?= $ligne2["num_res"] ?></th>
+                            <th>
 
-                                            <?php
+                                <?php
                                             try {
                                                 $mailadherant = "'" . $ligne2["mail"] . "'";
                                                 $modele3 = new Model("adherant");
@@ -441,11 +466,11 @@
                                                 die($e->getMessage());
                                             }
                                             ?>
-                                        </th>
-                                        <th>
+                            </th>
+                            <th>
 
 
-                                            <?php try {
+                                <?php try {
                                                 $type = $ligne2["id"];
                                                 $modele3 = new Model("formation");
                                                 $exemple3 = new Repository($modele3->getTable());
@@ -460,12 +485,12 @@
                                             }
                                             ?>
 
-                                        </th>
+                            </th>
 
 
-                                        <th>
+                            <th>
 
-                                            <?php if ($ligne2["validation"] == 1) {
+                                <?php if ($ligne2["validation"] == 1) {
                                                 echo "<span class='d-flex flex-row justify-content-start align-items-center ms-3 mb-0 text-success w-custom px-3 py-1 rounded-4 statu-shadow'>";
                                                 echo "<i class='fas fa-circle me-2 mb-0'></i>";
                                                 echo "<p class='m-0'> Acceptée </p>";
@@ -477,14 +502,17 @@
                                                         echo "<span class='d-flex flex-row justify-content-start align-items-center ms-3 mb-0 text-orange w-custom px-3 py-1 rounded-4 statu-shadow'>";
                                                         echo "<i class='fas fa-circle me-2 mb-0'></i>";
                                                         echo "<p class='m-0'>En attente</p>";
-                                                    } ?>
-                                            </span>
-                                            </span>
-                                        </th>
-                                    </tr>
+                                                    } 
+                                                    $id = $ligne2["num_res"];?>
+                                </span>
+                                </span>
+                            </th>
+                            <th><button onclick="SuppressionFormationAdherant(<?=$id ?>)">dksf</button></th>
+
+                        </tr>
 
 
-                                <?php
+                        <?php
 
 
                                     }
@@ -492,7 +520,7 @@
                     </tbody>
                 </table>
 
-    <?php
+                <?php
                                 } catch (PDOException $e) {
                                     die($e->getMessage());
                                 }
@@ -509,5 +537,6 @@
         </section>
     </div>
 </body>
+<script src="js/reservationAdrhant.js?time=<?php echo UID(200) ?>"></script>
 
 </html>
