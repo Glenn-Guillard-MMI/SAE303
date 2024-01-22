@@ -132,8 +132,8 @@
                         <div class="equipe-container me-4 mb-0 mt-5" style="background-image: url('ImagesEquipe/<?= $img ?>.png');">
                             <div class="content text-white p-3">
                                 <div class="d-flex justify-content-around flex-wrap fs-2 fw-medium">
-                                    <p class="mb-0" id='nom_<?= $idModification ?>'><?= $ligne2['nom'] ?></p>
-                                    <p class="mb-0" id='prenom_<?= $idModification ?>'><?= $ligne2['prenom'] ?></p>
+                                    <p class="mb-0" id='nom_<?= $idModification ?>'><?= $ligne2['prenom'] ?></p>
+                                    <p class="mb-0" id='prenom_<?= $idModification ?>'><?= $ligne2['nom'] ?></p>
                                 </div>
                                 <p class="mb-0 text-center fs-4" id='fonction_<?= $idModification ?>'><?= $ligne2['fonction'] ?></p>
                                 <div class="d-flex flex-row justify-content-between px-2 mt-3">

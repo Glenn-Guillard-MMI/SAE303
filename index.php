@@ -876,7 +876,7 @@ session_start();
           </svg>
         </label>
       </div>
-      <label id="titre-select-avis" class="mt-4 size-2-5">Offre choisi</label>
+      <label id="titre-select-avis" class="mt-4 size-2-5">Offre choisie</label>
       <?php
       ?>
       <select name="type" class="w-50 select-custom rounded-2">
